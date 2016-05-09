@@ -1,3 +1,11 @@
-# My Awesome Book
+# drools On Boarding docs-docs
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+## How to edit the docs
+
+- Fork the repository https://github.com/uberfire/uberfire-docs then clone the fork locally
+- Get gitbook editor from https://github.com/GitbookIO/editor-legacy
+- Get gitbook builder from https://github.com/GitbookIO/gitbook (you may need to install npm first)
+- Edit the docs in your forked repository uberfire-docs/docs in gitbook editor
+- When you've finished editing, build the docs by running uberfire-docs/buildHtml.sh and uberfire-docs/buildPdf.sh
+- View the built docs in uberfire-docs/docs/_book/index.html and uberfire-docs/uberfire-docs.pdf
+- Submit a pull request to get your changes accepted
