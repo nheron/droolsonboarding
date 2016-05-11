@@ -4,7 +4,8 @@
 * [Overview](overview/overview.md)
 * [Getting Started](gettingStarted/gettingStarted.md)
    * [Drools tutorial](gettingStarted/drools.md)
-   * [BRMS tutorial ](gettingStarted/brms.md)
+       * Drools Concept
+   * [BRMS tutorial](gettingStarted/brms.md)
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
    * [JBPM tutorial](gettingStarted/jbpm.md)
 * [Examples](examples/examples.md)
@@ -14,3 +15,4 @@
    * [Car Insurance Calculator Example](examples/carinsurancecalculator/calculator.md)
    * [Commercial income calculator example](examples/commercialincomecalculator/calculator.md)
    * [Insurance Contract subscription](examples/newinsurancesubscription/subscription.md)
+
