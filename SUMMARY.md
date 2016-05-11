@@ -6,7 +6,7 @@
    * [Drools tutorial](gettingStarted/drools.md)
        * [Drools architecture](gettingStarted/drools_concept.md)
        * [Drools API](gettingStarted/drools_api.md)
-       * Installing Drools Tooling
+       * [Installing Drools Tooling](gettingStarted/installing_drools_tooling.md)
    * [BRMS tutorial](gettingStarted/brms.md)
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
    * [JBPM tutorial](gettingStarted/jbpm.md)
