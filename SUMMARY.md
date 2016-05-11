@@ -5,6 +5,7 @@
 * [Getting Started](gettingStarted/gettingStarted.md)
    * [Drools tutorial](gettingStarted/drools.md)
        * [Drools architecture](gettingStarted/drools_concept.md)
+       * Drools API
    * [BRMS tutorial](gettingStarted/brms.md)
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
    * [JBPM tutorial](gettingStarted/jbpm.md)
