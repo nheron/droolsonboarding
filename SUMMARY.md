@@ -4,7 +4,7 @@
 * [Overview](overview/overview.md)
 * [Getting Started](gettingStarted/gettingStarted.md)
    * [Drools tutorial](gettingStarted/drools.md)
-       * Drools Concept
+       * [Drools Concept](gettingStarted/drools_concept.md)
    * [BRMS tutorial](gettingStarted/brms.md)
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
    * [JBPM tutorial](gettingStarted/jbpm.md)
