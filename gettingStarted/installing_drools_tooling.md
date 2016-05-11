@@ -25,7 +25,11 @@ then push on next
 Select the middle button and push next
 ![](drools/CreateProject_enterName.jpeg)
 Enter "FirstProject" as a project name and keep only the "Add a sample Helloworld rule file to this project". the generated project should look like that: 
+
 ![](drools/CreateNewProject_treeview.jpeg)
 
+
 If you do with the right mouse on DroolsTest class and run as "java Program", the following should be displayed on the console view
+
 ![](drools/CreateProject_ConsoleOutput.jpeg)
+All is well installed.
