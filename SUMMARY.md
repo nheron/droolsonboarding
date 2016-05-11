@@ -7,6 +7,7 @@
        * [Drools architecture](gettingStarted/drools_concept.md)
        * [Installing Drools Tooling](gettingStarted/installing_drools_tooling.md)
        * [Drools API](gettingStarted/drools_api.md)
+       * First Rule Language Element
    * [BRMS tutorial](gettingStarted/brms.md)
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
    * [JBPM tutorial](gettingStarted/jbpm.md)
