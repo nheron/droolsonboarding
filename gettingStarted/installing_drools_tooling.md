@@ -1,6 +1,6 @@
 # Installing Drools Tooling
 
-We propose a VirtualBox Virtual Machine with all installed and configured.
+We propose a VirtualBox  Machine with all installed and configured.
 
 If you prefer, you can install all tools on your machine.
 To be able to work with drools, we need : 
