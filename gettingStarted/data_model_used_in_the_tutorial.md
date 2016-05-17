@@ -46,3 +46,21 @@ Select the Junit library and push the next button
 On the next screen, push the Finish Button
 ![](drools/dataModel_fig11.png)
 and the the Ok button
+
+![](drools/dataModel_fig12.png)
+The Junit libray is now part of the project
+![](drools/dataModel_fig13.png)
+
+
+
+We now have to create some directory.
+Select the src  directory and right click button new Directory.
+
+![](drools/dataModel_fig14.png)
+Enter test/java in the folder name and press finish.
+Do the same but test/rules. 
+The folder part should look like that : 
+![](drools/dataModel_fig15.png)
+
+
+
