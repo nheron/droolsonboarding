@@ -9,5 +9,5 @@ You can find here all the materials that goes with this book.
 
 ## How to run the tutorial and examples
 
-- the source code for the tutorials and examples can be found on github : https://github.com
+- the source code for the tutorials and examples can be found on [bitbucket](https://bitbucket.org/nheron/droolscourse)
 - there is a virtual box appliance available with all included that you can find here : 
