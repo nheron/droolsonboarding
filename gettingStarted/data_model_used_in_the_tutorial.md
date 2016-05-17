@@ -94,7 +94,25 @@ The create a new class called KnowledgeSessionHelper
 In the Class, the content should look like here
 ![](drools/dataModel_fig23.png)
 # Create the first test case
-On 
+Select the src/test/java package and Right click Other and type junit. Select Junit Test case
+
+![](drools/dataModel_fig24.png)
+
+Push the next Button.
+In the next screen, enter droolscours as package name and FirstTry as Name
+
+![](drools/dataModel_fig25.png)
 
 
+And push the Finish Button
+
+the code should be entered like this : 
+
+![](drools/dataModel_fig26.png)
+Select the open class, Right click and run as JUnit Test : 
+
+![](drools/dataModel_fig27.png)
+And the Junit Window should appear as above.
+
+We are now ready to start the lessons.
 
