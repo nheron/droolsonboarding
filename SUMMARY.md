@@ -6,7 +6,6 @@
    * [Drools tutorial](gettingStarted/drools.md)
        * [Drools architecture](gettingStarted/drools_concept.md)
        * [Installing Drools Tooling](gettingStarted/installing_drools_tooling.md)
-       * [Drools API](gettingStarted/drools_api.md)
        * [Lesson 1](gettingStarted/first_rule_language_element.md)
    * [BRMS tutorial](gettingStarted/brms.md)
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
