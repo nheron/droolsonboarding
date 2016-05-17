@@ -62,5 +62,16 @@ Do the same but test/rules.
 The folder part should look like that : 
 ![](drools/dataModel_fig15.png)
 
+now Select src/test/java and right click buildpath/use as source folder
+
+
+![](drools/dataModel_fig16.png)
+
+Do the same with src/test/rules
+now the project should look like this : 
+
+
+
+
 
 
