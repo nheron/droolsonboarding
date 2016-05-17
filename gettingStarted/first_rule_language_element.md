@@ -21,5 +21,7 @@ the following element is then displayed : lesson1.drl
 (4) Rule conditions sometimes called LHS=Left Hand Side as it is on the left side of the RETE algorithm which is included in drools
 (5) Code to execute here pure java code sometimes called RHS=Right Hand Side. 
 
+## Adding a condition to a rule
+
 
 
