@@ -32,6 +32,9 @@ and for CashFlow
 
 ![](drools/dataModel_fig7.png)
 
+
+# Add JUnit library
+
 To be able to use junit, we have to add the junit library.
 Select the project, right click and select BuildPath/Configure BuildPath
 
@@ -74,5 +77,15 @@ now the project should look like this :
 
 ![](drools/dataModel_fig17.png)
 
+# Create a Helper Class
+
+To simplify the writing of tests, we shall write a helper class.
+To do, we first create a package called util and in there create a class that we shall all KnowledgeSessionHelper
+
+![](drools/dataModel_fig18.png)
 
 
+![](drools/dataModel_fig20.png)
+The create a new class called KnowledgeSessionHelper
+
+![](drools/dataModel_fig21.png)
