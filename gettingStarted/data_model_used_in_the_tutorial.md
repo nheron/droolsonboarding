@@ -43,4 +43,6 @@ Select the Junit library and push the next button
 
 
 ![](drools/dataModel_fig10.png)
-
+On the next screen, push the Finish Button
+![](drools/dataModel_fig11.png)
+and the the Ok button
