@@ -112,7 +112,7 @@ the code should be entered like this :
 Select the open class, Right click and run as JUnit Test : 
 
 ![](drools/dataModel_fig27.png)
-And the Junit Window should appear as above.
+And the Junit Window should appear as above. (of course no rules were fired).
 
 We are now ready to start the lessons.
 
