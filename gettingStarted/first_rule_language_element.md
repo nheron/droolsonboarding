@@ -1,4 +1,4 @@
-#  lesson 1 : First Rule Language Element
+#  First Rule Language Element
 
 
 
