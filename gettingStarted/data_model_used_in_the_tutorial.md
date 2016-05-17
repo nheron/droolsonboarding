@@ -12,3 +12,23 @@ Then we shall create a java package that we can name droolscours package in src/
 
 
 and we are going to create 3 java classes : Account, AccountingPeriod and CashFlow by right-clicking on the new package just created and new Class
+
+![](drools/dataModel_fig3.jpeg)
+
+
+![](drools/dataModel_fig4.png)
+
+And the Account class, add two attributes accountno and balance.
+Right click source/generate getter/setter and the Account class will have getter/setter.
+
+![](drools/dataModel_fig5.png)
+Do the same for accounting period 
+![](drools/dataModel_fig6.png)
+
+
+and for CashFlow
+
+
+
+
+
