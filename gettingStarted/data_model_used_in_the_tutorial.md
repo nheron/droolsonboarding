@@ -4,6 +4,7 @@ Here is the model we are going to use (taken from presentation done during confe
 We are in a bank that handles account (2) and on each account there can be movements (2). The purpose is to calculate the account balance between an accounting period (3) of all accounts given the movements it has.
 We will run all examples in junit Tests.
 ![](drools/dataModel_fig1.jpeg)
+# Implement the pojo model
 
 We have to create an AccountProject of type drools as previously describes.
 Then we shall create a java package that we can name droolscours package in src/main/java (to respect maven definition) by doing on src/main/java right click and new Package, gibe him a name and push the finish button.
