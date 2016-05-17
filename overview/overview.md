@@ -12,5 +12,7 @@ This is a big shift and we shall try to focus on that before the tooling around 
 - the third set of tutorials called "BRMS runtime tutorials" start to introduce possible software architectures in a real project. In the examples parts, we will use ideas that we describe in that part. 
 - The fourth set of tutorials called "JBPM tutorial" 
 
+Then in the example part we shall try to demonstrate how to use drools in more realistic use cases with tooling and configuration that near how it could be in a real project.
+
 
 
