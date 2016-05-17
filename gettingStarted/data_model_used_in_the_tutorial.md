@@ -42,5 +42,5 @@ Click on the Libraries tab and select the "Add library" button.
 Select the Junit library and push the next button
 
 
-
+![](drools/dataModel_fig10.png)
 
