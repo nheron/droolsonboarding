@@ -71,7 +71,7 @@ Do the same with src/test/rules
 now the project should look like this : 
 
 
-
+![](drools/dataModel_fig17.png)
 
 
 
