@@ -30,7 +30,8 @@ the following element is then displayed : lesson1.drl
 (4) Rule conditions sometimes called LHS=Left Hand Side as it is on the left side of the RETE algorithm which is included in drools
 (5) Code to execute here pure java code sometimes called RHS=Right Hand Side. 
 
-## Adding a condition to a rule
+## Adding a simple condition to a rule
+
 As any plugin in eclipe, the drools plugin allows autocompletion (ctrl+space)
 ![](drools/lesson1_fig5.png)
 
@@ -134,6 +135,7 @@ sessionStatefull.delete(handlea);
 ```
 
 as we call fireAllRules() after we retract the only fact that was in the working memory, the rule "Your First Rule revisited" is not fired.
+
 ## When and how is a rule fired ?
 
 Let us take an example : 
@@ -194,6 +196,11 @@ AccountingPeriod newPeriod = new AccountingPeriod();
         ```
 - the last line is coming from the then part of the rule "Rule on AccountingPeriod that are inserting". Meaning the insered object AccountingPeriod we inserted in the previous rule triggered the second rule.
 
-
+## lesson learning
+This ends the first lesson where we learned the core concepts needed when working with drools : 
+1) What is a rule
+2) A rule with a simple condition
+3) How to log what is happening in the rule engine
+4) What triggers a rule execution and how to interact with the rule engine for fact handling.
 
 
