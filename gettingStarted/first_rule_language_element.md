@@ -134,3 +134,5 @@ sessionStatefull.delete(handlea);
 ```
 
 as we call fireAllRules() after we retract the only fact that was in the working memory, the rule "Your First Rule revisited" is not fired.
+## When and how is a rule fired ?
+
