@@ -59,3 +59,23 @@ Now you can run the test in TestLesson1 and you should see this:
 ![](drools/lesson1_fig12.png)
 It is the message that we have put in the rule "Your first rule"
 
+Let us add some logging to facilate the output
+
+## Using a Global variable to log informations
+
+In the code we just did, we wrote the code System.out.println("blabla"). This is fine but imagine you want to log somewhere else, it is not possible.
+One good practice is to use global variables for that purpose.
+We first define a java class called OutputDisplay that we shall create in the util package in src/main/java
+
+![](drools/lesson1_fig13.png)
+Now we shall update the lesson1.drl file
+![](drools/lesson1_fig14.png)
+The keyword global is used and then a normal java declaration. Here the global is of type OutputDisplay and the variable is called showResults. This variable can now be used in the them part of the rule as here.
+To initialize the global variable, we shall use the method setGlobal on the session we create as shown here in our test : 
+
+![](drools/lesson1_fig15.png)
+
+When running the junit test, the console should look like this :
+
+![](drools/lesson1_fig16.png)
+
