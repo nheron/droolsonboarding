@@ -192,7 +192,7 @@ We see in the logs
 AccountingPeriod newPeriod = new AccountingPeriod();
 		insert (newPeriod);
         ```
-
+- the last line is coming from the then part of the rule "Rule on AccountingPeriod that are inserting". Meaning the insered object AccountingPeriod we inserted in the previous rule triggered the second rule.
 
 
 
