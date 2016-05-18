@@ -78,4 +78,20 @@ To initialize the global variable, we shall use the method setGlobal on the sess
 When running the junit test, the console should look like this :
 
 ![](drools/lesson1_fig16.png)
+## Using callback to log activity in drools runtime
+
+Up to known, we only defined one rule. It runs or not and if yes we added a method that shows us something to see if the rule was executed.
+In bigger project, adding logging code to each rule is not a good practice and will complexify the writing of rules and furthermore we are pushing drools to be a business tool for business analyst and they have to write technical code.
+Drools offers a pattern to implement that functionnality that is called session callbacks.
+
+Drools can be viewed in a synthetic picture like this : 
+![](drools/lesson1_fig17.png)
+
+- the production memory contains all the rule definition (in our case the drl for the moment)
+- The working memory which created with the session and we can add facts to it with the method insert.
+- The agenda which contains all the rules that can be fired.
+- The pattern Matcher which is the algorithm that is used to match the rules on the facts given. In drools latest version, there are many different algorithm that are used (The main one is the rete algorithm).
+
+On each of those parts, it is possible to add a callback when we create a Session.
+
 
