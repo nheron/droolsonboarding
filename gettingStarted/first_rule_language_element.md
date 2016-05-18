@@ -7,6 +7,12 @@
 ## What is a rule ?
 In the previously created project, we are going to add a new drl file (drl = drools rule language) 
 to do so, select src/test/rules and first create a package called lesson1 and the a rule file called "lesson1".
+![](drools/lesson1_fig0_0.png)
+
+
+![](drools/lesson1_fig0_1.png)
+
+
 
 ![](drools/lesson1_fig0.png)
 and the select rule Drools/Rule Resource
