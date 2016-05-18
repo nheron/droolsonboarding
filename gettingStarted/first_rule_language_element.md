@@ -155,7 +155,45 @@ Here is the result :
 The rule was executed a second time. 
 
 Here is what is happening when the FireAllRules method is called on a statefull session : 
-- drools will look at all rules that can apply 
+ - drools will look at all rules that can apply and put it in its agenda.
+ - drools will execute the rule that is on top of its agenda
+ - Once fired, the rule will be deactivated
+ - We have to tell drools of a state change in one of facts in the when part (lhs) to make him reconsidering the rule.
+ - A state change can be an insert, update or delete (retract).
+
+In the last example, we tell drools that a fact has been updated 
+
+```
+sessionStatefull.update(handle, a);
+```
+So therefore, considering the previously inserted fact has been updated, drools reconsiders the rule. 
+As in the rule "Your First Rule revisited" there are no condition on the attributes, the rule is then fired.
+
+
+But we can also do that in the then (RHS) part of a rule : insert, update, retract.
+
+Here is the test case : 
+![](drools/lesson1_fig30.png)
+
+Here are the concerned rules.
+![](drools/lesson1_fig31.png)
+in the first rule, in the then part we create a new instance of time AccountingPeriod and we use the keyword insert to tell drools to create a new fact.
+As a concequence, the second rule will be executed as the only condition is there is an AccountingPeriod in the working memory.
+
+![](drools/lesson1_fig32.png)
+We see in the logs
+- two first line : an object of type CashFlow was inserted. We did that from the Junit test with the code
+```FactHandle handlea = sessionStatefull.insert(a);```
+
+-  the third line is generated in the then part of the rule "Your First Rule revisited AccountingPeriod".
+-  The fourth and fifth line : an object of type AccountingPeriod was inserted. This was done in the then part of the rule "Your First Rule revisited AccountingPeriod" 
+
+```
+AccountingPeriod newPeriod = new AccountingPeriod();
+		insert (newPeriod);
+        ```
+
+
 
 
 
