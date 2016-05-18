@@ -52,8 +52,10 @@ And then modify the test case to obtain this
 ![](drools/lesson1_fig10.png)
 and in src/main/resources/META-INF modify kmodule.xml
 
+![](drools/lesson1_fig11.png)
+Here we defined a session called "ksession-rules" (that we use in the test to initialize the session) and where to find the rule files here in package "lesson1".
+Now you can run the test in TestLesson1 and you should see this: 
 
-
-
-
+![](drools/lesson1_fig12.png)
+It is the message that we have put in the rule "Your first rule"
 
