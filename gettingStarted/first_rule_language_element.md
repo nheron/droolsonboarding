@@ -38,5 +38,22 @@ We create a rule the has a condition just a fact of type Account. If the rule is
 
 ![](drools/lesson1_fig6.png)
 
-Create a junit test calles testLesson1
+Create a junit test called "testLesson1"
+
+![](drools/lesson1_fig7.png)
+
+
+![](drools/lesson1_fig8.png)
+
+
+
+![](drools/lesson1_fig9.png)
+And then modify the test case to obtain this
+![](drools/lesson1_fig10.png)
+and in src/main/resources/META-INF modify kmodule.xml
+
+
+
+
+
 
