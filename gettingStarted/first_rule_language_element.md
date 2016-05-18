@@ -17,7 +17,7 @@ to do so, select src/test/rules and first create a package called lesson1 and th
 
 and the select rule Drools/Rule Resource
 
-![](drools/lesson1_fig1.jpeg)
+![](drools/lesson1_fig0.png)
 
 Enter a rule name and package and press the Finish Button.
 ![](drools/lesson1_fig2.jpeg)
@@ -38,4 +38,5 @@ We create a rule the has a condition just a fact of type Account. If the rule is
 
 ![](drools/lesson1_fig6.png)
 
+Create a junit test calles testLesson1
 
