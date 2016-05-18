@@ -136,3 +136,26 @@ sessionStatefull.delete(handlea);
 as we call fireAllRules() after we retract the only fact that was in the working memory, the rule "Your First Rule revisited" is not fired.
 ## When and how is a rule fired ?
 
+Let us take an example : 
+![](drools/lesson1_fig26.png)
+We insert an Account, call FireAllRules and then call a second time fireAllRules on the same session.
+What shall happen ? How many times the rule "Your First Rule revisited" shall be fired ?
+
+Here is the result : 
+
+![](drools/lesson1_fig27.png)
+The rule is fired only once.
+
+Let us modify the example : 
+
+![](drools/lesson1_fig28.png)
+Before calling the second fireAllRules, we tell drools that the fact we inserted before was updated. 
+Here is the result : 
+![](drools/lesson1_fig29.png)
+The rule was executed a second time. 
+
+Here is what is happening when the FireAllRules method is called on a statefull session : 
+- drools will look at all rules that can apply 
+
+
+
