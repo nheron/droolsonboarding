@@ -7,7 +7,7 @@
        * [Drools architecture](gettingStarted/drools_concept.md)
        * [Installing Drools Tooling](gettingStarted/installing_drools_tooling.md)
        * [Data Model used in the tutorial](gettingStarted/data_model_used_in_the_tutorial.md)
-       * [Lesson 1](gettingStarted/first_rule_language_element.md)
+       * [Lesson 1 : Core concetps](gettingStarted/first_rule_language_element.md)
    * [BRMS tutorial](gettingStarted/brms.md)
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
    * [JBPM tutorial](gettingStarted/jbpm.md)
