@@ -117,14 +117,20 @@ and now the console should look like this :
 The first test is passed and we see the output generated when the rule is fired.
 The second test first inserts an objet, then updates it the retract it.
 To update an object, you first have to memorize the fact handle : 
-```FactHandle handlea = sessionStatefull.insert(a);```
+```
+FactHandle handlea = sessionStatefull.insert(a);
+```
 
 and then you have to use that facthandle to tell drools the object was updated :
 
-```a.setBalance(12.0);
-   sessionStatefull.update(handlea, a);```
+```
+   a.setBalance(12.0);
+   sessionStatefull.update(handlea, a);
+   ```
 
 and the same applies when you want to retract (now called delete in drools 6) :
-``` sessionStatefull.delete(handlea);```
+```
+sessionStatefull.delete(handlea);
+```
 
 as we call fireAllRules() after we retract the only fact that was in the working memory, the rule "Your First Rule revisited" is not fired.
