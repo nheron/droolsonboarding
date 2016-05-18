@@ -121,8 +121,8 @@ To update an object, you first have to memorize the fact handle :
 
 and then you have to use that facthandle to tell drools the object was updated :
 
-``` a.setBalance(12.0);
-        sessionStatefull.update(handlea, a);```
+```a.setBalance(12.0);
+   sessionStatefull.update(handlea, a);```
 
 and the same applies when you want to retract (now called delete in drools 6) :
 ``` sessionStatefull.delete(handlea);```
