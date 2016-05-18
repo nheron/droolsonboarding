@@ -1,9 +1,12 @@
 #  First Rule Language Element
 
 
+
+
+
 ## What is a rule ?
-In the previously created project, we are going to add a new drl file (drl = drools rule language)
-to do so, select src/main/ressources/rules and right click new/other
+In the previously created project, we are going to add a new drl file (drl = drools rule language) 
+to do so, select src/test/rules and first create a package called lesson1 and the a rule file called "lesson1".
 
 ![](drools/lesson1_fig0.png)
 and the select rule Drools/Rule Resource
@@ -22,6 +25,11 @@ the following element is then displayed : lesson1.drl
 (5) Code to execute here pure java code sometimes called RHS=Right Hand Side. 
 
 ## Adding a condition to a rule
+As any plugin in eclipe, the drools plugin allows autocompletion (ctrl+space)
+![](drools/lesson1_fig5.png)
 
+We create a rule the has a condition just a fact of type Account. If the rule is fired, then we shall show the message "The account exists" in the console. Notice that the then part is just pure java.
+
+![](drools/lesson1_fig6.png)
 
 
