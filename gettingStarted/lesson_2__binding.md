@@ -383,5 +383,43 @@ The rule above uses a binding variable. We create an attribute variable called $
 ![](drools/lesson2_fig9.png)
 Now the rule "Credit Rule" is only fired once and the balance is corret.
 
+## Calculating balance
+Now we know how to link facts and use attribute variable via binding attributes to use them as constraint, we shall modify the credit rule and create a debit rule : 
+
+
+```
+package cours
+
+
+import droolscours.Account;
+import droolscours.AccountingPeriod;
+import droolscours.CashFlow;
+import droolscours.util.OutputDisplay;
+
+global OutputDisplay showResult;
+
+rule "Credit rule"
+
+   	when
+   		$cash :CashFlow( $aDate : mvtDate, $no : accountNo ,type == CashFlow.CREDIT )
+   		$acc : Account(accountno ==$no  )
+   		$period : AccountingPeriod(  startDate <= $aDate && endDate >= $aDate)
+   	then
+   		$acc.setBalance($acc.getBalance()+$cash.getAmount());
+   		showResult.showText("le compte no "+$no+ " a maintenant une valeur de "+$acc.getBalance());
+   end
+rule "Debit rule"
+
+	when
+		$cash :CashFlow( $aDate : mvtDate, $no : accountNo ,type == CashFlow.DEBIT )
+		$acc : Account(accountno ==$no  )
+		$period : AccountingPeriod(  startDate <= $aDate && endDate >= $aDate)
+	then
+		$acc.setBalance($acc.getBalance()-$cash.getAmount());
+		showResult.showText("le compte no "+$no+ " a maintenant une valeur de "+$acc.getBalance());
+end
+```
+
+
 
 
