@@ -151,13 +151,18 @@ end
 ```
 package droolscours;
 
-import util.OutputDisplay;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.kie.api.event.rule.ObjectDeletedEvent;
+import org.kie.api.event.rule.ObjectInsertedEvent;
+import org.kie.api.event.rule.ObjectUpdatedEvent;
+import org.kie.api.event.rule.RuleRuntimeEventListener;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 import org.kie.api.runtime.StatelessKieSession;
-import util.DateHelper;
+import org.kie.api.runtime.rule.FactHandle;
 import util.KnowledgeSessionHelper;
 
 
@@ -170,6 +175,15 @@ public class TestLesson2 {
 	@BeforeClass
 	public static void beforeClass(){
 		kieContainer=KnowledgeSessionHelper.createRuleBase();
+	}
+    
+    @Before
+	public void setUp() throws Exception{
+		System.out.println("------------Before------------");
+	}
+	@After
+	public void tearDown() throws Exception{
+		System.out.println("------------Before------------");
 	}
 
 	@Test
