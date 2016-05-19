@@ -1,5 +1,4 @@
 # Lesson 2 : binding
-p26=> P39
 
 ## Adding callback initialization and more
 To be able to see what is happening in the rule engine, we shall add to the KnowledgeSessionHelper this method
@@ -465,7 +464,7 @@ and the test case
 
 ![](drools/lesson2_fig10.png)
 ![](drools/lesson2_fig11.png)
-As expected, the "Credit Rule" is fired once and the "Debit Rule" is fired once also. The CashFlow movement of April 15 2016 is ignored as it does not fullfill the constraints.
+As expected, the "Credit Rule" is fired once and the "Debit Rule" is fired once also. The CashFlow movement of April 15 2016 is ignored as it does not fulfill the constraints.
 
 
 
