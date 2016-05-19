@@ -9,7 +9,7 @@
        * [Data Model used in the tutorial](gettingStarted/data_model_used_in_the_tutorial.md)
        * [Lesson 1 : Core concepts](gettingStarted/first_rule_language_element.md)
        * [Lesson 2 : binding](gettingStarted/lesson_2__binding.md)
-       * [lesson 3 :](gettingStarted/lesson_3.md)
+       * [lesson 3 : Some more drools languages](gettingStarted/lesson_3.md)
    * [BRMS tutorial](gettingStarted/brms.md)
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
    * [JBPM tutorial](gettingStarted/jbpm.md)
