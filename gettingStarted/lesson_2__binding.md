@@ -2,7 +2,7 @@
 p26=> P39
 
 ## Adding callback initialization 
-To be able to see what is happening in the rule engine, we shall add to the 
+To be able to see what is happening in the rule engine, we shall add to the KnowledgeSessionHelper this method
 
 ```
   public static KieSession getStatefulKnowledgeSessionWithCallback(
