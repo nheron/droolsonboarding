@@ -218,8 +218,37 @@ We are going to implement a test case with the following data :
 The result should be a balance of 500$ for the accounting period.
 
 ## How to bind to facts
-
+We want to update the account balance for each CashFlow.
+We first put the CashFlow and select all CashFlow of type CREDIT.
 ![](drools/lesson2_fig2.png)
+Then we add a second constraint of type Account.
+The question is now how in the then part do the balance update.
+It is where the fact binding comes in : 
 
+```
+package droolscours
+//list any import classes here.
+import droolscours.AccountingPeriod;
+import droolscours.CashFlow;
+import droolscours.Account;
+import util.OutputDisplay;
+
+global OutputDisplay showResults;
+
+rule "Credit rule"
+   
+	when
+   		$cash :CashFlow(type == CashFlow.CREDIT )
+   		$acc : Account(  )
+   	then
+   		$acc.setBalance($acc.getBalance()+$cash.getAmount());
+   		showResults.showText("Account no "+$acc.getAccountNo()+ " has now a balance of "+$acc.getBalance());
+end
+
+```
+
+
+In front of the fact, we declare variables $cash and $acc like shown above and then those variables can be used in the then part as normal java variables.
+As shown above we can then update the balance.
 
 
