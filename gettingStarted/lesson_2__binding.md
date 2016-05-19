@@ -183,7 +183,7 @@ public class TestLesson2 {
 	}
 	@After
 	public void tearDown() throws Exception{
-		System.out.println("------------Before------------");
+		System.out.println("------------After------------");
 	}
 
 	@Test
