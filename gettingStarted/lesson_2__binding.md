@@ -403,21 +403,21 @@ rule "Credit rule"
 
    	when
    		$cash :CashFlow( $aDate : mvtDate, $no : accountNo ,type == CashFlow.CREDIT )
-   		$acc : Account(accountno ==$no  )
+   		$acc : Account(accountNo ==$no  )
    		$period : AccountingPeriod(  startDate <= $aDate && endDate >= $aDate)
    	then
    		$acc.setBalance($acc.getBalance()+$cash.getAmount());
-   		showResult.showText("le compte no "+$no+ " a maintenant une valeur de "+$acc.getBalance());
+   		showResults.showText("Account no "+$acc.getAccountNo()+ " has now a balance of "+$acc.getBalance());
    end
 rule "Debit rule"
 
 	when
 		$cash :CashFlow( $aDate : mvtDate, $no : accountNo ,type == CashFlow.DEBIT )
-		$acc : Account(accountno ==$no  )
+		$acc : Account(accountNo ==$no  )
 		$period : AccountingPeriod(  startDate <= $aDate && endDate >= $aDate)
 	then
 		$acc.setBalance($acc.getBalance()-$cash.getAmount());
-		showResult.showText("le compte no "+$no+ " a maintenant une valeur de "+$acc.getBalance());
+		showResults.showText("Account no "+$acc.getAccountNo()+ " has now a balance of "+$acc.getBalance());
 end
 ```
 
