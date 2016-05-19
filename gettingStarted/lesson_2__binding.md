@@ -217,5 +217,9 @@ We are going to implement a test case with the following data :
 
 The result should be a balance of 500$ for the accounting period.
 
+## How to bind to facts
+
+![](drools/lesson2_fig2.png)
+
 
 
