@@ -1,7 +1,7 @@
 # Lesson 2 : binding
 p26=> P39
 
-## Adding callback initialization 
+## Adding callback initialization and more
 To be able to see what is happening in the rule engine, we shall add to the KnowledgeSessionHelper this method
 
 ```
@@ -57,5 +57,39 @@ To be able to see what is happening in the rule engine, we shall add to the Know
             }
         });
 ```
+In the CashFlow class, we should add the following toString method
+```
+
+import java.text.DateFormat;
+
+	@Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        StringBuffer buff = new StringBuffer();
+        buff.append("-----CashFlow-----)\n");
+        buff.append("Account no=" + this.accountNo + "\n");
+        if (this.mvtDate != null) {
+            buff.append("Mouvement Date= "
+                    + DateFormat.getDateInstance().format(this.mvtDate)
+                    + "\n");
+        } else {
+            buff.append("No Mouvement date was set\n");
+        }
+        buff.append("Mouvement Amount=" + this.amount + "\n");
+        buff.append("-----CashFlow end--)");
+        return buff.toString();
+    }
+	
+```
+
+
+## Test Case 
+We are going to implement a test case with the following data : 
+1) Account with accountno=1
+2) an Accounting period going from January first 2016 to march 31th 2016
+3) 3 Cash Flow movements, credit 1000$ January 15th 2016, debit 500$ February 15th 2016 and a credit movement April 15th 2016 of 1000$.
+
+The result should be a balance of 500$ for the accounting period.
+
 
 
