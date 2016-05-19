@@ -220,6 +220,7 @@ The result should be a balance of 500$ for the accounting period.
 ## Fact binding
 We want to update the account balance for each CashFlow.
 We first put the CashFlow and select all CashFlow of type CREDIT.
+To do so, we add a constraint on the type attribute of java class CashFlow.
 ![](drools/lesson2_fig2.png)
 Then we add a second constraint of type Account.
 The question is now how in the then part do the balance update.
