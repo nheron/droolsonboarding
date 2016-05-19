@@ -1,2 +1,2 @@
-# lesson 4 : Execercice
+# lesson 4 : Exercise
 
