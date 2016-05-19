@@ -62,6 +62,10 @@ In the CashFlow class, we should add the following toString method
 
 import java.text.DateFormat;
 
+public class CashFlow {
+	public static int CREDIT = 1;
+	public static int DEBIT = 2;
+
 	@Override
     public String toString() {
         // TODO Auto-generated method stub
