@@ -125,9 +125,73 @@ In the kmodule.xml, make it look like that
 </kmodule>
 ```
 
-in the src/test/rules, create a package lesson2 and a rule resource named lesson2.drl
+in the src/test/rules, create a package lesson2 and a rule resource named lesson2.drl and should look like this : 
+
+```
+
+package droolscours
+//list any import classes here.
+import droolscours.AccountingPeriod;
+import droolscours.CashFlow;
+import droolscours.Account;
+import util.OutputDisplay;
+global OutputDisplay showResults;
+
+rule "Your First Rule revisited again"
+
+    when
+        Account(  )
+    then
+        showResults.showText("The account exists");
+end
 
 
+```
+
+```
+package droolscours;
+
+import util.OutputDisplay;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.kie.api.runtime.KieContainer;
+import org.kie.api.runtime.KieSession;
+import org.kie.api.runtime.StatelessKieSession;
+import util.DateHelper;
+import util.KnowledgeSessionHelper;
+
+
+@SuppressWarnings("restriction")
+public class TestLesson2 {
+	static KieContainer kieContainer;
+	StatelessKieSession sessionStateless = null;
+	KieSession  sessionStatefull = null;
+
+	@BeforeClass
+	public static void beforeClass(){
+		kieContainer=KnowledgeSessionHelper.createRuleBase();
+	}
+
+	@Test
+	public void testdeuxFait1() {
+		sessionStatefull = KnowledgeSessionHelper
+				.getStatefulKnowledgeSessionWithCallback(kieContainer,"ksession-lesson2");
+
+		OutputDisplay display = new OutputDisplay();
+		sessionStatefull.setGlobal("showResults", display);
+		Account a = new Account();
+		sessionStatefull.insert(a);
+		AccountingPeriod period = new AccountingPeriod();
+		sessionStatefull.insert(period);
+		sessionStatefull.fireAllRules();
+	}
+}
+    
+```
+
+To see if it runs, select the TestLesson2 class, right click and run as Junit Test and the console should look like this : 
+
+![](drools/lesson2_fig1.png)
 ## Test Case 
 We are going to implement a test case with the following data : 
 1) Account with accountno=1
