@@ -206,6 +206,8 @@ public class TestLesson2 {
 To see if it runs, select the TestLesson2 class, right click and run as Junit Test and the console should look like this : 
 
 ![](drools/lesson2_fig1.png)
+So now we know all is working we can continue our lesson.
+
 
 ## Test Case 
 We are going to implement a test case with the following data : 
