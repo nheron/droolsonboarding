@@ -420,6 +420,55 @@ rule "Debit rule"
 		showResults.showText("Account no "+$acc.getAccountNo()+ " has now a balance of "+$acc.getBalance());
 end
 ```
+In the rule above, we add a constraint so that the mvtDate of the CashFlow is between the startDate and endDate of the AccountinPeriod.
+
+
+and the test case
+
+```
+    @Test
+	public void testcalculateBalance() throws Exception {
+		sessionStatefull = KnowledgeSessionHelper
+				.getStatefulKnowledgeSessionWithCallback(kieContainer, "ksession-lesson2");
+		OutputDisplay display = new OutputDisplay();
+		sessionStatefull.setGlobal("showResults", display);
+		Account a = new Account();
+		a.setAccountNo(1);
+		a.setBalance(0);
+		sessionStatefull.insert(a);
+		CashFlow cash1 = new CashFlow();
+		cash1.setAccountNo(1);
+		cash1.setAmount(1000);
+		cash1.setMvtDate(DateHelper.getDate("2016-01-15"));
+		cash1.setType(CashFlow.CREDIT);
+		sessionStatefull.insert(cash1);
+		CashFlow cash2 = new CashFlow();
+		cash2.setAccountNo(1);
+		cash2.setAmount(500);
+		cash2.setMvtDate(DateHelper.getDate("2016-02-15"));
+		cash2.setType(CashFlow.DEBIT);
+		sessionStatefull.insert(cash2);
+		CashFlow cash3 = new CashFlow();
+		cash3.setAccountNo(1);
+		cash3.setAmount(1000);
+		cash3.setMvtDate(DateHelper.getDate("2016-04-15"));
+		cash3.setType(CashFlow.CREDIT);
+		sessionStatefull.insert(cash3);
+		AccountingPeriod period = new AccountingPeriod();
+		period.setStartDate(DateHelper.getDate("2016-01-01"));
+		period.setEndDate(DateHelper.getDate("2016-03-31"));
+		sessionStatefull.insert(period);
+		sessionStatefull.fireAllRules();
+		Assert.assertTrue(a.getBalance()==500);
+	}
+```
+
+![](drools/lesson2_fig10.png)
+![](drools/lesson2_fig11.png)
+As expected, the "Credit Rule" is fired once and the "Debit Rule" is fired once also. The CashFlow movement of April 15 2016 is ignored as it does not fullfill the constraints.
+
+
+
 
 
 
