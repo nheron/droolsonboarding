@@ -112,6 +112,21 @@ public class DateHelper {
 
 ```
 
+In the kmodule.xml, make it look like that
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule">
+    <kbase name="rules" packages="lesson1">
+        <ksession name="ksession-rules"/>
+    </kbase>
+     <kbase name="rules2" packages="lesson2">
+        <ksession name="ksession-lesson2"/>
+    </kbase>
+</kmodule>
+```
+
+in the src/test/rules, create a package lesson2 and a rule resource named lesson2.drl
+
 
 ## Test Case 
 We are going to implement a test case with the following data : 
