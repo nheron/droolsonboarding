@@ -86,6 +86,32 @@ public class CashFlow {
 	
 ```
 
+in the util package, we shall create a DateHelper class that will look like this : 
+
+
+```
+package util;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class DateHelper {
+    public static String sFormat = "yyyy-MM-dd";
+
+    public static Date getDate(String sDate) throws Exception {
+        SimpleDateFormat sdf = new SimpleDateFormat(sFormat);
+        return sdf.parse(sDate);
+    }
+
+    public static Date getDate(String sDate, String anotherFormat)
+            throws Exception {
+        SimpleDateFormat sdf = new SimpleDateFormat(anotherFormat);
+        return sdf.parse(sDate);
+    }
+}
+
+```
+
 
 ## Test Case 
 We are going to implement a test case with the following data : 
