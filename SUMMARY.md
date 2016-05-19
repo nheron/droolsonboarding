@@ -10,7 +10,7 @@
        * [Lesson 1 : Core concepts](gettingStarted/first_rule_language_element.md)
        * [Lesson 2 : binding](gettingStarted/lesson_2__binding.md)
        * [lesson 3 : Some more drools languages](gettingStarted/lesson_3.md)
-       * lesson 4 : Execercice
+       * [lesson 4 : Execercice](gettingStarted/lesson_4__execercice.md)
    * [BRMS tutorial](gettingStarted/brms.md)
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
    * [JBPM tutorial](gettingStarted/jbpm.md)
