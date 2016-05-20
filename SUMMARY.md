@@ -11,7 +11,7 @@
        * [Lesson 2 : binding](gettingStarted/lesson_2__binding.md)
        * [lesson 3 : Some more drools languages](gettingStarted/lesson_3.md)
        * [lesson 4 : ruleflow](gettingStarted/lesson_4__ruleflow.md)
-       * [lesson 4 : Exercise](gettingStarted/lesson_4__execercice.md)
+       * [lesson 5 : Exercise](gettingStarted/lesson_4__execercice.md)
    * [BRMS tutorial](gettingStarted/brms.md)
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
    * [JBPM tutorial](gettingStarted/jbpm.md)
