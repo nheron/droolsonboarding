@@ -138,6 +138,7 @@ And the console should look as follows :
 
 ## Nested Accessor
 
+
 ```
 rule "Accessor"
 	when
