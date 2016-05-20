@@ -202,6 +202,8 @@ end
         sessionStatefull.fireAllRules();
     }
 ```
+![](drools/lesson3_fig4.png)
+
 
 
 
