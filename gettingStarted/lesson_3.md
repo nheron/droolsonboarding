@@ -235,6 +235,33 @@ end
 
 ## exist
 
+```
+rule "Exists"
+	when
+		exists Account(  )
+	then
+		showResult.showText("Account exists");
+end
+```
+```
+    @Test
+    public void testExistsCondition() throws Exception {
+        sessionStatefull = KnowledgeSessionHelper
+                .getStatefulKnowledgeSessionWithCallback(kieContainer, "ksession-lesson3");
+        OutputDisplay display = new OutputDisplay();
+        sessionStatefull.setGlobal("showResult", display);
+        Account pAccount = new Account();
+        sessionStatefull.insert(pAccount);
+        Customer c = new Customer();
+        sessionStatefull.insert(c);
+        sessionStatefull.fireAllRules();
+    }
+```
+
+![](drools/lesson3_fig6.png)
+
+
+
 
 
 
