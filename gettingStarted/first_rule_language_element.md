@@ -32,7 +32,7 @@ the following element is then displayed : lesson1.drl
 
 ## Adding a simple condition to a rule
 
-As any plugin in eclipe, the drools plugin allows autocompletion (ctrl+space)
+As any plugin in eclipse, the drools plugin allows auto completion (ctrl+space)
 ![](drools/lesson1_fig5.png)
 
 We create a rule the has a condition just a fact of type Account. If the rule is fired, then we shall show the message "The account exists" in the console. Notice that the then part is just pure java.
@@ -88,10 +88,10 @@ Drools offers a pattern to implement that functionnality that is called session 
 Drools can be viewed in a synthetic picture like this : 
 ![](drools/lesson1_fig17.png)
 
-- the production memory contains all the rule definition (in our case the drl for the moment)
-- The working memory which created with the session and we can add facts to it with the method insert.
-- The agenda which contains all the rules that can be fired.
-- The pattern Matcher which is the algorithm that is used to match the rules on the facts given. In drools latest version, there are many different algorithm that are used (The main one is the rete algorithm).
+The production memory contains all the rule definition (in our case the drl for the moment).
+The working memory which created with the session and we can add facts to it with the method insert.
+The agenda which contains all the rules that can be fired.
+The pattern Matcher which is the algorithm that is used to match the rules on the facts given. In drools latest version, there are many different algorithm that are used (The main one is the rete algorithm).
 
 On each of those parts, it is possible to add a callback when we create a Session.
 
