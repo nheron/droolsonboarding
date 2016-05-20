@@ -174,7 +174,7 @@ The rule has been fired.
 
 
 ## And/or
-
+It is possible to do constraints on attribute like in java.
 ```
 rule "infixAnd"
 	when
@@ -205,12 +205,9 @@ end
 ![](drools/lesson3_fig4.png)
 
 
-
-
-
-
-
 ## not
+
+
 
 ## exist
 
