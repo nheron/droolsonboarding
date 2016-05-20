@@ -175,6 +175,39 @@ The rule has been fired.
 
 ## And/or
 
+```
+rule "infixAnd"
+	when
+	  ( $c1 : Customer ( country=="GB") and  PrivateAccount(  owner==$c1))
+		    or
+       ( $c1 : Customer (country=="US") and PrivateAccount(  owner==$c1))
+	then
+		showResult.showText("Person lives in GB or US");
+end
+```
+```
+   @Test
+    public void testInOrFact() throws Exception {
+        sessionStatefull = KnowledgeSessionHelper
+                .getStatefulKnowledgeSessionWithCallback(kieContainer, "ksession-lesson3");
+        OutputDisplay display = new OutputDisplay();
+        sessionStatefull.setGlobal("showResult", display);
+        Customer customer = new Customer();
+
+        customer.setCountry("GB");
+        sessionStatefull.insert(customer);
+        PrivateAccount pAccount = new PrivateAccount();
+        pAccount.setOwner(customer);
+        sessionStatefull.insert(pAccount);
+        sessionStatefull.fireAllRules();
+    }
+```
+
+
+
+
+
+
 ## not
 
 ## exist
