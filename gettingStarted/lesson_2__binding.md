@@ -1,4 +1,4 @@
-# Lesson 2 : binding
+# Relating facts and attributes to each other in a rule
 
 ## Adding callback initialization and more
 To be able to see what is happening in the rule engine, we shall add to the KnowledgeSessionHelper this method
