@@ -147,7 +147,24 @@ rule "Accessor"
 end
 ```
 
+```
+    @Test
+    public void testNestedAccessor() throws Exception {
+        sessionStatefull = KnowledgeSessionHelper
+                .getStatefulKnowledgeSessionWithCallback(kieContainer, "ksession-lesson3");
+        OutputDisplay display = new OutputDisplay();
+        sessionStatefull.setGlobal("showResult", display);
+        Customer customer = new Customer();
+        customer.setName("Héron");
+        customer.setSurname("Nicolas");
+        PrivateAccount pAccount = new PrivateAccount();
+        pAccount.setOwner(customer);
+        sessionStatefull.insert(pAccount);
+        sessionStatefull.fireAllRules();
+    }
+```
 
+![](drools/lesson3_fig3.png)
 
 
 
