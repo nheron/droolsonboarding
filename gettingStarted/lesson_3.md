@@ -138,6 +138,7 @@ And the console should look as follows :
 
 ## Nested Accessor
 
+This allows to add a constraint to a attribute class without the need to add the linked object to the session.
 
 ```
 rule "Accessor"
@@ -164,8 +165,11 @@ end
         sessionStatefull.fireAllRules();
     }
 ```
+As seen here, we do not add the customer instance to the drools session.
+
 
 ![](drools/lesson3_fig3.png)
+The rule has been fired.
 
 
 
