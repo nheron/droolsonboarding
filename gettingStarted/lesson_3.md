@@ -138,6 +138,17 @@ And the console should look as follows :
 
 ## Nested Accessor
 
+```
+rule "Accessor"
+	when
+		$cash :PrivateAccount( owner.name =="Héron" )
+	then
+		showResult.showText("Account is owned by Héron");
+end
+```
+
+
+
 
 
 ## And/or
