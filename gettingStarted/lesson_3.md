@@ -1,7 +1,7 @@
 # lesson 3 : Some more drools languages
 
-In lesson 1 et 2, we concentrate on how the rule engine works in the first lesson. In the second lesson, we introduced how to express constraint between facts.
-In this lesson, we will concentrate on the available constraint in the drools language.
+We concentrate on how the rule engine works in the first lesson. In the second lesson, we introduced how to express constraint between facts.
+In this lesson, we will concentrate on all the drools language possibilities to write constraints on facts.
 The reader has to create a test classes called TestLesson3 like for lesson2.
 
 ## Some more classes
