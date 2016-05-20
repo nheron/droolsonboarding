@@ -2,6 +2,7 @@
 
 In lesson 1 et 2, we concentrate on how the rule engine works in the first lesson. In the second lesson, we introduced how to express constraint between facts.
 In this lesson, we will concentrate on the available constraint in the drools language.
+The reader has to create a test classes called TestLesson3 like for lesson2.
 
 ## Some more classes
 To be able to see some more advanced features, we are goig to add 2 new classes in src/main/java droolscours package.
@@ -96,11 +97,48 @@ public class PrivateAccount extends Account {
 
 
 ## In Constraint
-
+This allows to validate an attribute is a list of values
 ![](drools/lesson3_fig1.png)
+```
+package cours
+
+//#list any import classes here.
+import droolscours.CashFlow;
+import util.OutputDisplay;
+//#declare any global variables here
+global OutputDisplay showResult;
+
+rule "The cashFlow can be a  credit or a debit"
+
+	when
+		$cash :CashFlow(type in ( CashFlow.DEBIT,CashFlow.CREDIT) )
+
+	then
+		showResult.showText("The cashFlow is a credit or a debit");
+end
+```
+
+```
+    @Test
+    public void testInConstrait() throws Exception {
+        sessionStatefull = KnowledgeSessionHelper
+                .getStatefulKnowledgeSessionWithCallback(kieContainer, "lesson31-session");
+        OutputDisplay display = new OutputDisplay();
+        sessionStatefull.setGlobal("showResult", display);
+        CashFlow cashFlow = new CashFlow();
+        cashFlow.setType(CashFlow.CREDIT);
+        sessionStatefull.insert(cashFlow);
+        sessionStatefull.fireAllRules();
+    }
+```
+And the console should look as follows : 
+
+![](drools/lesson3_fig2.png)
 
 
 ## Nested Accessor
+
+
 
 ## And/or
 
