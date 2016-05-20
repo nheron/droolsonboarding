@@ -208,8 +208,35 @@ end
 ## not
 
 
+```
+rule "no customer"
+	when
+		not Customer(  )
+	then
+		showResult.showText("No customer");
+end
+
+```
+
+
+```
+    @Test
+    public void testNotCondition() throws Exception {
+        sessionStatefull = KnowledgeSessionHelper
+                .getStatefulKnowledgeSessionWithCallback(kieContainer, "ksession-lesson3");
+        OutputDisplay display = new OutputDisplay();
+        sessionStatefull.setGlobal("showResult", display);
+        sessionStatefull.fireAllRules();
+    }
+```
+
+![](drools/lesson3_fig5.png)
+
 
 ## exist
+
+
+
 
 ## ForAll
 
