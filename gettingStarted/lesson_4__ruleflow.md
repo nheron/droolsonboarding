@@ -1,2 +1,2 @@
-# lesson 4 : ruleflow
+# Organizing rule execution for bigger projects.
 
