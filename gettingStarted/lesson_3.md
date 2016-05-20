@@ -207,6 +207,7 @@ end
 
 ## not
 
+This allows to test if no fact of a type is in the session.
 
 ```
 rule "no customer"
@@ -234,7 +235,7 @@ end
 
 
 ## exist
-
+On the contrary of previous syntax, this allows to test if there at least one fact type is in the session.
 ```
 rule "Exists"
 	when
