@@ -2,7 +2,15 @@
 
 We concentrate on how the rule engine works in the first lesson. In the second lesson, we introduced how to express constraint between facts.
 In this lesson, we will concentrate on all the drools language possibilities to write constraints on facts for more complex cases.
-The reader has to create a test classes called TestLesson3 like for lesson2, a new package lesson3 in the src/test/rules
+The reader has to create a test classes called TestLesson3 like for lesson2, a new package lesson3 in the src/test/rules and add in the kmodule.xml a new session declaration
+
+```
+     <kbase name="rules3" packages="lesson3">
+        <ksession name="ksession-lesson3"/>
+    </kbase>
+
+```
+
 
 ## Some more classes
 To be able to see some more advanced features, we are goig to add 2 new classes in src/main/java droolscours package.
