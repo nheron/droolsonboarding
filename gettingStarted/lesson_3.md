@@ -98,7 +98,7 @@ public class PrivateAccount extends Account {
 
 ## In Constraint
 This allows to validate an attribute is a list of values
-![](drools/lesson3_fig1.png)
+
 ```
 package cours
 
