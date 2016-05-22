@@ -1,8 +1,8 @@
 # Adding more constraints in facts
 
 We concentrate on how the rule engine works in the first lesson. In the second lesson, we introduced how to express constraint between facts.
-In this lesson, we will concentrate on all the drools language possibilities to write constraints on facts.
-The reader has to create a test classes called TestLesson3 like for lesson2.
+In this lesson, we will concentrate on all the drools language possibilities to write constraints on facts for more complex cases.
+The reader has to create a test classes called TestLesson3 like for lesson2, a new package lesson3 in the src/test/rules
 
 ## Some more classes
 To be able to see some more advanced features, we are goig to add 2 new classes in src/main/java droolscours package.
@@ -122,14 +122,14 @@ end
     @Test
     public void testInConstrait() throws Exception {
         sessionStatefull = KnowledgeSessionHelper
-                .getStatefulKnowledgeSessionWithCallback(kieContainer, "lesson31-session");
+                .getStatefulKnowledgeSessionWithCallback(kieContainer, "ksession-lesson3");
         OutputDisplay display = new OutputDisplay();
         sessionStatefull.setGlobal("showResult", display);
         CashFlow cashFlow = new CashFlow();
         cashFlow.setType(CashFlow.CREDIT);
         sessionStatefull.insert(cashFlow);
         sessionStatefull.fireAllRules();
-    }
+    }    }
 ```
 And the console should look as follows : 
 
