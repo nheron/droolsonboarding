@@ -469,7 +469,8 @@ As expected, the "Credit Rule" is fired once and the "Debit Rule" is fired once 
 
 ## Summary 
 In lesson 1, we learned the dynamic of the rule engine : how and when are the rules fired.
-In the current lesson, we started to link together conditions between facts and how to modify 
+In the current lesson, we started to link together conditions between facts and how to interact with the facts in the rule execution.
+In the next lesson, we will see how to express more complex constraints.
 
 
 
