@@ -380,6 +380,8 @@ rule "FromCondition"
 end
 ```
 
+
+
 and the following test case : 
 
 ```
@@ -397,9 +399,80 @@ and the following test case :
 
 ```
 
+The rule is fired twice as in the service there are two customers with the same name and with a different country.
 
 
-## counting
+![](drools/lesson3_fig8.png)
+
+
+
+
+
+## Collecting 
+
+
+
+the purpose is to collect a set of fact and constraint if the constraints are true.
+Let us see the following example int the rule "More then 2 CashFlow Line". in this rule, we want to collect all CashFlow that are in the correct time period and the good account number.
+The "from collect" syntax returns an arrayList. It is possible to add a condition as in the first rule where we add a constraint that we expect at least 2 items. In the second rule, we do not add this constraint.
+
+```
+rule "More then 2 CashFlow Line"
+	when
+		$c : Account( $acc : accountno )
+		$p : AccountingPeriod ($sDate : startDate ,$eDate : endDate )
+		$number : ArrayList(size >= 2 )
+              from collect( CashFlow( mvtDate >= $sDate && mvtDate  <= $eDate,accountNo == $acc ) )
+
+	then
+		showResult.showText("Found more than 2 CashFlow Lines");
+		showResult.showText("<<<<<<<<<<");
+		for (Object ff : $number){
+		    showResult.showText(ff.toString());
+		}
+		showResult.showText(">>>>>>>>>>>>>>>>");
+end
+
+rule "Numbers of  CashFlow Line"
+	when
+		$c : Account( $acc : accountno )
+		$p : AccountingPeriod ($sDate : startDate ,$eDate : endDate )
+		$number : ArrayList( )
+              from collect( CashFlow( mvtDate >= $sDate && mvtDate  <= $eDate,accountNo == $acc ) )
+
+	then
+		showResult.showText("Found "+$number+" more than 2 CashFlow Lines");
+end
+
+```
+Here is our test case.
+```
+	@Test
+	public void testCount() throws Exception {
+		sessionStatefull = KnowledgeSessionHelper.getStatefulKnowledgeSessionWithCallback(kieContainer,
+				"lesson34-session");
+		OutputDisplay display = new OutputDisplay();
+		sessionStatefull.setGlobal("showResult", display);
+		Account a = new Account();
+		a.setAccountNo(1);
+		a.setBalance(0);
+		sessionStatefull.insert(a);
+		sessionStatefull.insert(new CashFlow(DateHelper.getDate("2010-01-15"), 1000, CashFlow.CREDIT, 1));
+		sessionStatefull.insert(new CashFlow(DateHelper.getDate("2010-02-15"), 500, CashFlow.DEBIT, 1));
+		sessionStatefull.insert(new CashFlow(DateHelper.getDate("2010-04-15"), 1000, CashFlow.CREDIT, 1));
+		sessionStatefull
+				.insert(new AccountingPeriod(DateHelper.getDate("2010-01-01"), DateHelper.getDate("2010-31-31")));
+		sessionStatefull.fireAllRules();
+	}
+
+
+```
+
+
+![](drools/lesson3_fig9.png
+
+
+
 
 ## Summing
 
