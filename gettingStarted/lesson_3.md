@@ -534,6 +534,9 @@ end
 
 ```
 
+The constraint here is on a fact type CashFlow with the constraints that we already used before (good account number and the good date period and it should be a credit or a debit)
+Then the initial condition, we initialize a double value we call total. Then in the action/reverse, we add to the total the amount in the CashFlow that we get by using an attribute binding. In the result action we put the total we calculated.
+
 
 
 
