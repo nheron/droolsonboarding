@@ -469,11 +469,18 @@ Here is our test case.
 ```
 
 
-![](drools/lesson3_fig9.png
+![](drools/lesson3_fig9.png)
 
 
 
 ## Accumulating
+In the previous section, we collect data. There is an "from accumulate" that allows us to sum data in one command.
+
+```
+
+```
+
+
 
 
 
