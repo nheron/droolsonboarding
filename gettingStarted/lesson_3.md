@@ -448,7 +448,7 @@ end
 Here is our test case.
 ```
 	@Test
-	public void testCount() throws Exception {
+	public void testCollecting() throws Exception {
 		sessionStatefull = KnowledgeSessionHelper.getStatefulKnowledgeSessionWithCallback(kieContainer,
 				"lesson34-session");
 		OutputDisplay display = new OutputDisplay();
