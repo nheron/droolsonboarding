@@ -467,6 +467,36 @@ Here is our test case.
 
 
 ```
+You may need to add constructors in the CashFlow and AccountingPeriod classes : 
+
+```
+	public AccountingPeriod() {
+	}
+
+	public AccountingPeriod(Date startDate, Date endDate) {
+		super();
+		this.startDate = startDate;
+		this.endDate = endDate;
+	}
+
+```
+```
+    public CashFlow() {
+		super();
+	}
+	public CashFlow(Date mvtDate, double amount, int type, long accountNo) {
+        super();
+        this.mvtDate = mvtDate;
+        this.amount = amount;
+        this.type = type;
+        this.accountNo = accountNo;
+    }
+```
+
+
+
+
+
 
 
 ![](drools/lesson3_fig9.png)
