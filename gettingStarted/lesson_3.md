@@ -553,7 +553,6 @@ Then the initial condition, we initialize a double value we call total. Then in 
         sessionStatefull.delete(fa);
         sessionStatefull.fireAllRules();
     }
-
 ```
 
 
