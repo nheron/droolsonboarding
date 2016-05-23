@@ -147,11 +147,21 @@ Here is the result :
 
 ![](drools/lesson1_fig27.png)
 The rule is fired only once.
+May be it is because we did not modify the Account object ?
+Let us do another example that modifies the account object we pass to the the session.
 
-Let us modify the example : 
+![](drools/lesson1_fig28_bis.png)
+Here is the result : 
+
+![](drools/lesson1_fig28_ter.png)
+
+The rule is still not fired a second time. Just modifying the object does not do the job.
+
+
+Let us modify the example like this by telling the rule engine we modified the fact : 
 
 ![](drools/lesson1_fig28.png)
-Before calling the second fireAllRules, we tell drools that the fact we inserted before was updated. 
+Before calling the second fireAllRules, we tell drools that the fact we inserted before was updated. In our case, we did not modify its data.
 Here is the result : 
 ![](drools/lesson1_fig29.png)
 The rule was executed a second time. 
