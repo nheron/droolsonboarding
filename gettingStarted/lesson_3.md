@@ -285,7 +285,8 @@ rule "ForAll"
 end
 
 ```
-
+In this rule, in the forall condition, we link the CashFLow instance to the Account instance.
+We are goint to do a test case where all objects are related
 
 ```
 	@Test
@@ -321,6 +322,9 @@ end
 
 
 ```
+When running the test, you should see the following logging.
+
+![](drools/lesson3_fig7.png)
 
 
 
