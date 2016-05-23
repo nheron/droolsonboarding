@@ -537,7 +537,24 @@ end
 The constraint here is on a fact type CashFlow with the constraints that we already used before (good account number and the good date period and it should be a credit or a debit)
 Then the initial condition, we initialize a double value we call total. Then in the action/reverse, we add to the total the amount in the CashFlow that we get by using an attribute binding. In the result action we put the total we calculated.
 
+```
+    @Test
+    public void testAccumulate() throws Exception {
+        sessionStatefull = KnowledgeSessionHelper.getStatefulKnowledgeSessionWithCallback(kieContainer, "ksession-lesson3");
+        OutputDisplay display = new OutputDisplay();
+        sessionStatefull.setGlobal("showResult", display);
+        sessionStatefull.insert(new Account(1,0));
 
+        FactHandle fa = sessionStatefull.insert(new CashFlow(DateHelper.getDate("2010-01-15"), 1000, CashFlow.CREDIT, 1));
+        sessionStatefull.insert(new CashFlow(DateHelper.getDate("2010-02-15"),500,CashFlow.DEBIT,1));
+        sessionStatefull.insert(new CashFlow(DateHelper.getDate("2010-04-15"),1000,CashFlow.CREDIT,1));
+        sessionStatefull.insert(new AccountingPeriod(DateHelper.getDate("2010-01-01"),DateHelper.getDate("2010-12-31")));
+        sessionStatefull.fireAllRules();
+        sessionStatefull.delete(fa);
+        sessionStatefull.fireAllRules();
+    }
+
+```
 
 
 
