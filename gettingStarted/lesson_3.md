@@ -445,28 +445,6 @@ rule "Numbers of  CashFlow Line"
 end
 
 ```
-Here is our test case.
-```
-	@Test
-	public void testCollecting() throws Exception {
-		sessionStatefull = KnowledgeSessionHelper.getStatefulKnowledgeSessionWithCallback(kieContainer,
-				"lesson34-session");
-		OutputDisplay display = new OutputDisplay();
-		sessionStatefull.setGlobal("showResult", display);
-		Account a = new Account();
-		a.setAccountNo(1);
-		a.setBalance(0);
-		sessionStatefull.insert(a);
-		sessionStatefull.insert(new CashFlow(DateHelper.getDate("2010-01-15"), 1000, CashFlow.CREDIT, 1));
-		sessionStatefull.insert(new CashFlow(DateHelper.getDate("2010-02-15"), 500, CashFlow.DEBIT, 1));
-		sessionStatefull.insert(new CashFlow(DateHelper.getDate("2010-04-15"), 1000, CashFlow.CREDIT, 1));
-		sessionStatefull
-				.insert(new AccountingPeriod(DateHelper.getDate("2010-01-01"), DateHelper.getDate("2010-31-31")));
-		sessionStatefull.fireAllRules();
-	}
-
-
-```
 You may need to add constructors in the CashFlow and AccountingPeriod classes : 
 
 ```
@@ -492,6 +470,30 @@ You may need to add constructors in the CashFlow and AccountingPeriod classes :
         this.accountNo = accountNo;
     }
 ```
+
+Here is our test case.
+```
+	@Test
+	public void testCollecting() throws Exception {
+		sessionStatefull = KnowledgeSessionHelper.getStatefulKnowledgeSessionWithCallback(kieContainer,
+				"lesson34-session");
+		OutputDisplay display = new OutputDisplay();
+		sessionStatefull.setGlobal("showResult", display);
+		Account a = new Account();
+		a.setAccountNo(1);
+		a.setBalance(0);
+		sessionStatefull.insert(a);
+		sessionStatefull.insert(new CashFlow(DateHelper.getDate("2010-01-15"), 1000, CashFlow.CREDIT, 1));
+		sessionStatefull.insert(new CashFlow(DateHelper.getDate("2010-02-15"), 500, CashFlow.DEBIT, 1));
+		sessionStatefull.insert(new CashFlow(DateHelper.getDate("2010-04-15"), 1000, CashFlow.CREDIT, 1));
+		sessionStatefull
+				.insert(new AccountingPeriod(DateHelper.getDate("2010-01-01"), DateHelper.getDate("2010-31-31")));
+		sessionStatefull.fireAllRules();
+	}
+
+
+```
+
 
 
 
