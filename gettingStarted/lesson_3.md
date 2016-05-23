@@ -314,9 +314,7 @@ We are goint to do a test case where all objects are related
 		sessionStatefull.insert(a2);
 		CashFlow cash3 = new CashFlow();
 		cash3.setAccountNo(2);
-	
 		sessionStatefull.insert(cash3);
-
 		sessionStatefull.fireAllRules();
 	}
 
@@ -326,7 +324,20 @@ When running the test, you should see the following logging.
 
 ![](drools/lesson3_fig7.png)
 
+Just modify the test case by updating the test case : 
 
+```
+sessionStatefull.insert(cash2);
+		Account a2 = new Account();
+		a2.setAccountNo(2);
+		a2.setBalance(0);
+		sessionStatefull.insert(a2);
+		CashFlow cash3 = new CashFlow();
+		cash3.setAccountNo(1);
+		sessionStatefull.insert(cash3);
+		sessionStatefull.fireAllRules();
+```
+When you run the test case, the rule ForAll will not be fired.
 
 
 ## From
