@@ -557,6 +557,10 @@ Then the initial condition, we initialize a double value we call total. Then in 
 
 ![](drools/lesson3_fig10.png)
 
+## Summary
+
+This lesson was an introduction to the main drools language syntax that are needed for starting a drools project.
+In the next lesson, we will start learning the ruleflow concept that we encourage to use in drools projects.
 
 
 
