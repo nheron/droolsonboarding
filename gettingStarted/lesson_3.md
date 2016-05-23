@@ -494,23 +494,47 @@ Here is our test case.
 
 ```
 
-
-
-
-
-
-
-
 ![](drools/lesson3_fig9.png)
 
 
 
 ## Accumulating
 In the previous section, we collect data. There is an "from accumulate" that allows us to sum data in one command.
+the "from collect" instruction takes 5 parameters : 
+1) a fact constraint expression 
+2) an init condition 
+3) the instruction when the rule applies to the fact constraint expression
+4) the reverse action when the fact constraint expression is not true anymore
+5) The result of the accumulate
+
+Here is our example : 
+
+```
+rule "Credit and Debit Rule"
+	when
+		$c : Account( $acc : accountno )
+		$p : AccountingPeriod ($sDate : startDate ,$eDate : endDate )
+        $totalCredit : Number( doubleValue > 100 )
+             from accumulate( CashFlow( type ==CashFlow.CREDIT,$value : amount, mvtDate >= $sDate && mvtDate  <= $eDate,accountNo == $acc ),
+                              init( double total = 0; ),
+                              action( total += $value; ),
+                              reverse( total -= $value; ),
+                              result( total ) )
+        $totalDebit : Number( doubleValue > 100 )
+             from accumulate( CashFlow( type ==CashFlow.DEBIT,$value : amount, mvtDate >= $sDate && mvtDate  <= $eDate,accountNo == $acc ),
+                              init( double total = 0; ),
+                              action( total += $value; ),
+                              reverse( total -= $value; ),
+                              result( total ) )
+
+	then
+		showResult.showText(" Found "+$totalCredit+" as a credit");
+		showResult.showText(" Found "+$totalDebit+" as a debit");
+end
 
 ```
 
-```
+
 
 
 
