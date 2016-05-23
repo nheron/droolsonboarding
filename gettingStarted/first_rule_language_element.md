@@ -206,7 +206,7 @@ AccountingPeriod newPeriod = new AccountingPeriod();
         ```
 - the last line is coming from the then part of the rule "Rule on AccountingPeriod that are inserting". Meaning the insered object AccountingPeriod we inserted in the previous rule triggered the second rule.
 
-## lesson learning
+## Summary
 This ends the first lesson where we learned the core concepts needed when working with drools : 
 1) What is a rule
 2) A rule with a simple condition
