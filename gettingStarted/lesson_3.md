@@ -10,7 +10,7 @@ The reader has to create a test classes called TestLesson3 like for lesson2, a n
     </kbase>
 
 ```
-
+While building the examples, you will see more rules fired than the shown examples. As drools is a declarative language, as soon as the constraint are satisfied, the rule can fire.
 
 ## Some more classes
 To be able to see some more advanced features, we are goig to add 2 new classes in src/main/java droolscours package.
@@ -554,6 +554,8 @@ Then the initial condition, we initialize a double value we call total. Then in 
         sessionStatefull.fireAllRules();
     }
 ```
+
+![](drools/lesson3_fig10.png)
 
 
 
