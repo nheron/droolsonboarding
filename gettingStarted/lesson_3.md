@@ -341,6 +341,61 @@ When you run the test case, the rule ForAll will not be fired.
 
 
 ## From
+It is sometimes needed to access data from outside the drools session.
+As it is not possible to insert all objects in the session, we can use the from instruction in the when part.
+
+First let us create a CustomerService class in package Droolscours.sercice
+
+```
+package droolscours.service;
+
+import droolscours.Customer;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CustomerService {
+
+    public List<Customer> getListCustomer() {
+        List<Customer> result = new ArrayList<Customer>();
+        result.add(new Customer("Héron", "Nicolas", "Fr"));
+        result.add(new Customer("Héron", "James", "GB"));
+        result.add(new Customer("Héron", "Nicolas", "GB"));
+        return result;
+    }
+
+}
+
+```
+
+then we shall create the rule that uses the from 
+
+```
+rule "FromCondition"
+	when
+		$c : Customer()
+		$cc : Customer(name ==$c.name,surname==$c.surname,country !=$c.country) from serviceCustomer.getListCustomer();
+	then
+		showResult.showText("Found same customer in 2 countries");
+end
+```
+
+and the following test case : 
+
+```
+	@Test
+	public void testFromLHS() throws Exception {
+		sessionStatefull = KnowledgeSessionHelper.getStatefulKnowledgeSessionWithCallback(kieContainer,
+				"ksession-lesson3");
+		OutputDisplay display = new OutputDisplay();
+		sessionStatefull.setGlobal("showResult", display);
+		sessionStatefull.setGlobal("serviceCustomer", new CustomerService());
+		Customer c = new Customer("Héron", "Nicolas", "A");
+		sessionStatefull.insert(c);
+		sessionStatefull.fireAllRules();
+	}
+
+```
 
 
 
