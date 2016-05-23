@@ -467,7 +467,7 @@ and the test case
 As expected, the "Credit Rule" is fired once and the "Debit Rule" is fired once also. The CashFlow movement of April 15 2016 is ignored as it does not fulfill the constraints.
 
 
-## Sumary 
+## Summary 
 In lesson 1, we learned the dynamic of the rule engine : how and when are the rules fired.
 In the current lesson, we started to link together conditions between facts and how to modify 
 
