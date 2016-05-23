@@ -284,8 +284,8 @@ rule "ForAll"
 		showResult.showText("All cashflows are related to an Account ");
 end
 
-
 ```
+
 
 ```
 	@Test
