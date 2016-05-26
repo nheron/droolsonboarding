@@ -5,7 +5,7 @@ When capturing business requirements, most users express the rules by dividing t
 In the drools/jbpm technology, we are going to use a jbpm process by using rule steps, it is then called a rule flow. But in reality, we can mix jbpm/drools together.
 
 
-## Configure project to became a jbpm project
+## Configure project to become a jbpm project
 
 select the project, right click with the mouse configure/convert to jbpm project
 
