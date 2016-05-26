@@ -23,6 +23,25 @@ put two Rule tasks and one End Event.
 ![](drools/lesson4_fig4.png)
 
 
+Then select each of the Rule set and set the properties as follows : 
+
+
+
+![](drools/lesson4_fig5.png)
+
+![](drools/lesson4_fig6.png)
+The workflow should look like that : 
+![](drools/lesson4_fig7.png)
+Select the workflow inthe rear, and in the properties file, change as follows : 
+
+
+
+
+
+
+
+
+
 
 
 
