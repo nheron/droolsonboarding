@@ -174,12 +174,10 @@ public class TestLesson4 {
 	public static void beforeClass() {
 		kieContainer = KnowledgeSessionHelper.createRuleBase();
 	}
-
 	@Before
 	public void setUp() throws Exception {
 		System.out.println("------------Before------------");
 	}
-
 	@After
 	public void tearDown() throws Exception {
 		System.out.println("------------After ------------");
@@ -211,6 +209,7 @@ A rule flow group works like a separate group of rules. Those who are setting th
 When no more rules can be fired, the process can continue to the next node.
 
 We can go further 
+
 ## starting a ruleflow from a rule
 
 
