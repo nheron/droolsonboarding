@@ -207,7 +207,13 @@ Before calling the fireAllRules method, we call a startProcess method with the "
 And the console display should be like this : 
 
 ![](drools/lesson4_fig9.png)
+How a rule-group works ?
 
+A rule flow group works like a separate group of rules. Those who are setting the focus when the rule step is called with the same node id as the ruleflow-group.
+When no more rules can be fired, the process can continue to the next node.
+
+We can go further 
+## starting a ruleflow from a rule
 
 
 
