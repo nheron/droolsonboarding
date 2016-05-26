@@ -13,3 +13,4 @@ select the project, right click with the mouse configure/convert to jbpm project
 
 ## Create your first rule flow
 
+in the src/test/rules create a package lesson4. Right click and create new File and call it ruleflow1.bpmn
