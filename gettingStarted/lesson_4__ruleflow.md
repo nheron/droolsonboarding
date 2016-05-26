@@ -78,6 +78,136 @@ do not forget to add a new entry in the kmodule.xml
 Look at the keyword "ruleflow-group". Here the first rule we give it the name "Group1" and the second "Group2". they have the same name as the Rule-flow items we defined in the process definition above. Therefor, the first rule can only be fired when the rule-flow group "Group1" is activated and the same for the second rule and rule-flow group "Group2".
 Before running a test case, we will add a new callback to know the activities around the jbpm process.
 
+```
+   public static KieSession getStatefulKnowledgeSessionForJBPM(
+            KieContainer kieContainer, String sessionName) {
+    	  KieSession session = getStatefulKnowledgeSessionWithCallback(kieContainer,sessionName);
+        session.addEventListener(new ProcessEventListener() {
+			
+  			@Override
+  			public void beforeVariableChanged(ProcessVariableChangedEvent arg0) {
+  				// TODO Auto-generated method stub
+  				
+  			}
+  			
+  			@Override
+  			public void beforeProcessStarted(ProcessStartedEvent arg0) {
+  				System.out.println("Process Name "+arg0.getProcessInstance().getProcessName()+" has been started");
+  			  
+  				
+  			}
+  			
+  			@Override
+  			public void beforeProcessCompleted(ProcessCompletedEvent arg0) {
+  				// TODO Auto-generated method stub
+  				
+  			}
+  			
+  			@Override
+  			public void beforeNodeTriggered(ProcessNodeTriggeredEvent arg0) {
+  				// TODO Auto-generated method stub
+  				
+  			}
+  			
+  			@Override
+  			public void beforeNodeLeft(ProcessNodeLeftEvent arg0) {
+ 				if (arg0.getNodeInstance() instanceof RuleSetNodeInstance){
+  					System.out.println("Node Name "+ arg0.getNodeInstance().getNodeName()+" has been left");		
+  				}
+
+  			}
+  			
+  			@Override
+  			public void afterVariableChanged(ProcessVariableChangedEvent arg0) {
+  				// TODO Auto-generated method stub
+  				
+  			}
+  			
+  			@Override
+  			public void afterProcessStarted(ProcessStartedEvent arg0) {
+  					
+  			}
+  			
+  			@Override
+  			public void afterProcessCompleted(ProcessCompletedEvent arg0) {
+  				System.out.println("Process Name "+arg0.getProcessInstance().getProcessName()+" has stopped");
+  				
+  				
+  			}
+  			
+  			@Override
+  			public void afterNodeTriggered(ProcessNodeTriggeredEvent arg0) {
+  				if (arg0.getNodeInstance() instanceof RuleSetNodeInstance){
+  					System.out.println("Node Name "+ arg0.getNodeInstance().getNodeName()+" has been entered");		
+  				}
+  			}
+  			
+  			@Override
+  			public void afterNodeLeft(ProcessNodeLeftEvent arg0) {
+   			}
+  		});
+        return session;
+    }
+ 
+
+```
+Note that we are only looking for Node of type Rule Step called RuleSetNodeInstance.
+And the test case looks like this : 
+
+```
+package droolscours;
+import util.OutputDisplay;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.kie.api.runtime.KieContainer;
+import org.kie.api.runtime.KieSession;
+import util.KnowledgeSessionHelper;
+
+@SuppressWarnings("restriction")
+public class TestLesson4 {
+	static KieContainer kieContainer;
+	KieSession sessionStatefull = null;
+
+	@BeforeClass
+	public static void beforeClass() {
+		kieContainer = KnowledgeSessionHelper.createRuleBase();
+	}
+
+	@Before
+	public void setUp() throws Exception {
+		System.out.println("------------Before------------");
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		System.out.println("------------After ------------");
+	}
+
+	@Test
+	public void testRuleFlow1() {
+		sessionStatefull = KnowledgeSessionHelper
+				.getStatefulKnowledgeSessionForJBPM(kieContainer, "ksession-lesson4");
+		OutputDisplay display = new OutputDisplay();
+		sessionStatefull.setGlobal("showResult", display);
+		Account a = new Account();
+		sessionStatefull.insert(a);
+		AccountingPeriod period = new AccountingPeriod();
+		sessionStatefull.insert(period);
+		sessionStatefull.startProcess("RF1");
+		sessionStatefull.fireAllRules();
+	}
+}
+```
+Before calling the fireAllRules method, we call a startProcess method with the "RF1" parameter which is the ID we gave to the process above.
+
+
+
+And the console display should be like this : 
+
+![](drools/lesson4_fig9.png)
+
 
 
 
