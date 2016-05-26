@@ -193,8 +193,6 @@ public class TestLesson4 {
 		sessionStatefull.setGlobal("showResult", display);
 		Account a = new Account();
 		sessionStatefull.insert(a);
-		AccountingPeriod period = new AccountingPeriod();
-		sessionStatefull.insert(period);
 		sessionStatefull.startProcess("RF1");
 		sessionStatefull.fireAllRules();
 	}
@@ -216,8 +214,10 @@ We can go further
 ## starting a ruleflow from a rule
 
 
+Let us the following rule :
+![](drools/lesson4_fig10.png)
 
-
+And here is the following test case : 
 
 
 
