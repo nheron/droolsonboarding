@@ -233,6 +233,10 @@ And here is the following test case :
 	}
 ```
 
+![](drools/lesson4_fig11.png)
+
+## Rule flow with a condition
+
 
 
 
