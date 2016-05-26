@@ -18,7 +18,9 @@ in the src/test/rules create a package lesson4. Right click and create new File 
 ![](drools/lesson4_fig3.png)
 
 
+put two Rule tasks and one End Event.
 
+![](drools/lesson4_fig4.png)
 
 
 
