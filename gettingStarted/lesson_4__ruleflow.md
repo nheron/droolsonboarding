@@ -65,7 +65,21 @@ rule "Account group2"
 end
 
 ```
+do not forget to add a new entry in the kmodule.xml
+
+```
+     <kbase name="rules4" packages="lesson4">
+        <ksession name="ksession-lesson4"/>
+    </kbase>
+
+```
+
+
 Look at the keyword "ruleflow-group". Here the first rule we give it the name "Group1" and the second "Group2". they have the same name as the Rule-flow items we defined in the process definition above. Therefor, the first rule can only be fired when the rule-flow group "Group1" is activated and the same for the second rule and rule-flow group "Group2".
+Before running a test case, we will add a new callback to know the activities around the jbpm process.
+
+
+
 
 
 
