@@ -220,6 +220,19 @@ Let us the following rule :
 And here is the following test case : 
 
 
+```
+	@Test
+	public void testRuleFlow2() {
+		sessionStatefull = KnowledgeSessionHelper
+				.getStatefulKnowledgeSessionForJBPM(kieContainer, "ksession-lesson4");
+		OutputDisplay display = new OutputDisplay();
+		sessionStatefull.setGlobal("showResult", display);
+		Account a = new Account();
+		sessionStatefull.insert(a);
+		sessionStatefull.fireAllRules();
+	}
+```
+
 
 
 
