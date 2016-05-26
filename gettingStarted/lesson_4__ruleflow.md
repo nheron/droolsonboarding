@@ -32,7 +32,39 @@ Then select each of the Rule set and set the properties as follows :
 ![](drools/lesson4_fig6.png)
 The workflow should look like that : 
 ![](drools/lesson4_fig7.png)
-Select the workflow inthe rear, and in the properties file, change as follows : 
+
+Select the workflow in the rear, and in the properties file, change as follows : 
+
+![](drools/lesson4_fig8.png)
+
+Create a new rule file called demo-ruleflow1.drl
+
+```
+package cours
+
+import droolscours.Account;
+import droolscours.AccountingPeriod;
+import droolscours.CashFlow;
+import util.OutputDisplay;
+
+global OutputDisplay showResult;
+
+rule "Account group1"
+	ruleflow-group "Group1"
+	when
+		Account(  )
+	then 
+		showResult.showText("Account in Group1");
+end
+rule "Account group2"
+	ruleflow-group "Group2"
+	when
+		Account(  )
+	then 
+		showResult.showText("Account in Group2");
+end
+
+```
 
 
 
