@@ -4,19 +4,15 @@
 
 
 
-## install jbpm plugin
 
-To be able to use rule flow, we need to install the jbpm. The update site is [here](http://download.jboss.org/jbpm/release/6.4.0.Final/updatesite/).
 
-In eclipse, help/install new software
+
+
+
+## Configure project to became a jbpm project
+
+select the project, right click with the mouse configure/convert to jbpm project
+
 ![](drools/lesson4_fig1.png)
 
-push the "Add" button and enter the information as shown : 
-![](drools/lesson4_fig2.png)
-
-
-
-
-
-##
-
+## Create your first rule flow
