@@ -13,4 +13,15 @@ select the project, right click with the mouse configure/convert to jbpm project
 
 ## Create your first rule flow
 
-in the src/test/rules create a package lesson4. Right click and create new File and call it ruleflow1.bpmn
+in the src/test/rules create a package lesson4. Right click and create new File and call it ruleflow1.bpmn2 and click the OK button. An error messages appear to say the file is empty but the plugin will create a start event.
+
+![](drools/lesson4_fig3.png)
+
+
+
+
+
+
+
+
+
