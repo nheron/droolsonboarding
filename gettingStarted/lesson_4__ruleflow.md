@@ -12,3 +12,4 @@ select the project, right click with the mouse configure/convert to jbpm project
 ![](drools/lesson4_fig1.png)
 
 ## Create your first rule flow
+
