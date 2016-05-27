@@ -240,24 +240,94 @@ It is also possible to execute certain ruleflow-group based on condition that ca
 
 Create a new package in src/test/rule and calle it lesson4a. Create a new process file that you can call demo-ruleflow2.bpmn2 and a rule file demo-ruleflow2.drl.
 
-The bpmn process should look like this : 
+The bpmn process should look like this and give it the id "RF3": 
 ![](drools/lesson4_fig12.png)
 
-The left splitt should be a "diverge Gateway" and the right one a "converge Gateway".
+The left split should be a "diverge Gateway" and the right one a "converge Gateway".
 The calculate1 should have a ruleflow called "group1" and the calculate2 "group2".
 
+When clicking on the "diverge gateway", you should select the "OR"
+
+
+![](drools/lesson4_fig13.png)
 
 
 
+![](drools/lesson4_fig14.png)
+
+Now we have to edit each connection 
+Here is for "to Node Calculate1". Do not forget to click the "Imports" button  to add the Account class.
+
+
+![](drools/lesson4_fig15.png)
 
 
 
+"To Node Calculate2".
+
+![](drools/lesson4_fig16.png)
 
 
+here is the rule file : 
 
+```
+package cours
 
+//#list any import classes here.
+import droolscours.Account;
+import droolscours.AccountingPeriod;
+import droolscours.CashFlow;
+import util.OutputDisplay;
 
+global OutputDisplay showResult;
 
+rule "start process"
+	when
+	then
+		kcontext.getKieRuntime().startProcess("RF3");
+end
 
+rule "Account group1"
+	ruleflow-group "Group1"
+	when
+		Account(balance > 0  )
+	then 
+		showResult.showText("Account in Group1 > 1000 ");
+		
+end
+rule "Account group2"
+	ruleflow-group "Group2"
+	when
+		Account(  )
+	then 
+		showResult.showText("Account in Group2 < 1000");
+		
+end
+```
 
+and the test case
+
+```
+	@Test
+	public void testRuleFlow3() {
+		sessionStatefull = KnowledgeSessionHelper
+				.getStatefulKnowledgeSession(kieContainer, "ksession-lesson4a");
+		OutputDisplay display = new OutputDisplay();
+		sessionStatefull.setGlobal("showResult", display);
+		Account a = new Account();
+		a.setBalance(2500);
+		sessionStatefull.insert(a);
+		AccountingPeriod period = new AccountingPeriod();
+		sessionStatefull.insert(period);
+		sessionStatefull.fireAllRules();
+
+	}
+```
+
+![](drools/lesson4_fig17.png)
+
+if you change the balance to 500, the console should be : 
+
+![](drools/lesson4_fig18.png)
+This can be usefull if there is a set of rules depending on some constraint.
 
