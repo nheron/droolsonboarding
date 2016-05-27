@@ -241,6 +241,12 @@ It is also possible to execute certain ruleflow-group based on condition that ca
 Create a new package in src/test/rule and calle it lesson4a. Create a new process file that you can call demo-ruleflow2.bpmn2 and a rule file demo-ruleflow2.drl.
 
 The bpmn process should look like this : 
+![](drools/lesson4_fig12.png)
+
+The left splitt should be a "diverge Gateway" and the right one a "converge Gateway".
+The calculate1 should have a ruleflow called "group1" and the calculate2 "group2".
+
+
 
 
 
