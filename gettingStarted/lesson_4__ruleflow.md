@@ -329,5 +329,5 @@ and the test case
 if you change the balance to 500, the console should be : 
 
 ![](drools/lesson4_fig18.png)
-This can be usefull if there is a set of rules depending on some constraint.
+This can be useful if there is a set of rules depending on some constraint.
 
