@@ -236,6 +236,14 @@ And here is the following test case :
 
 ## Rule flow with a condition
 
+It is also possible to execute certain ruleflow-group based on condition that can have the same syntax as a rule constraint. 
+
+Create a new package in src/test/rule and calle it lesson4a. Create a new process file that you can call demo-ruleflow2.bpmn2 and a rule file demo-ruleflow2.drl.
+
+The bpmn process should look like this : 
+
+
+
 
 
 
