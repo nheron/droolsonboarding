@@ -246,7 +246,7 @@ The bpmn process should look like this and give it the id "RF3":
 The left split should be a "diverge Gateway" and the right one a "converge Gateway".
 The calculate1 should have a ruleflow called "group1" and the calculate2 "group2".
 
-When clicking on the "diverge gateway", you should select the "OR"
+When clicking on the "diverge gateway", you should select the "OR" type and for the the "converge Gateway" the "XOR".
 
 
 ![](drools/lesson4_fig13.png)
