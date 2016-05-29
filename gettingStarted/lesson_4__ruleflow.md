@@ -329,5 +329,6 @@ and the test case
 if you change the balance to 500, the console should be : 
 
 ![](drools/lesson4_fig18.png)
-It is more efficient to have two groups of rules like this instead adding for all rules of group1 the constraint on balance > 1000 and balance <= 1000 for group2. Indeed, if the level 1000$ changes you have to modify all rules. And furthermore, if the end user gives your the rule : "first case is when balance is less than 1000$", then the good practice is to implement business rules as they are given.
+It is more efficient to have two groups of rules like this instead adding for all rules of 'Group1' the constraint on balance > 1000 and balance <= 1000 for "Group2". Indeed, if the level 1000$ changes you have to modify all rules. And furthermore, if the end user gives your the rule : "first case is when balance is less than 1000$", then the good practice is to implement business rules as they are given. And implementing with a ruleflow will help end users to divide their way of expressing more complex rules.
+
 
