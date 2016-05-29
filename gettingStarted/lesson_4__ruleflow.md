@@ -329,5 +329,5 @@ and the test case
 if you change the balance to 500, the console should be : 
 
 ![](drools/lesson4_fig18.png)
-This can be useful if there is a set of rules depending on some constraint.
+It is more efficient to have two groups of rules like this instead adding for all rules of group1 the constraint on balance > 1000 and balance <= 1000 for group2. Indeed, if the level 1000$ changes you have to modify all rules. And furthermore, if the end user gives your the rule : "first case is when balance is less than 1000$", then the good practice is to implement business rules as they are given.
 
