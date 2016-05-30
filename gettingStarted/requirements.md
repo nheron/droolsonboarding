@@ -55,6 +55,6 @@ there are 3 types of costs :
 
 | City| Cost 
 | -- | -- | 
-| Shangai | 0,2€/km |
-| Rotterdam | 0,5€/km |
-| Tournai | 1€/km |
+| Shangai | 20€/hour and can handle 30 pallets/hour |
+| Rotterdam | 45€/hour and can handle 10 pallets/hour |
+| Tournai | 67€/hour and can handle 5 pallets/hour |
