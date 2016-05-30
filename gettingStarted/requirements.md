@@ -29,6 +29,16 @@ Here is the list of products in our test order.
 | Gravel | bulk |  |  |  |  | 14 Tons |
 | furniture | individual |23 |  |  |  | 500 kg |
 
+And the trip is a follows : 
+
+| # | start city | arrival city | distance (km) | travel mode |
+| -- | -- | -- | -- | -- |
+| 1 | Shangai | Rotterdam | 22000 | Boat|
+| 2 | Rotterdam | Tournai | 300 | Train |
+| 3 | Tournai | Lille | 20 | Truck |
+
+
+
 
 there are 3 types of costs : 
 - transport costs
@@ -38,4 +48,10 @@ there are 3 types of costs :
 | boat | 0,2€/km |
 | Train | 0,5€/km |
 | Truck | 1€/km |
+
+- Taxes
+
+
+
+- handling
 
