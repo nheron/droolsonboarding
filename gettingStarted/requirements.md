@@ -20,6 +20,6 @@ All products start from the same city and go to the same city in an order. A tri
 
 | Transport| Cost 
 | -- | -- | 
-| 0:2 | 1:2 |
+| boat | 1:2 |
 | 0:2 | 1:2 |
 | 0:2 | 1:2 |
