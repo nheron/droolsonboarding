@@ -32,7 +32,8 @@ Here is the list of products in our test order.
 
 there are 3 types of costs : 
 - transport costs
-- | Transport| Cost 
+
+| Transport| Cost 
 | -- | -- | 
 | boat | 0,2€/km |
 | Train | 0,5€/km |
