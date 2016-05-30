@@ -18,13 +18,8 @@ A product can be put on a pallet. a pallet 120 cm width and and 80 cm depth. It 
 
 All products start from the same city and go to the same city in an order. A trip is composed f steps. Each step can be done by train, boat or truck.
 
-| Transport| Cost 
-| -- | -- | 
-| boat | 0,2€/km |
-| Train | 0,5€/km |
-| Truck | 1€/km |
 
-Here is the list of products in our test case
+Here is the list of products in our test order.
 
 | Product | Transport type | Number | Height | Weight | depth | weight |
 | -- | -- | -- | -- | -- | -- | -- |
@@ -33,3 +28,13 @@ Here is the list of products in our test case
 | Sand | bulk |  | |  |  | 35 Tons |
 | Gravel | bulk |  |  |  |  | 14 Tons |
 | furniture | individual |23 |  |  |  | 500 kg |
+
+
+there are 3 types of costs : 
+- transport costs
+- | Transport| Cost 
+| -- | -- | 
+| boat | 0,2€/km |
+| Train | 0,5€/km |
+| Truck | 1€/km |
+
