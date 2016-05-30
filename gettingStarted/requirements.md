@@ -23,3 +23,12 @@ All products start from the same city and go to the same city in an order. A tri
 | boat | 0,2€/km |
 | Train | 0,5€/km |
 | Truck | 1€/km |
+
+Here is the list of products in our test case
+| Product | Transport type | Number | Height | Weight | depth | weight |
+| -- | -- | -- | -- | -- | -- | -- |
+| drill | pallet | 2:2 | 3:2 | 4:2 | 5:2 | 6:2 |
+| screwdriver | pallet | 2:3 | 3:3 | 4:3 | 5:3 | 6:3 |
+| Sand | bulk | 2:4 | 3:4 | 4:4 | 5:4 | 6:4 |
+| Gravel | bulk | 2:5 | 3:5 | 4:5 | 5:5 | 6:5 |
+| furniture | alone | 2:6 | 3:6 | 4:6 | 5:6 | 6:6 |
