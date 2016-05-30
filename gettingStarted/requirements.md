@@ -38,8 +38,6 @@ And the trip is a follows :
 | 3 | Tournai | Lille | 20 | Truck |
 
 
-
-
 there are 3 types of costs : 
 - transport costs
 
@@ -55,3 +53,8 @@ there are 3 types of costs :
 
 - handling
 
+| City| Cost 
+| -- | -- | 
+| Shangai | 0,2€/km |
+| Rotterdam | 0,5€/km |
+| Tournai | 1€/km |
