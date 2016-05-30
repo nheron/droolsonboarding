@@ -21,3 +21,7 @@ All products start from the same city and go to the same city in an order. A tri
 | 0:0 | 1:0 | 2:0 | 3:0 |
 | -- | -- | -- | -- |
 | 0:2 | 1:2 | 2:2 | 3:2 |
+| -- | -- | -- | -- |
+| 0:2 | 1:2 | 2:2 | 3:2 |
+| -- | -- | -- | -- |
+| 0:2 | 1:2 | 2:2 | 3:2 |
