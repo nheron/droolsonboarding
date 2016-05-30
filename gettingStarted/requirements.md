@@ -25,10 +25,11 @@ All products start from the same city and go to the same city in an order. A tri
 | Truck | 1€/km |
 
 Here is the list of products in our test case
+
 | Product | Transport type | Number | Height | Weight | depth | weight |
 | -- | -- | -- | -- | -- | -- | -- |
 | drill | pallet | 1000 | 20cm | 40cm | 30cm | 2 kg |
 | screwdriver | pallet | 30000 | 3cm | 2cm | 20cm | 0,2 kg |
-| Sand | bulk | 1 |1 | 1 | 1 | 35 Tons |
-| Gravel | bulk | 1 | 1 |1  | 1 | 14 Tons |
-| furniture | individual |23 | 1 | 1 | 1 | 500 kg |
+| Sand | bulk |  | |  |  | 35 Tons |
+| Gravel | bulk |  |  |  |  | 14 Tons |
+| furniture | individual |23 |  |  |  | 500 kg |
