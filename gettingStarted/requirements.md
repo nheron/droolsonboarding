@@ -18,10 +18,8 @@ A product can be put on a pallet. a pallet 120 cm width and and 80 cm depth. It 
 
 All products start from the same city and go to the same city in an order. A trip is composed f steps. Each step can be done by train, boat or truck.
 
-| 0:0 | 1:0 | 2:0 | 3:0 |
-| -- | -- | -- | -- |
-| 0:2 | 1:2 | 2:2 | 3:2 |
-| -- | -- | -- | -- |
-| 0:2 | 1:2 | 2:2 | 3:2 |
-| -- | -- | -- | -- |
-| 0:2 | 1:2 | 2:2 | 3:2 |
+| Transport| Cost 
+| -- | -- | 
+| 0:2 | 1:2 |
+| 0:2 | 1:2 |
+| 0:2 | 1:2 |
