@@ -20,6 +20,6 @@ All products start from the same city and go to the same city in an order. A tri
 
 | Transport| Cost 
 | -- | -- | 
-| boat | 1:2 |
-| 0:2 | 1:2 |
-| 0:2 | 1:2 |
+| boat | 0,2€/km |
+| Train | 0,5€/km |
+| Trucj | 1€/km |
