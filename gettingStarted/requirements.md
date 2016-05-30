@@ -48,6 +48,12 @@ there are 3 types of costs :
 | Truck | 1€/km |
 
 - Taxes
+| City| Cost 
+| -- | -- | 
+| Shangai | 0,02€/kg |
+| Rotterdam | 0,05€/kg and 1€ per handling person |
+| Tournai | 2€ per handling person |
+| Lille | 30€ per handling person |
 
 
 
@@ -58,3 +64,5 @@ there are 3 types of costs :
 | Shangai | 20€/hour and can handle 30 pallets/hour |
 | Rotterdam | 45€/hour and can handle 10 pallets/hour |
 | Tournai | 67€/hour and can handle 5 pallets/hour |
+| Lille | 79€/hour and can handle 5 pallets/hour |
+The handling should not take more than 12 hours.
