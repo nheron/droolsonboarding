@@ -9,7 +9,7 @@ A customer puts an order that contains products. An order contains a lost of pro
 A product has 
 * a name
 * a height, 
-* a witdh, 
+* a width, 
 * a depth, 
 * transport type : if the product can be put with other products in a pallet, individual(alone) or bulk  (like sand for example)
 * a weight
@@ -39,7 +39,7 @@ And the trip is a follows :
 
 
 there are 3 types of costs : 
-- transport costs
+- transport costs per Pallet
 
 | Transport| Cost 
 | -- | -- | 
