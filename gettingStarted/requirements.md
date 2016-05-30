@@ -56,7 +56,6 @@ there are 3 types of costs :
 | Lille | 30€ per handling person |
 
 
-
 - handling
 
 | City| Cost 
@@ -65,4 +64,5 @@ there are 3 types of costs :
 | Rotterdam | 45€/hour and can handle 10 pallets/hour |
 | Tournai | 67€/hour and can handle 5 pallets/hour |
 | Lille | 79€/hour and can handle 5 pallets/hour |
+
 The handling should not take more than 12 hours.
