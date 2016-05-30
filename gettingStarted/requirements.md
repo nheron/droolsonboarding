@@ -48,7 +48,7 @@ there are 3 types of costs :
 | Truck | 1€/km |
 
 - Taxes
-- 
+
 | City| Cost 
 | -- | -- | 
 | Shangai | 0,02€/kg |
