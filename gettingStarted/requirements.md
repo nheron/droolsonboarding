@@ -67,3 +67,5 @@ there are 3 types of costs :
 | Lille | 79€/hour and can handle 30 pallets/hour |
 
 The handling should not take more than 12 hours.
+
+The source code and the solution can be found [here](https://github.com/nheron/droolscourse/tree/master/cost-calculation).
