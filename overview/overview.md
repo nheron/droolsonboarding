@@ -1,7 +1,7 @@
 # Overview
 
 
-TODO
+
 
 Software programmers are used to a procedural approach when it comes to implement Business requirements. The consequence is that the business rule implementation solely depends on the competence and understanding the software developer has of the Business Rules he has to implement.
 This limitation was already seen and identified by researches. Object oriented programming may be seen as "the solution" to business implementation and agility and many developers relies on this paradigm. At the end, Object oriented approach ends up with the classical ["Spaghetti code"](https://en.wikipedia.org/wiki/Spaghetti_code).
