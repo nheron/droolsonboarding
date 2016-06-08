@@ -4,7 +4,7 @@
 
 
 Software programmers are used to a procedural approach when it comes to implement Business requirements. The consequence is that the business rule implementation solely depends on the competence and understanding the software developer has of the Business Rules he has to implement.
-This limitation was already seen and identified by researches. Object oriented programming may be seen as "the solution" to business implementation and agility and many developers relies on this paradigm. At the end, Object oriented approach ends up with the classical ["Spaghetti code"](https://en.wikipedia.org/wiki/Spaghetti_code).
+This limitation was already seen and identified by researches. Object oriented programming may be seen as "the solution" to business implementation and agility and many developers rely on this paradigm. At the end, Object oriented approach ends up with the classical ["Spaghetti code"](https://en.wikipedia.org/wiki/Spaghetti_code).
 To avoid this ending, a new approach was taken called "[declarative programming](https://en.wikipedia.org/wiki/Declarative_programming)".
 This is a big shift and we shall try to focus on that before the tooling around drools.
 - the first set of tutorials called "drools tutorials" start from the base concepts (there are few and is concentrated on the the core engine) up to more language concepts
