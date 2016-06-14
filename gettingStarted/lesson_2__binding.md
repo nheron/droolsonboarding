@@ -416,7 +416,8 @@ rule "Debit rule"
 		$period : AccountingPeriod(  startDate <= $aDate && endDate >= $aDate)
 	then
 		$acc.setBalance($acc.getBalance()-$cash.getAmount());
-		showResults.showText("Account no "+$acc.getAccountNo()+ " has now a balance of "+$acc.getBalance());
+		showResults.showText("Account no "+$acc.getAccountNo()
+                  + " has now a balance of "+$acc.getBalance());
 end
 ```
 In the rule above, we add a constraint so that the mvtDate of the CashFlow is between the startDate and endDate of the AccountinPeriod.
