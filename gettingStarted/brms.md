@@ -49,12 +49,14 @@ As shown in the next picture, the steps when using version 5 were the following 
 ![](BRMS/Guvnor5Architecture.jpg)
 
 Now the application and Guvnor must have a synchronized version of the pojo model. 
-There a few other points that shoul be taken care :  
+There a few other points that should be taken care :  
 * when upgrading a pojo model version, the two parts must be synchronized. 
-* It is not possible to work in parallele. There are workarounds like duplicating the package in guvnor, etc..
+* It is not possible to work in parallel. There are workarounds like duplicating the package in guvnor, etc..
+* As modern java development is using a maven approach in dependency and configuration management, using Guvnor 5.x that forces to have it speacial build and deploy approach.
 
 
-Guvnor is a nice tool very usefull where most user interface about writting rules was kept in the Business Central (enhanced of course) but all the wrapping was redesigned.
+Guvnor is a nice tool very useful where most user interface about writing rules was kept in the Business Central (enhanced of course) but all the wrapping was redesigned. 
+
 
 
 ## How version 6 fits in modern java development process
