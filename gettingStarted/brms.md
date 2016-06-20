@@ -65,8 +65,9 @@ Guvnor is a nice tool very useful where most user interface about writing rules 
 ### Maven versus Manuel Dependency handling
 
 In the 6.x BRMS, maven is fully supported in both direction : 
-1) The BRMS can access a local maven repository and if maven is installed, the BRMS can retrive maven artifact from its local repository as well as from remote maven repositories
-2) The BRMS can act as a remote Maven repository and can be access from external maven builds.
+1. The BRMS can access a local maven repository and if maven is installed, the BRMS can retrive maven artifact from its local repository as well as from remote maven repositories.
+2. The BRMS can act as a remote Maven repository and can be access from external maven builds
+.
 
 Here is a typical use case : 
 ![](BRMS/BS-UseCase1.jpg)
@@ -75,7 +76,7 @@ Here is a typical use case :
 2. A maven build is then started (in jenkins for example) and the pojo model is deployed on the maven repository. The maven artifact has a groupid, an artifactid and a version.
 3. The business Analyst creates a new project on the Business Central application, and in the dependency list user interface, he just enters the groupid, artifactid  and the version the java developer gave me. Maven magin now will come in place as Business Central will automatically retrieves from all remote maven repositories that were defined to him the artifact as well as all its dependencies. 
 4. When building the final application, the rule package is retrieve by its groupid, artifactid and version. Indeed, when creating a project in Business Central, you have to give it those identication element. In the dependency file of the application (pom.xml), just add those identication elements as well as the url of the business central maven repository, and it works. The maven build of the application will retrieve the good version of the rule package.
-5. 
+
 In Guvnor 5.X, if a pojo model had dependencies, you had to upload them one by one with the good version. It could lead to errors and when an update was needed in the dependencies, you had to upload them one by one.
 Someone may ask : why is there a need for handling dependencies ? Just make a java entity model with no dependencies. This is true and when using guvnor 5.x, we did like this as good practice because of the limit Guvnor had. But in modern application, the entity model is stored in databases using JPA or Hibernate annotations (or other framework when using nosql databases for example). Now with the maven dependency and configuration handled by business central, it is possible to use this entity model with no duplication.
 Also, in Guvnor 5.x, we had to build package versions (called snapshot) and then somehow reference that name in the application to retrieve at runtime the good package version. We can now do both even if we only show the deployment of the rule package at build time of the application.
