@@ -78,10 +78,11 @@ Here is a typical use case :
 5. 
 In Guvnor 5.X, if a pojo model had dependencies, you had to upload them one by one with the good version. It could lead to errors and when an update was needed in the dependencies, you had to upload them one by one.
 Someone may ask : why is there a need for handling dependencies ? Just make a java entity model with no dependencies. This is true and when using guvnor 5.x, we did like this as good practice because of the limit Guvnor had. But in modern application, the entity model is stored in databases using JPA or Hibernate annotations (or other framework when using nosql databases for example). Now with the maven dependency and configuration handled by business central, it is possible to use this entity model with no duplication.
+Also, in Guvnor 5.x, we had to build package versions (called snapshot) and then somehow reference that name in the application to retrieve at runtime the good package version. We can now do both even if we only show the deployment of the rule package at build time of the application.
 
+The case presented here is one use case. But using other parts of the tooling like the kie server may go to other architecture. We will present later other scenarios.
 
-
-
+There is no mystery in this feature. It is just a way to have a good dependency and configuration management in the business Central. In the past, we had to handle that manually. But the same work was done manually.
 
 ### Git versus subversion (Apache jackrabbit)
 
