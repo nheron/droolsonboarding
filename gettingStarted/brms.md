@@ -3,6 +3,10 @@
 
 ## What is a BRMS ?
 
+TODO Business Central
+
+
+
 
 
 
@@ -24,10 +28,15 @@
 
 ### Rule design pattern : decision tables,decision tree, guided rules
 
+
 ### Plugin Architecture to build patterns
 
 
 ### Execution server : kie server and Plugin architecture
+
+
+
+
 
 
 
