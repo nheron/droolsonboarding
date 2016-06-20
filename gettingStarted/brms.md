@@ -39,15 +39,30 @@ Before starting the tutorial, we shall go through a few concepts that will help 
 ## How version 5.x BRMS was working and used in a project.
 
 
+As shown in the next picture, the steps when using version 5 were the following : 
+* The java developer produces the pojo model (working with the business analyst)
+* The java archive (jar) shall be uploaded to the Guvnor (BRMS) application. On this pojo mode, the business analyst can write rules.
+* The java developer produces the final application that contains the drools runtime and deploys it with the pojo model inside.
 
 
 
+![](BRMS/Guvnor5Architecture.jpg)
+
+Now the application and Guvnor must have a synchronized version of the pojo model. 
+There a few other points that shoul be taken care :  
+* when upgrading a pojo model version, the two parts must be synchronized. 
+* It is not possible to work in parallele. There are workarounds like duplicating the package in guvnor, etc..
+
+
+Guvnor is a nice tool very usefull where most user interface about writting rules was kept in the Business Central (enhanced of course) but all the wrapping was redesigned.
 
 
 ## How version 6 fits in modern java development process
 
 
 ### Maven versus Manuel Dependency handling
+
+
 
 
 ### Git versus subversion (Apache jackrabbit)
