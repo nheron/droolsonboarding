@@ -1,19 +1,19 @@
 # BRMS Tutorial
 
 
-##What is a BRMS ?
+## What is a BRMS ?
 
 
 
 
-##How version 5.x BRMS was working 
+## How version 5.x BRMS was working 
 
 
 
-##How version 6 fits in modern java development process
+## How version 6 fits in modern java development process
 
 
-###Maven versus Manuel Dependency handling
+### Maven versus Manuel Dependency handling
 
 
 ### Git versus subversion (Apache jackrabbit)
