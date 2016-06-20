@@ -82,7 +82,7 @@ Also, in Guvnor 5.x, we had to build package versions (called snapshot) and then
 
 The case presented here is one use case. But using other parts of the tooling like the kie server may go to other architecture. We will present later other scenarios.
 
-There is no mystery in this feature. It is just a way to have a good dependency and configuration management in the business Central. In the past, we had to handle that manually. But the same work was done manually.
+There is no mystery in this feature. It is just a way to have a good dependency and configuration management in the business Central. In the past, we had to handle that manually. But the same work was done manually. Also, all this should be setup by IT and is no concern of the business analyst Except the version of the rule package to use in development , integration or production environments.
 
 ### Git versus subversion (Apache jackrabbit)
 
