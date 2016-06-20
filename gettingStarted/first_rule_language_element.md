@@ -208,9 +208,10 @@ AccountingPeriod newPeriod = new AccountingPeriod();
 
 ## Summary
 This ends the first lesson where we learned the core concepts needed when working with drools : 
-1) What is a rule
-2) A rule with a simple condition
-3) How to log what is happening in the rule engine
-4) What triggers a rule execution and how to interact with the rule engine for fact handling.
+1. What is a rule
+2. A rule with a simple condition
+3. How to log what is happening in the rule engine
+4. What triggers a rule execution and how to interact with the rule engine for fact handling.
+
 
 
