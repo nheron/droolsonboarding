@@ -40,7 +40,7 @@ Before starting the tutorial, we shall go through a few concepts that will help 
 
 
 As shown in the next picture, the steps when using version 5 were the following : 
-* The java developer produces the pojo model (working with the business analyst). You could in guvnor define a pojo model but with simple attributes.
+* The java developer produces the pojo model (working with the business analyst). You could in guvnor define a pojo model but with simple attributes. Most of the time, this feature was used for temporary data produces by rules and consumes by others. Therefor, no java pojo model was needed for that.
 * The java archive (jar) shall be uploaded to the Guvnor (BRMS) application. On this pojo mode, the business analyst can write rules.
 * The java developer produces the final application that contains the drools runtime and deploys it with the pojo model inside.
 
@@ -62,28 +62,28 @@ Guvnor is a nice tool very useful where most user interface about writing rules 
 ## How version 6 fits in modern java development process
 
 
-### Maven versus Manuel Dependency handling
+### Maven versus Manuel Dependency management
 
 In the 6.x BRMS, maven is fully supported in both direction : 
-1. The BRMS can access a local maven repository and if maven is installed, the BRMS can retrive maven artifact from its local repository as well as from remote maven repositories.
-2. The BRMS can act as a remote Maven repository and can be access from external maven builds
-.
+1. The BRMS can retrieve maven artifact from its local repository as well as from remote maven repositories.
+2. The BRMS can act as a remote Maven repository and can be access from external maven builds.
 
 Here is a typical use case : 
 ![](BRMS/BS-UseCase1.jpg)
 
-1. The java developer makes the pojo model and pushes the code commits on the SCM repository (like a git repository). There is here an alternative where this can be done in Business Central. In this case, the maven build that concerns the final application will retrieve the pojo model from the business Central repository
+1. The java developer makes the pojo/entity model and pushes the code commits on the SCM repository (like a git repository). There is here an alternative where this can be done in Business Central. In this case, the maven build that concerns the final application will retrieve the pojo/entity model from the business Central repository.
 2. A maven build is then started (in jenkins for example) and the pojo model is deployed on the maven repository. The maven artifact has a groupid, an artifactid and a version.
-3. The business Analyst creates a new project on the Business Central application, and in the dependency list user interface, he just enters the groupid, artifactid  and the version the java developer gave me. Maven magin now will come in place as Business Central will automatically retrieves from all remote maven repositories that were defined to him the artifact as well as all its dependencies. 
-4. When building the final application, the rule package is retrieve by its groupid, artifactid and version. Indeed, when creating a project in Business Central, you have to give it those identication element. In the dependency file of the application (pom.xml), just add those identication elements as well as the url of the business central maven repository, and it works. The maven build of the application will retrieve the good version of the rule package.
+3. The business Analyst creates a new project on the Business Central application, and in the dependency list user interface, he just enters the groupid, artifactid  and the version the java developer gave him for the pojo/entity model. Maven "magic" now will come in place as Business Central will automatically retrieves from all remote maven repositories that were defined to him the pojo/entity model artifact as well as all its dependencies. 
+4. When building the final application, the rule package is retrieve by its groupid, artifactid and version. Indeed, when creating a project in Business Central, you have to give it those  element. In the dependency file of the application (pom.xml), just add those identification elements as well as the url of the business central maven repository, and it works. The maven build of the application will retrieve the good version of the rule package.
 
 In Guvnor 5.X, if a pojo model had dependencies, you had to upload them one by one with the good version. It could lead to errors and when an update was needed in the dependencies, you had to upload them one by one.
-Someone may ask : why is there a need for handling dependencies ? Just make a java entity model with no dependencies. This is true and when using guvnor 5.x, we did like this as good practice because of the limit Guvnor had. But in modern application, the entity model is stored in databases using JPA or Hibernate annotations (or other framework when using nosql databases for example). Now with the maven dependency and configuration handled by business central, it is possible to use this entity model with no duplication.
-Also, in Guvnor 5.x, we had to build package versions (called snapshot) and then somehow reference that name in the application to retrieve at runtime the good package version. We can now do both even if we only show the deployment of the rule package at build time of the application.
+Someone may ask : why is there a need for handling dependencies ? Just make a java entity model with no dependencies. This is true and when using guvnor 5.x, we did like this as good practice because of the limit Guvnor had. But in modern application, the entity model is stored in databases using JPA or Hibernate annotations (or other framework when using nosql databases for example). Now with the maven dependency and configuration handled by business central, it is possible to use this entity model with no need to duplicate the model and then do mapping. It is no more needed.
+Also, in Guvnor 5.x, we had to build package versions (called snapshot) and then somehow reference that name in the application to retrieve at runtime the good package version. We can now do both even if we only show the example the deployment of the rule package at build time of the application.
 
 The case presented here is one use case. But using other parts of the tooling like the kie server may go to other architecture. We will present later other scenarios.
 
-There is no mystery in this feature. It is just a way to have a good dependency and configuration management in the business Central. In the past, we had to handle that manually. But the same work was done manually. Also, all this should be setup by IT and is no concern of the business analyst Except the version of the rule package to use in development , integration or production environments.
+There is no mystery in this feature. It is just a way to have a good dependency and configuration management in the business Central. In the past, we had to handle all that manually with possible human errors. 
+All this should be setup by IT and is no concern of the business analyst except the version of the rule package to use in development , integration or production environments.
 
 ### Git versus subversion (Apache jackrabbit)
 
