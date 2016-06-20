@@ -15,6 +15,7 @@ All jbpm components were separated application like jbpm-console.
 
 
 ## What is Business central ?
+
 In version 6, the guvnor part was completely redesigned  : 
 
 * A new framework based on GWT but with features that helps to build a Modern business application on HTML5 : [Errai](http://erraiframework.org/) 
@@ -23,18 +24,23 @@ In version 6, the guvnor part was completely redesigned  :
 * Use of a file base repository versus the CMS used before : [git](https://git-scm.com/)
 We will explain all this in next part.
 
-The drools part itself now implements a new algorithm : PHREAK algorith (see [5.4 part of documentation](http://docs.jboss.org/drools/release/6.3.0.Final/drools-docs/html/ch05.html#PHREAK)). 
+There are now two flavors of business central : the BRMS (Business Rule Management System)  and the BPMS (Business Process Management System). 
+
+The BPMS  contains the BRMS with all jbpm specific components : 
+* Form Modeler to develop specific Human task User Interfaces
+* Process instance and task management : to run the processes from within the workbench and act on human tasks.
+We will see during this tutorial the BRMS part.
+
+The drools core part itself now implements a new algorithm : PHREAK algorith (see [5.4 part of documentation](http://docs.jboss.org/drools/release/6.3.0.Final/drools-docs/html/ch05.html#PHREAK)). 
+
+Before starting the tutorial, we shall go through a few concepts that will help to understand how to use and integrate the BRMS in a real project.
+
+
+## How version 5.x BRMS was working and used in a project.
 
 
 
 
-
-
-
-
-
-
-## How version 5.x BRMS was working 
 
 
 
