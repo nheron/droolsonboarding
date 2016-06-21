@@ -15,7 +15,7 @@
            * [Requirements](gettingStarted/requirements.md)
    * [BRMS tutorial](gettingStarted/brms.md)
        * [Organizational Unit And repository](gettingStarted/organizational_unit_and_repository.md)
-       * Data Model
+       * [Data Model](gettingStarted/data_model.md)
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
    * [JBPM tutorial](gettingStarted/jbpm.md)
 * [Examples](examples/examples.md)
