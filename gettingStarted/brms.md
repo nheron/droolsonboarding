@@ -90,9 +90,19 @@ Guvnor 5.x was base on Content Management System (CMS) library [Apache Jackrabbi
 * All rule artifact are stored as document 
 * Document modification history is stored. 
 * There is a concept of workspace in which all document are stored. Guvnor used that concept to store a drools package and all its elements. So one project is stored in one workspace.
-* 
+* The storage behind Apache Jackrabbit is stored in a relational database. So you could use all standard Relation Provider available on the market
 
+To be able to communicate with the repository, a [webdav](http://www.webdav.org/) interface was [provided](https://docs.jboss.org/drools/release/5.6.0.Final/drools-guvnor-docs/html/ch09.html#d0e4162). This remote interface was very near to subversion approach. it was also possible to access the content of a  guvnor project through its [eclipse plugin](https://docs.jboss.org/drools/release/5.6.0.Final/drools-guvnor-docs/html/ch09.html#d0e4198).
 
+This approach works very well when documents are handled. When it comes to source code, there is a need of more complex content : 
+1. Branches to allow parallel development
+2. It was not possible to store the content as normal source code in the IT department
+3. The granularity of having one repository history for all projects was not adequate.
+
+Indeed, when big companies were using guvnor, more than one instance of guvnor were used (one per department for example). There was a need to be able to centralize all the business rules knowledge and to allow to many department/organization to access it. A "Organizational Unit" concept was created in the 6.x version which allow to link one or more repository.
+
+As drools is an open source project and uses itself git as a source code management repository, git was chosen to store the content of the new Guvnor version. 
+As the new Guvnor version allows to store all elements of a company, it was called Business Central.
 
 
 ## Version 6 tooling 
