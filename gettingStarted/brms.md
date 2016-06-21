@@ -118,20 +118,35 @@ As seen in the previous part, the drools community redesigned completely the BRM
 
 ### Rule design pattern : decision tables,decision tree, guided rules
 
-Guided Rule
+In previous tutirial, we have learned how to write rules using the Drools Rule Language (DRL)
+
+![](drools/lesson1_fig31.png)
+
+We cannot expect a Business User to write rules using DRL. So Business Central offers editors that will simplify writing rules. We are going to quickly present some of them.
 
 
-Guided Decision Table
+#### Guided Rule
+
+This editor allows to build a rule just by clicking and it will guide the user through all the syntax.
 
 
-Guided Decision Tree
+![](BRMS/GuidedRule.png)
+
+#### Guided Decision Table
 
 
-Guided Score Card
+![](BRMS/GuidedDecisionTable.png)
 
+#### Guided Decision Tree
 
-Test scenario
+![](BRMS/GuidedDecisionTree.png)
 
+#### Guided Score Card
+TODO
+
+#### Test scenario
+
+![](BRMS/TestScenario.png)
 
 
 
