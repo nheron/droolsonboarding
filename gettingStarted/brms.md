@@ -80,15 +80,15 @@ Also, in Guvnor 5.x, we had to build package versions (called snapshot) and then
 
 The case presented here is one use case. But using other parts of the tooling like the kie server may go to other architecture. We will present later other scenarios.
 
-There is no mystery in this feature. It is just a way to have a good dependency and configuration management in the business Central.  In the past, we had to handle all that manually with possible human errors. The process is now automated and complies to an enterprise standard Apache Maven.
+There is no mystery in this feature. It is just a way to have a good dependency and configuration management in the business Central.  In the past, we had to handle all that manually with possible human errors. The process is now automated and complies to an enterprise standard Apache Maven. Another advantage of using maven build is that the Drools community will not need to maintain a specific build process and concentrate on other feat
 
 All this should be setup by IT and is no concern of the business analyst except the version of the rule package to use in development , integration or production environments.
 
 ### Git versus Apache jackrabbit
 
-Guvnor 5.x was base on Content Management System (CMS) library [Apache Jackrabbit](http://jackrabbit.apache.org/jcr/index.html). 
-* All rule artifact are stored as document 
-* Document modification history is stored. 
+Guvnor 5.x was base on a Content Management System (CMS) library [Apache Jackrabbit](http://jackrabbit.apache.org/jcr/index.html). 
+* All rule artifact were stored as document 
+* Document modification history was kept. 
 * There is a concept of workspace in which all document are stored. Guvnor used that concept to store a drools package and all its elements. So one project is stored in one workspace.
 * The storage behind Apache Jackrabbit is stored in a relational database. So you could use all standard Relation Provider available on the market
 
@@ -101,7 +101,7 @@ This approach works very well when documents are handled. When it comes to sourc
 
 Indeed, when big companies were using guvnor, more than one instance of guvnor were used (one per department for example). There was a need to be able to centralize all the business rules knowledge and to allow to many department/organization to access it. A "Organizational Unit" concept was created in the 6.x version which allow to link one or more repository.
 
-As drools is an open source project and uses itself git as a source code management repository, git was chosen to store the content of the new Guvnor version. 
+As drools is an open source project and uses itself git as a source code management repository, git was chosen to store the content of the new Guvnor version. In version 5.x, the storage was only readable by the CMS library. Now the low level storage can be directly read with a normal file explorer. There is no more need of Eclipse Plugin to access the rule project. In version 5.x all this plombing around Developer tooling took a lot of time to the drools community. With this new tooling choice, all this exists by default and the community can concentrate on other features.
 As the new Guvnor version allows to store all elements of a company, it was called Business Central.
 
 
