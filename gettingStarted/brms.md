@@ -54,9 +54,7 @@ There a few other points that should be taken care :
 * It is not possible to work in parallel. There are workarounds like duplicating the package in guvnor, etc..
 * As modern java development is using a maven approach in dependency and configuration management, using Guvnor 5.x forces to have a specific build and deploy approach for it.
 
-
 Guvnor is a nice tool very useful where most user interface about writing rules was kept in the Business Central (enhanced of course) but all the wrapping was redesigned. 
-
 
 
 ## How version 6 fits in modern java development process
@@ -82,10 +80,18 @@ Also, in Guvnor 5.x, we had to build package versions (called snapshot) and then
 
 The case presented here is one use case. But using other parts of the tooling like the kie server may go to other architecture. We will present later other scenarios.
 
-There is no mystery in this feature. It is just a way to have a good dependency and configuration management in the business Central. In the past, we had to handle all that manually with possible human errors. 
+There is no mystery in this feature. It is just a way to have a good dependency and configuration management in the business Central.  In the past, we had to handle all that manually with possible human errors. The process is now automated and complies to an enterprise standard Apache Maven.
+
 All this should be setup by IT and is no concern of the business analyst except the version of the rule package to use in development , integration or production environments.
 
-### Git versus subversion (Apache jackrabbit)
+### Git versus Apache jackrabbit
+
+Guvnor 5.x was base on Content Management System (CMS) library [Apache Jackrabbit](http://jackrabbit.apache.org/jcr/index.html). 
+* All rule artifact are stored as document 
+* Document modification history is stored. 
+* There is a concept of workspace in which all document are stored. Guvnor used that concept to store a drools package and all its elements. So one project is stored in one workspace.
+* 
+
 
 
 
