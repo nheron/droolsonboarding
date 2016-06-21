@@ -107,13 +107,14 @@ As the new Guvnor version allows to store all elements of a company, it was call
 
 
 ## Version 6 tooling 
+
 As seen in the previous part, the drools community redesigned completely the BRMS tooling :  
 * A new build system of the rules to make them usabale in an application (maven)
 * A new repository content manager (git) to make it easier to integrate with java development tooling and minimize development needs for that by using software industry standard
 * Business Central concept
 * New Rule design pattern
 * An open architecture to add new features with the plugin architecture 
-* An execution server called kie server that simplifies the deployment of rule packages.
+* An execution server called kie server that simplifies the deployment of rule packages and is totally integrated in Business Central.
 
 ### Rule design pattern : decision tables,decision tree, guided rules
 
