@@ -43,12 +43,19 @@ Here is the data model we are going to use in our tutorial :
 
 
 ## Where dependencies and package white list are stored
-
+As said before, in case of a restart of the workbench application, the dependency list is empty.
+In this case, to see the dependency, you set the project explorer mode to repository view as shown below/
 
 ![](BRMS/Step2-DataModel/action10.png)
+You can now see how the repository is stored with all files.
 
 ![](BRMS/Step2-DataModel/action11.png)
 
+Click on the pom.xml file. In the dependency part of the file, you should see what we entered before.
+
+
 ![](BRMS/Step2-DataModel/action12.png)
+And in the file package-names-white-list the package we defined allowed to be used in the guided editors.
+
 
 ![](BRMS/Step2-DataModel/action13.png)
