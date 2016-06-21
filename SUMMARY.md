@@ -17,7 +17,7 @@
        * [Organizational Unit And repository](gettingStarted/organizational_unit_and_repository.md)
        * [Data Model](gettingStarted/data_model.md)
        * [Business Requirements](gettingStarted/business_requirements.md)
-       * How to install the server
+       * [How to install the server](gettingStarted/how_to_install_the_server.md)
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
    * [JBPM tutorial](gettingStarted/jbpm.md)
 * [Examples](examples/examples.md)
