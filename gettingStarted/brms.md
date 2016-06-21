@@ -102,6 +102,7 @@ This approach works very well when documents are handled. When it comes to sourc
 Indeed, when big companies were using guvnor, more than one instance of guvnor were used (one per department for example). There was a need to be able to centralize all the business rules knowledge and to allow to many department/organization to access it. A "Organizational Unit" concept was created in the 6.x version which allow to link one or more repository.
 
 As drools is an open source project and uses itself git as a source code management repository, git was chosen to store the content of the new Guvnor version. In version 5.x, the storage was only readable by the CMS library. Now the low level storage can be directly read with a normal file explorer. There is no more need of Eclipse Plugin to access the rule project. In version 5.x all this plombing around Developer tooling took a lot of time to the drools community. With this new tooling choice, all this exists by default and the community can concentrate on other features.
+
 As the new Guvnor version allows to store all elements of a company, it was called Business Central.
 
 
