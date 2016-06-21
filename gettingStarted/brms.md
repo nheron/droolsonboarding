@@ -118,6 +118,20 @@ As seen in the previous part, the drools community redesigned completely the BRM
 
 ### Rule design pattern : decision tables,decision tree, guided rules
 
+Guided Rule
+
+
+Guided Decision Table
+
+
+Guided Decision Tree
+
+
+Guided Score Card
+
+
+Test scenario
+
 
 
 
