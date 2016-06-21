@@ -1,2 +1,10 @@
-# How to install the server
+# Using a docker container
+
+
+
+
+
+
+# How maven is configured
+
 
