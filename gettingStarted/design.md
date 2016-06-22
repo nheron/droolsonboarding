@@ -7,8 +7,6 @@ We are going to divide our rules in 5 steps and do a rule-flow which mean a proc
 4. Reduction :  birthday and If people are living in Zurich
 5. Calculate the total
 
-
-
 The data model we are going to use is as follows : 
 
 
