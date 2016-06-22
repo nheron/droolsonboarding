@@ -130,6 +130,41 @@ function double AgeCalculationMonth(Date d1,Date d2) {
 
 ## Create the initial step
 
+![](BRMS/step3-2-Implementation/action01.png)
+
+![](BRMS/step3-2-Implementation/action02.png)
+![](BRMS/step3-2-Implementation/action03.png)
+
+
+![](BRMS/step3-2-Implementation/action04.png)
+
+
+![](BRMS/step3-2-Implementation/action06.png)
+
+
+![](BRMS/step3-2-Implementation/action07.png)
+
+![](BRMS/step3-2-Implementation/action08.png)
+
+![](BRMS/step3-2-Implementation/action09.png)
+
+![](BRMS/step3-2-Implementation/action10.png)
+
+![](BRMS/step3-2-Implementation/action11.png)
+
+![](BRMS/step3-2-Implementation/action12.png)
+
+![](BRMS/step3-2-Implementation/action13.png)
+
+![](BRMS/step3-2-Implementation/action14.png)
+
+![](BRMS/step3-2-Implementation/action15.png)
+
+![](BRMS/step3-2-Implementation/action16.png)
+
+![](BRMS/step3-2-Implementation/action17.png)
+
+![](BRMS/step3-2-Implementation/action18.png)
 
 
 ## Create the decision table for the standard price
