@@ -43,6 +43,31 @@ Do the same with other business tasks.
 And do not forget to save the process.
 
 
+## Cloning the git repository
+Before going further, if you have git installed on your machine, you can checkout the code by cloning the repository  : 
+
+```
+git clone git://machine_ip:9418/nautic
+```
+
+![](BRMS/Step3-1-Implementation/action07.png)
+
+In my example, I use a docker container that is in a virtualBox Machine at ip 192.168.99.100 and at port 19418.
+
 ## Create the initial step
+
+
+
+## Create the decision table for the standard price
+
+
+## Implement the promotion
+
+
+## Implement the reduction
+
+## 
+
+
 
 
