@@ -18,7 +18,7 @@
        * [Data Model](gettingStarted/data_model.md)
        * [Business Requirements](gettingStarted/business_requirements.md)
        * [How to install the server](gettingStarted/how_to_install_the_server.md)
-       * Design 
+       * [Design](gettingStarted/design.md)
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
    * [JBPM tutorial](gettingStarted/jbpm.md)
 * [Examples](examples/examples.md)
