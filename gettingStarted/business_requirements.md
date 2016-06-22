@@ -1,8 +1,8 @@
 # Business Requirements
 
 
-
-
+A new web site has been developed to sell ticket for the city Olympic Swimming pool of Zurich.
+The purpose is to build a web service by giving him the customer quote request and in response the proposed quoting.
 
 As an input, we will receive a quote that contains 
     * an address,
