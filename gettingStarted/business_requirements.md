@@ -54,5 +54,9 @@ Here are the price per age and desired period.
 | 60 |     | full Year | 120€ |
 
 
+-  In a quote with a group of at least 4 people, the youngest person between 3 and 11 years old years has a free ticket
 
+- if a person has his birtday the day the ticket is quoted, then a 10% applies to that person. This applies only for a day ticket
+
+- If people are living in Zurich, then 10% applies to each person
 
