@@ -40,6 +40,7 @@ Do the same with other business tasks.
 
 ![](BRMS/Step3-1-Implementation/action06.png)
 
+And do not forget to save the process.
 
 
 ## Create the initial step
