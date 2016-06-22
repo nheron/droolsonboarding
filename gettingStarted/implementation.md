@@ -5,7 +5,13 @@
 
 We are going to implement a rule flow with 5 steps.
 
+| 0:0 | 1:0 |
+| -- | -- |
+| 0:2 | 1:2 |
+
+
 | Name | ruleflow group name |
+| -- | -- |
 | init data | init |
 | standard price | standard |
 | Promotion | promotion |
