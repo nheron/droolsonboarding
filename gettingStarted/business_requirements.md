@@ -11,6 +11,7 @@ As an input, we will receive a quote that contains
     * a desired period.
 
 As a response, we shall receive the same quote but filled with standard Price per person, the list of reduction per person and the total price.
+Here are the price per age and desired period.
 
 | Age >= | Age < | season | amount |
 | -- | -- | -- | -- |
