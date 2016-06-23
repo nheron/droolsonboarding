@@ -246,6 +246,17 @@ The test scenario should then look like this :
 
 ## Calculate person age
 
+We shall calculate the person age based on his birthday and the curDay attribute of the quote.
+At the same time, we shall initialize the price attribute with a BigDecimal.
+in the function.drl, add the "import java.math.BigDecimal"
+
+![](BRMS/step3-3bis-Implementation/action03.png)
+First add the two classes on which we shall apply the rule.
+![](BRMS/step3-3bis-Implementation/action01.png)
+
+
+![](BRMS/step3-3bis-Implementation/action04.png)
+
 
 
 ## Create the decision table for the standard price
