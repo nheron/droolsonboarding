@@ -164,9 +164,10 @@ function double AgeCalculationMonth(Date d1,Date d2) {
 
 ![](BRMS/step3-2-Implementation/action17.png)
 
-Then you shall obtain the rule as follows. Notice that the stringValue of the calculatedAttribute as a formula. So you should select the formula not a litteral.
+Then you shall obtain the rule as follows. Notice that the stringValue of the calculatedAttribute as a formula. So you should select the formula not a litteral. And also that we had to create a binding varialble "bd" for attribute birthdate of call Person.
 
 ![](BRMS/step3-2-Implementation/action18.png)
+
 
 
 ## Test the initial step
