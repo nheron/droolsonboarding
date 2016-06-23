@@ -167,7 +167,9 @@ function double AgeCalculationMonth(Date d1,Date d2) {
 Then you shall obtain the rule as follows. Notice that the stringValue of the calculatedAttribute as a formula. So you should select the formula not a litteral. And also that we had to create a binding varialble "bd" for attribute birthdate of call Person.
 
 ![](BRMS/step3-2-Implementation/action18.png)
+Notice that we test there is not already a calculated attribute for that person with the same key
 
+Notice that we have to add to the list of calculated attribute of the person and then tell the rule engine the list was updated.
 
 
 
@@ -324,6 +326,12 @@ AS we are going to add constraint on the person age
 ![](BRMS/Step3-4-implementation/action21.png)
 
 ![](BRMS/Step3-4-implementation/action22.png)
+
+![](BRMS/Step3-4-implementation/action22bis.png)
+
+
+
+
 
 ![](BRMS/Step3-4-implementation/action23.png)
 
