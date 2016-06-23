@@ -57,7 +57,7 @@ In my example, I use a docker container that is in a virtualBox Machine at ip 19
 
 ## Create functions 
 We will need some java functions to help us writing rules
-Go to new ITems/DRL FIle and create a rule called function and put in the  rule content the following code : 
+Go to new Items/DRL FIle and create a rule called "function" and put in the  rule content the following code : 
 
 
 ```
@@ -164,7 +164,12 @@ function double AgeCalculationMonth(Date d1,Date d2) {
 
 ![](BRMS/step3-2-Implementation/action17.png)
 
+Then you shall obtain the rule as follows. Notice that the stringValue of the calculatedAttribute as a formula. So you should select the formula not a litteral.
+
 ![](BRMS/step3-2-Implementation/action18.png)
+
+
+## Test the initial step
 
 
 ## Create the decision table for the standard price
