@@ -244,15 +244,26 @@ The test scenario should then look like this :
 
 
 
+## Calculate person age
+
+
+
 ## Create the decision table for the standard price
+
+
+To implement the price table we will use a decision table.
+Go to the "new Item" and select the "Guided Decision Table" : 
 
 ![](BRMS/Step3-4-implementation/action01.png)
 
 
 
+We give him a name : 
 
 
 ![](BRMS/Step3-4-implementation/action02.png)
+
+AS we are going to add constraint on the person age
 
 ![](BRMS/Step3-4-implementation/action03.png)
 
