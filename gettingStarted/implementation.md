@@ -170,6 +170,8 @@ Then you shall obtain the rule as follows. Notice that the stringValue of the ca
 
 
 
+
+
 ## Test the initial step
 
 The workbench allows to test the rule we do.
@@ -258,7 +260,7 @@ Then we should create the rule like that.
 
 ![](BRMS/step3-3bis-Implementation/action04.png)
 
-We added two options : the ruleflow group and the no-loop to avoid recursion.
+We added two options : the ruleflow group.
 
 Then we can create a test scenario to verify our rule.
 
