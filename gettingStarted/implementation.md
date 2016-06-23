@@ -172,6 +172,76 @@ Then you shall obtain the rule as follows. Notice that the stringValue of the ca
 
 ## Test the initial step
 
+The workbench allows to test the rule we do.
+Create a new item of type "Test scenario"  like follows : 
+
+![](BRMS/step3-3-implementation/action02.png)
+
+
+![](BRMS/step3-3-implementation/action01.png)
+
+
+
+![](BRMS/step3-3-implementation/action03.png)
+
+
+Click on the "Given" Cross  and add a new fact as follows : 
+
+![](BRMS/step3-3-implementation/action04.png)
+
+Then click on the "Add Field" text.
+
+![](BRMS/step3-3-implementation/action05.png)
+Select the field "quoteDate" : 
+
+![](BRMS/step3-3-implementation/action06.png)
+
+Click on the "Literal value" button
+
+![](BRMS/step3-3-implementation/action07.png)
+
+As the attribute is of type date, you can select a date with the date picker.
+
+![](BRMS/step3-3-implementation/action08.png)
+
+Select a date and then add another instance of type Person
+
+ ![](BRMS/step3-3-implementation/action10.png)
+and add a field and select birthdate.
+ ![](BRMS/step3-3-implementation/action11.png)
+ Select literal value.
+
+ ![](BRMS/step3-3-implementation/action12.png)
+
+And select a date as for the quote date but on same day (here June 30th?
+ ![](BRMS/step3-3-implementation/action13.png)
+then add a expectatation by clicking on the Cross near Expect
+ ![](BRMS/step3-3-implementation/action14.png)
+ 
+Add a fact of type CalculatedAttribute
+
+![](BRMS/step3-3-implementation/action16bis.png)
+
+and Click on the "A fact of type... "
+Then chose the StringValue field
+
+ ![](BRMS/step3-3-implementation/action15.png)
+ 
+ And then enter the value true
+ 
+ ![](BRMS/step3-3-implementation/action16ter.png)
+ 
+ And as the rule we want to test is in ruleflow group init. Click on the cross near the "Given"  cross and enter "init" in the activate rule flow group part.
+
+ ![](BRMS/step3-3-implementation/action16.png)
+
+
+The test scenario should then look like this : 
+
+ ![](BRMS/step3-3-implementation/action17.png)
+ Then click the "Run scenario" button twice and you should see the screeen as follows
+ ![](BRMS/step3-3-implementation/action18.png)
+
 
 ## Create the decision table for the standard price
 
