@@ -253,9 +253,16 @@ in the function.drl, add the "import java.math.BigDecimal"
 ![](BRMS/step3-3bis-Implementation/action03.png)
 First add the two classes on which we shall apply the rule.
 ![](BRMS/step3-3bis-Implementation/action01.png)
+Then we should create the rule like that.
 
 
 ![](BRMS/step3-3bis-Implementation/action04.png)
+
+We added two options : the ruleflow group and the no-loop to avoid recursion.
+
+Then we can create a test scenario to verify our rule.
+
+![](BRMS/step3-3bis-Implementation/action05.png)
 
 
 
