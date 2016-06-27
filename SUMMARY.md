@@ -22,7 +22,7 @@
        * [Implementing the Process Flow](gettingStarted/implementing_the_process_flow.md)
        * [Implementation technical parts](gettingStarted/implementation_technical_parts.md)
        * [How to install the server](gettingStarted/how_to_install_the_server.md)
-       * Implementing the inital step
+       * [Implementing the inital step](gettingStarted/implementing_the_inital_step.md)
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
    * [JBPM tutorial](gettingStarted/jbpm.md)
 * [Examples](examples/examples.md)
