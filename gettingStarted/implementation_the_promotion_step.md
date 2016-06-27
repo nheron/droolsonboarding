@@ -56,7 +56,12 @@ Then make the rule look like this
 
 
 
-## Test the rule
+## Creating rule to start a process
+
+
+
+
+## Creating rule to insert a period
 
 
 
