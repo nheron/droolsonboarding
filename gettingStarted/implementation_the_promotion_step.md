@@ -57,11 +57,23 @@ Then make the rule look like this
 
 
 ## Creating rule to start a process
+To be able to start a process from a test scenario, we want to insert an object and set a attribute that would be the process id we want to start.
+So we first create a new Item of type Data Obkect that we shall call StartProcess. And we should add a field called procesId of type String
 
+![](BRMS/step3-6-Implementation/action01.png)
+
+Then we shall create a guided rule called StartProcessRule as follows. In the Then add free form drl 
+
+
+![](BRMS/step3-6-Implementation/action02.png)
 
 
 
 ## Creating rule to insert a period
+
+![](BRMS/step3-6-Implementation/action03.png)
+
+Create a drl file with the following content
 
 
 
