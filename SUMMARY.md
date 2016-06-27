@@ -24,6 +24,7 @@
        * [Implementing standard price step](gettingStarted/implementing_standard_price_step.md)
        * [Implementation the promotion step](gettingStarted/implementation_the_promotion_step.md)
        * [How to install the server](gettingStarted/how_to_install_the_server.md)
+       * Implementing the reduction step
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
    * [JBPM tutorial](gettingStarted/jbpm.md)
 * [Examples](examples/examples.md)
