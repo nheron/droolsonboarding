@@ -49,9 +49,11 @@ And select the Number type from the add a pattern link.
 ![](BRMS/Step3-5-Implementation/action11.png)
 
 
-
+Then make the rule look like this
 
 ![](BRMS/Step3-5-Implementation/action13.png)
+
+
 
 
 
