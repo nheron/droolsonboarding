@@ -18,7 +18,6 @@
        * [Data Model](gettingStarted/data_model.md)
        * [Business Requirements](gettingStarted/business_requirements.md)
        * [Design](gettingStarted/design.md)
-       * [Implementation](gettingStarted/implementation.md)
        * [Implementing the Process Flow](gettingStarted/implementing_the_process_flow.md)
        * [Implementation technical parts](gettingStarted/implementation_technical_parts.md)
        * [Implementing the initial step](gettingStarted/implementing_the_inital_step.md)
