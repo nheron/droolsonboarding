@@ -22,7 +22,7 @@
        * [Implementation technical parts](gettingStarted/implementation_technical_parts.md)
        * [Implementing the initial step](gettingStarted/implementing_the_inital_step.md)
        * [Implementing standard price step](gettingStarted/implementing_standard_price_step.md)
-       * [Implementation the promotion step](gettingStarted/implementation_the_promotion_step.md)
+       * [Implementing the promotion step](gettingStarted/implementation_the_promotion_step.md)
        * [Implementing the reduction step](gettingStarted/implementing_the_reduction_step.md)
        * [How to install the server](gettingStarted/how_to_install_the_server.md)
        * Implementing the promotion step
