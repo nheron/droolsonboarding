@@ -3,11 +3,6 @@
 
 
 
-
-
-## Create the initial step
-
-
 ## Create the decision table for the standard price
 
 
