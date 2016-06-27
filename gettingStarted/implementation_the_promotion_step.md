@@ -88,3 +88,8 @@ Create a drl file with the following content
 
 
 
+![](BRMS/step3-6-Implementation/action06.png)
+
+
+
+
