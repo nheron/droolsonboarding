@@ -24,7 +24,7 @@
        * [Implementing standard price step](gettingStarted/implementing_standard_price_step.md)
        * [Implementing the Child over 3 years old is free promotion step](gettingStarted/implementation_the_promotion_step.md)
        * [Implementing the Birthday promotion step](gettingStarted/implementing_the_birthday_promotion_step.md)
-       * [Implementing the reduction step](gettingStarted/implementing_the_reduction_step.md)
+       * [Implementing the Zurich reduction step](gettingStarted/implementing_the_reduction_step.md)
        * [Implementing the subscription step](gettingStarted/implementing_the_subscription_step.md)
        * [How to install the server](gettingStarted/how_to_install_the_server.md)
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
