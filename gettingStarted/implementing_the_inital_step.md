@@ -1,2 +1,2 @@
-# Implementing the inital step
+# Implementing the initial step
 
