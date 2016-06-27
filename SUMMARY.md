@@ -23,6 +23,7 @@
        * [Implementation technical parts](gettingStarted/implementation_technical_parts.md)
        * [How to install the server](gettingStarted/how_to_install_the_server.md)
        * [Implementing the initial step](gettingStarted/implementing_the_inital_step.md)
+       * Implementing standard price Step
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
    * [JBPM tutorial](gettingStarted/jbpm.md)
 * [Examples](examples/examples.md)
