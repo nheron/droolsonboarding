@@ -22,7 +22,7 @@
        * [Implementation technical parts](gettingStarted/implementation_technical_parts.md)
        * [Implementing the initial step](gettingStarted/implementing_the_inital_step.md)
        * [Implementing standard price step](gettingStarted/implementing_standard_price_step.md)
-       * [Implementing the Zurich promotion step](gettingStarted/implementation_the_promotion_step.md)
+       * [Implementing the Child over 3 years old is free promotion step](gettingStarted/implementation_the_promotion_step.md)
        * [Implementing the Birthday promotion step](gettingStarted/implementing_the_birthday_promotion_step.md)
        * [Implementing the reduction step](gettingStarted/implementing_the_reduction_step.md)
        * [Implementing the subscription step](gettingStarted/implementing_the_subscription_step.md)
