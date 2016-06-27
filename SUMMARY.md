@@ -25,8 +25,8 @@
        * [Implementing the promotion step](gettingStarted/implementation_the_promotion_step.md)
        * [Implementing the reduction step](gettingStarted/implementing_the_reduction_step.md)
        * [How to install the server](gettingStarted/how_to_install_the_server.md)
-       * Implementing the promotion step
-       * Implementing the subscription step 
+       * [Implementing the promotion step](gettingStarted/implementing_the_promotion_step.md)
+       * Implementing the subscription step
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
    * [JBPM tutorial](gettingStarted/jbpm.md)
 * [Examples](examples/examples.md)
