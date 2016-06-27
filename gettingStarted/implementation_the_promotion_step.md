@@ -1,4 +1,4 @@
-# Implementation the Zurich promotion step
+# Implementation the Child over 3 is free
 
 ## Creating the rule
 
