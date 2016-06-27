@@ -1,4 +1,4 @@
-# Implementation the promotion step
+# Implementation the Zurich promotion step
 
 ## Creating the rule
 
