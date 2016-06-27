@@ -22,7 +22,7 @@
        * [Implementing the Process Flow](gettingStarted/implementing_the_process_flow.md)
        * [Implementation technical parts](gettingStarted/implementation_technical_parts.md)
        * [Implementing the initial step](gettingStarted/implementing_the_inital_step.md)
-       * [Implementing standard price Step](gettingStarted/implementing_standard_price_step.md)
+       * [Implementing standard price step](gettingStarted/implementing_standard_price_step.md)
        * [How to install the server](gettingStarted/how_to_install_the_server.md)
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
    * [JBPM tutorial](gettingStarted/jbpm.md)
