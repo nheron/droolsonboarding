@@ -19,7 +19,7 @@
        * [Business Requirements](gettingStarted/business_requirements.md)
        * [Design](gettingStarted/design.md)
        * [Implementation](gettingStarted/implementation.md)
-       * Implementing the Process Flow
+       * [Implementing the Process Flow](gettingStarted/implementing_the_process_flow.md)
        * [How to install the server](gettingStarted/how_to_install_the_server.md)
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
    * [JBPM tutorial](gettingStarted/jbpm.md)
