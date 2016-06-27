@@ -1,4 +1,4 @@
-# Implementing the reduction step
+# Implementing the Zurich reduction step
 
 
 ## Rule Zurich reduction rule
