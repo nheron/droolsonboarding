@@ -86,9 +86,11 @@ Create a drl file with the following content
 
 ## Testing the rule
 
-
+Create the test scenario by inserting Objects like follows.
 
 ![](BRMS/step3-6-Implementation/action06.png)
+
+
 
 
 
