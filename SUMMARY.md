@@ -20,6 +20,7 @@
        * [Design](gettingStarted/design.md)
        * [Implementation](gettingStarted/implementation.md)
        * [How to install the server](gettingStarted/how_to_install_the_server.md)
+       * Implementing the Process Flow
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
    * [JBPM tutorial](gettingStarted/jbpm.md)
 * [Examples](examples/examples.md)
