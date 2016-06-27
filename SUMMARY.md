@@ -21,6 +21,7 @@
        * [Implementation](gettingStarted/implementation.md)
        * [Implementing the Process Flow](gettingStarted/implementing_the_process_flow.md)
        * [How to install the server](gettingStarted/how_to_install_the_server.md)
+       * Implementation technical parts
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
    * [JBPM tutorial](gettingStarted/jbpm.md)
 * [Examples](examples/examples.md)
