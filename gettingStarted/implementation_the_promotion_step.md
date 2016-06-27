@@ -63,6 +63,7 @@ So we first create a new Item of type Data Obkect that we shall call StartProces
 ![](BRMS/step3-6-Implementation/action01.png)
 
 Then we shall create a guided rule called StartProcessRule as follows. In the Then add free form drl 
+![](BRMS/step3-6-Implementation/action03.png)
 
 
 ![](BRMS/step3-6-Implementation/action02.png)
@@ -71,7 +72,7 @@ Then we shall create a guided rule called StartProcessRule as follows. In the Th
 
 ## Creating rule to insert a period
 
-![](BRMS/step3-6-Implementation/action03.png)
+![](BRMS/step3-6-Implementation/action04.png)
 
 Create a drl file with the following content
 
@@ -81,7 +82,9 @@ Create a drl file with the following content
 
 
 
+![](BRMS/step3-6-Implementation/action05.png)
 
+## Testing the rule
 
 
 
