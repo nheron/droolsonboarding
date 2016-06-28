@@ -54,7 +54,16 @@ Then make the rule look like this
 ![](BRMS/Step3-5-Implementation/action13.png)
 
 
+## Creating rule to insert a period
 
+![](BRMS/step3-6-Implementation/action04.png)
+
+Create a drl file with the following content
+
+
+
+
+![](BRMS/step3-6-Implementation/action05.png)
 
 ## Creating rule to start a process
 To be able to start a process from a test scenario, we want to insert an object and set a attribute that would be the process id we want to start.
