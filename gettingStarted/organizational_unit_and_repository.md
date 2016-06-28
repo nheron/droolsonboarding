@@ -24,7 +24,7 @@ Now we shall create a repository (git) for that.
 
 ![](BRMS/Step1-CreateOrganisationAndRepository/Action05.png)
 
-We Shall give him a name a select the "Managed Repository" selector as shown below. We shall create thta repository for the Organizational Unit we created before.
+We Shall give him a name a select the "Managed Repository" selector as shown below. We shall create the repository for the Organizational Unit we created before.
 
 ![](BRMS/Step1-CreateOrganisationAndRepository/Action06.png)
 
