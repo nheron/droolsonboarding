@@ -70,20 +70,6 @@ Then we shall create a guided rule called StartProcessRule as follows. In the Th
 
 
 
-## Creating rule to insert a period
-
-![](BRMS/step3-6-Implementation/action04.png)
-
-Create a drl file with the following content
-
-
-
-
-
-
-
-![](BRMS/step3-6-Implementation/action05.png)
-
 ## Testing the rule
 
 Create the test scenario by inserting Objects like follows.
