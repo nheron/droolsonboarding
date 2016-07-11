@@ -9,7 +9,7 @@ If the person has his Birthday on the quote day and a day ticket is asked, then 
 
 ![](BRMS/step3-8-implementation/action01.png)
 
-
+Instead of ROUND_HALF_DOWN you can put ROUND_HALF_UP which will put higher reduction amount.
 
 ![](BRMS/step3-8-implementation/action02.png)
 
