@@ -8,6 +8,7 @@
 
 ![](BRMS/Step3-7-Implementation/action02.png)
 
+
 ## Test the Zurich reduction rule
 
 ![](BRMS/Step3-7-Implementation/action03.png)
