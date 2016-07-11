@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+   * Technical Materials
 * [Overview](overview/overview.md)
 * [Getting Started](gettingStarted/gettingStarted.md)
    * [Drools tutorial](gettingStarted/drools.md)
