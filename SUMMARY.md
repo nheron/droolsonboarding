@@ -26,7 +26,7 @@
        * [Implementing the Birthday promotion step](gettingStarted/implementing_the_birthday_promotion_step.md)
        * [Implementing the Zurich reduction step](gettingStarted/implementing_the_reduction_step.md)
        * [Implementing the subscription step](gettingStarted/implementing_the_subscription_step.md)
-       * [C](gettingStarted/how_to_install_the_server.md)
+       * [Conclusion](gettingStarted/how_to_install_the_server.md)
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
    * [JBPM tutorial](gettingStarted/jbpm.md)
 * [Examples](examples/examples.md)
