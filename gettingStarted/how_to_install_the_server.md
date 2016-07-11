@@ -1,10 +1,6 @@
-# Using a docker container
+# What we did
 
 
 
-
-
-
-# How maven is configured
 
 
