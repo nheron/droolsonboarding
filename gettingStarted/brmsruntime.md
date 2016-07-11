@@ -42,3 +42,5 @@ Out of the box, the new drools tooling in version 6.4 offers us an authoring too
 Which is even better is that as well the authoring tool (kie-wb) or the execution server (kie-server) can be extended.
 
 In this tutorial we are going to present an example of each case.
+
+
