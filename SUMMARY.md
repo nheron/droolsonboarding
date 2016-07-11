@@ -29,7 +29,7 @@
        * [Conclusion](gettingStarted/how_to_install_the_server.md)
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
        * Extending the workbench
-       * [Exte](gettingStarted/exte.md)
+       * [Exte](gettingStarted/exteeeee.md)
        * Extending the kie runtime server
    * [JBPM tutorial](gettingStarted/jbpm.md)
 * [Examples](examples/examples.md)
