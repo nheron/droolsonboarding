@@ -28,7 +28,7 @@
        * [Implementing the final step](gettingStarted/implementing_the_subscription_step.md)
        * [Conclusion](gettingStarted/how_to_install_the_server.md)
    * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
-       * Extending the workbench
+       * [Extending the workbench](gettingStarted/extending_the_workbench.md)
        * Extending the kie runtime server
    * [JBPM tutorial](gettingStarted/jbpm.md)
 * [Examples](examples/examples.md)
