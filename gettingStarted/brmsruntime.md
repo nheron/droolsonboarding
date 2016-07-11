@@ -20,11 +20,11 @@ In the 6.x serie, the Guvnor tool was replaced by what was called workbench and 
 It is possible to take the same architecture using the drools API and the kie-wb. 
 There are now two possibilities
 * as the business central is a maven repository, rebuild the runtime (or application if the runtime is embedded) with the new package version.
-* In the runtime dynamically add to the java classpath the new jar of the rules package.
-
-
+* In the runtime dynamically add to the java classpath the new jar of the rules package each time there is a new version.
 
 
 ## using kie-server and kie-wb together
+
+
 
 ![](BRMS runtime tutorial/kie-architecture.jpg)
