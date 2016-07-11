@@ -33,8 +33,8 @@ The new architecture looks like the previous one :
 * Each kie-server calls the kie-wb at startup and declares itself 
 * From the kie-wb, it is possible to create kie-container in the desired kie-server. 
 * This kie-container contains one maven artifact defined in the kie-wb for one version. 
-* All this is linked together using maven configuration and all related features but all is done for us. You just say I want this artifact in this version (it must be built before of coursep and that is all.
-* The kie-container exposes a basic rest service that has the same signature as the API we used in the drools toturial : insert object, fire all rules etc..
+* All this is linked together using maven configuration and all related features but all is done for us. You just say I want this artifact in this version (it must be built before of course) and that is all.
+* The kie-container exposes a basic rest service that has the same signature as the API we used in the drools tutorial : insert object, fire all rules etc..
 * The application A calls the drools API remotely and does not have to take care of new rule version deployment.
 
 Out of the box, the new drools tooling in version 6.4 offers us an authoring tool with a runtime ready to work/deploy a drools set of rules in a maven package.
