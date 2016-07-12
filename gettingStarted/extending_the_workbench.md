@@ -14,3 +14,5 @@ So as a first approach, we shall write a plugin that implements new rest interfa
 
 the source code of this project is [here](https://github.com/chtiJBUG/drools-onboarding/tree/master/drools-framework-kie-wb-parent).
 
+
+
