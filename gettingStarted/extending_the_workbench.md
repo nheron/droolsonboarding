@@ -16,3 +16,19 @@ the source code of this project is [here](https://github.com/chtiJBUG/drools-onb
 
 
 
+
+
+
+
+
+
+## Testing the rest interface
+
+http:\/\/localhost:8080\/kie-wb\/rest\/packages\/demo\/onboarding-nautic-project
+
+
+
+
+
+
+
