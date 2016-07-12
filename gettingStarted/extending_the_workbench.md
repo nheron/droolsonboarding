@@ -8,7 +8,11 @@ There are two approaches to continue to run the same service to the end user :
 2\) We create a new addon the implements a new user interface in the workbench.
 
 The second approach looks very nice and I can voices telling this is the solution.
-Unfortunately, end user do not like to change their habits !  
+Unfortunately, end user do not like to change their habits !
 
 So as a first approach, we shall write a plugin that implements new rest interface very near to the Guvnor 5.x API.
+
+the source code of this project is [here](https://github.com/chtiJBUG/drools-onboarding).
+
+
 
