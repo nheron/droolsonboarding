@@ -12,7 +12,5 @@ Unfortunately, end user do not like to change their habits !
 
 So as a first approach, we shall write a plugin that implements new rest interface very near to the Guvnor 5.x API.
 
-the source code of this project is [here](https://github.com/chtiJBUG/drools-onboarding).
-
-
+the source code of this project is [here](https://github.com/chtiJBUG/drools-onboarding/tree/master/drools-framework-kie-wb-parent).
 
