@@ -1,7 +1,6 @@
 # BRMS runtime tutorial
 
-
-## Using previous drools version (5.x)
+## Using previous drools version \(5.x\)
 
 In a classical drools project in previous version, the architecture was often like this : 
 ![](BRMS runtime tutorial/Drools-global-env.jpg)
@@ -13,34 +12,33 @@ In a classical drools project in previous version, the architecture was often li
 
 An alternative of this architecture is to implement the runtime directly in the application A.
 
-
 ## Architecture using 6.4 version and drools API
 
 In the 6.x serie, the Guvnor tool was replaced by what was called workbench and now Business Central. We shall call it kie-wb. 
 It is possible to take the same architecture using the drools API and the kie-wb. 
 There are now two possibilities
-* as the business central is a maven repository, rebuild the runtime (or application if the runtime is embedded) with the new package version.
+
+* as the business central is a maven repository, rebuild the runtime \(or application if the runtime is embedded\) with the new package version.
 * In the runtime dynamically add to the java classpath the new jar of the rules package each time there is a new version.
 * 
 
 ## using kie-server and kie-wb together
 
-In the 6.x version, a new component was introduced called kie-server. It wraps all we described in previous step in is integrated with the workbench.
-The new architecture looks like the previous one : 
+In the 6.x version, a new component was introduced called kie-server. It wraps all we described in previous step and is integrated with the workbench.
+The new architecture looks like the previous one :
 
 ![](BRMS runtime tutorial/kie-architecture.jpg)
 
 * Each kie-server calls the kie-wb at startup and declares itself 
 * From the kie-wb, it is possible to create kie-container in the desired kie-server. 
 * This kie-container contains one maven artifact defined in the kie-wb for one version. 
-* All this is linked together using maven configuration and all related features but all is done for us. You just say I want this artifact in this version (it must be built before of course) and that is all.
+* All this is linked together using maven configuration and all related features but all is done for us. You just say I want this artifact in this version \(it must be built before of course\) and that is all.
 * The kie-container exposes a basic rest service that has the same signature as the API we used in the drools tutorial : insert object, fire all rules etc..
 * The application A calls the drools API remotely and does not have to take care of new rule version deployment.
 
-Out of the box, the new drools tooling in version 6.4 offers us an authoring tool with a runtime ready to work/deploy a drools set of rules in a maven package.
+Out of the box, the new drools tooling in version 6.4 offers us an authoring tool with a runtime ready to work\/deploy a drools set of rules in a maven package.
 
-Which is even better is that as well the authoring tool (kie-wb) or the execution server (kie-server) can be extended.
+Which is even better is that as well the authoring tool \(kie-wb\) or the execution server \(kie-server\) can be extended.
 
 In this tutorial we are going to present an example of each case.
-
 
