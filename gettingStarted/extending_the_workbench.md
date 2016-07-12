@@ -16,13 +16,21 @@ the source code of this project is [here](https://github.com/chtiJBUG/drools-onb
 
 ## Testing the rest interface
 
-Before explaining how 
+Before explaining how to build such a component, here are a few tests to explain how it works. We are using the firefox extension[ rest client](https://addons.mozilla.org/en-US/firefox/addon/restclient/).
+
+Here to get the list of project\(package\) in a repository and a organizational unit : here "demo" and "onboarding-nautic-project" repossitory.
+
+
 
 ![](/assets/action02.png)
+
+Here to get the list of assets of a project : 
 
 ![](/assets/action01.png)
 
 
 
-![](/assets/action03.png)
+
+
+
 
