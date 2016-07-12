@@ -20,7 +20,6 @@ There are now two possibilities
 
 * as the business central is a maven repository, rebuild the runtime \(or application if the runtime is embedded\) with the new package version.
 * In the runtime dynamically add to the java classpath the new jar of the rules package each time there is a new version.
-* 
 
 ## using kie-server and kie-wb together
 
