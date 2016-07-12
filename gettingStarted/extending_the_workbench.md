@@ -14,17 +14,19 @@ So as a first approach, we shall write a plugin that implements new rest interfa
 
 the source code of this project is [here](https://github.com/chtiJBUG/drools-onboarding/tree/master/drools-framework-kie-wb-parent).
 
-
-
-
-
-
-
-
-
 ## Testing the rest interface
 
-http:\/\/localhost:8080\/kie-wb\/rest\/packages\/demo\/onboarding-nautic-project
+
+
+![](/assets/action02.png)
+
+
+
+![](/assets/action01.png)
+
+```
+
+```
 
 
 
