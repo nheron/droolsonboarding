@@ -16,21 +16,13 @@ the source code of this project is [here](https://github.com/chtiJBUG/drools-onb
 
 ## Testing the rest interface
 
-
+Before explaining how 
 
 ![](/assets/action02.png)
 
-
-
 ![](/assets/action01.png)
 
-```
-
-```
 
 
-
-
-
-
+![](/assets/action03.png)
 
