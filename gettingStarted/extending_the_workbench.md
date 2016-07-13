@@ -47,17 +47,9 @@ on the github repository of the project, the structure of the maven project is l
 
 Let us look in the kie-drools-framework-rest-backend module in package org.chtijbug.kie.rest.backend and class PackageResource.java
 
-
-
 | Path |  |  |
 | :--- | :--- | :--- |
 |  |  |  |
-
-
-
-
-
-
 
 rererere
 
