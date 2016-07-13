@@ -51,12 +51,14 @@ Let us look in the kie-drools-framework-rest-backend module in package org.chtij
 | :--- | :--- | :--- |
 | \/package\/{organizationalUnitName}\/{repositoryName} | GET | Get list of package \(project\) |
 | \/package\/{organizationalUnitName}\/{repositoryName}\/{packageName}\/assets | GET | get list of asset in the package |
-| \/package\/{organizationalUnitName}\/{repositoryName}\/{packageName}\/assets/{assetName} | GET | get detail of one asset |
-| \/package\/{organizationalUnitName}\/{repositoryName}\/{packageName}\/assets/{assetName}/source | GET | get source code an asset |
-| \/package\/{organizationalUnitName}\/{repositoryName}\/{packageName}\/assets/{assetName} | PUT | updates asset detail |
-| \/package\/{organizationalUnitName}\/{repositoryName}\/{packageName}\/assets/newAsset | POST | creates a new asset |
-| \/package\/{organizationalUnitName}\/{repositoryName}\/{packageName}\/assets/{assetName}/source| POST |  updates the source code of an asset |
-| \/package\/{organizationalUnitName}\/{repositoryName}\/{packageName}\/assets/{assetName}/source| POST |  updates the source code of an asset |
+| \/package\/{organizationalUnitName}\/{repositoryName}\/{packageName}\/assets\/{assetName} | GET | get detail of one asset |
+| \/package\/{organizationalUnitName}\/{repositoryName}\/{packageName}\/assets\/{assetName}\/source | GET | get source code an asset |
+| \/package\/{organizationalUnitName}\/{repositoryName}\/{packageName}\/assets\/{assetName} | PUT | updates asset detail |
+| \/package\/{organizationalUnitName}\/{repositoryName}\/{packageName}\/assets\/newAsset | POST | creates a new asset |
+| \/package\/{organizationalUnitName}\/{repositoryName}\/{packageName}\/assets\/{assetName}\/source | POST | updates the source code of an asset |
+| \/package\/{organizationalUnitName}\/{repositoryName}\/{packageName}\/assets\/{assetName}\/source | POST | updates the source code of an asset |
 
-rererere
+This will provide the same rest interface for manipulating asset.
+
+
 
