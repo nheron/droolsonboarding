@@ -34,11 +34,11 @@ the url is :
 
 http:\/\/localhost:8080\/kie-wb\/rest\/packages\/demo\/onboarding-nautic-project\/swimmingpool\/assets\/BirthdayReduction.rdrl\/source
 
-
-
 ## Implementing the plugin
 
+on the github repository of the project, the structure of the maven project is like this : 
 
+![](/assets/action05.png)
 
 
 
