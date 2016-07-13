@@ -16,6 +16,8 @@ the source code of this project is [here](https://github.com/chtiJBUG/drools-onb
 
 ## Testing the rest interface
 
+Let us first look how the rest interface is working.
+
 Before explaining how to build such a component, here are a few tests to explain how it works. We are using the firefox extension[ rest client](https://addons.mozilla.org/en-US/firefox/addon/restclient/).
 
 Here to get the list of project\(package\) in a repository and a organizational unit : here "demo" and "onboarding-nautic-project" repossitory.
@@ -28,9 +30,19 @@ Here to get the list of assets of a project :
 
 Here to have the content of a rule asset \(BirthdayReduction\)
 
-the url is : 
+the url is :
 
 http:\/\/localhost:8080\/kie-wb\/rest\/packages\/demo\/onboarding-nautic-project\/swimmingpool\/assets\/BirthdayReduction.rdrl\/source
 
-![](/assets/action04.png)
+
+
+## Implementing the plugin
+
+
+
+
+
+
+
+
 
