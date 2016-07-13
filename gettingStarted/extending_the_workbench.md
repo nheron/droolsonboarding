@@ -45,11 +45,19 @@ on the github repository of the project, the structure of the maven project is l
 | dkie-drools-framework-rest-backend | This is the backend of our plugin |
 | kie-drools-framework-rest-pojo | This is the java class model you can share between the front end of a plugin and the |
 
-
-
-This is the case
-
+Let us look in the kie-drools-framework-rest-backend module in package org.chtijbug.kie.rest.backend and class PackageResource.java
 
 
 
+| Path |  |  |
+| :--- | :--- | :--- |
+|  |  |  |
+
+
+
+
+
+
+
+rererere
 
