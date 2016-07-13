@@ -51,7 +51,6 @@ Let us look in the kie-drools-framework-rest-backend module in package org.chtij
 | :--- | :--- | :--- |
 | \/package\/{organizationalUnitName}\/{repositoryName} | GET | Get list of package \(project\) |
 | \/package\/{organizationalUnitName}\/{repositoryName}\/{packageName}\/assets | GET | get lisr of asset in the package |
-|  |  |
 
 rererere
 
