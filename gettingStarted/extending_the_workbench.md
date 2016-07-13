@@ -41,6 +41,7 @@ on the github repository of the project, the structure of the maven project is l
 | Maven project | Content |
 | :--- | :--- |
 | kie-drools-framework-wb-webapp | IThis is a copy od the drools-wb and customized. All names were changed. In the dependency file pom.xml we added the new plugin we are building |
-| drools-framework-kie-wb-wars |
-|  |  |
+| drools-framework-kie-wb-wars | This is assembly project that will create war for each application server |
+| dkie-drools-framework-rest-backend | This is the backend of our plugin |
+| kie-drools-framework-rest-pojo | This is the java class model you can share between the front end of a plugin and the |
 
