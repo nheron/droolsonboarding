@@ -20,17 +20,17 @@ Before explaining how to build such a component, here are a few tests to explain
 
 Here to get the list of project\(package\) in a repository and a organizational unit : here "demo" and "onboarding-nautic-project" repossitory.
 
-
-
 ![](/assets/action02.png)
 
-Here to get the list of assets of a project : 
+Here to get the list of assets of a project :
 
-![](/assets/action01.png)
+![](/assets/action03.png)
 
+Here to have the content of a rule asset \(BirthdayReduction\)
 
+the url is : 
 
+http:\/\/localhost:8080\/kie-wb\/rest\/packages\/demo\/onboarding-nautic-project\/swimmingpool\/assets\/BirthdayReduction.rdrl\/source
 
-
-
+![](/assets/action04.png)
 
