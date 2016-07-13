@@ -38,6 +38,10 @@ http:\/\/localhost:8080\/kie-wb\/rest\/packages\/demo\/onboarding-nautic-project
 
 on the github repository of the project, the structure of the maven project is like this :
 
+| Maven project | Content |
+| :--- | :--- |
+| kie-drools-framework-wb-webapp | IThis is a copy od the drools-wb and customized. All names were changed. In the dependency file pom.xml we added the new plugin we are building |
+
 
 
 
