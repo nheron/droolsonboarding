@@ -36,9 +36,7 @@ http:\/\/localhost:8080\/kie-wb\/rest\/packages\/demo\/onboarding-nautic-project
 
 ## Implementing the plugin
 
-on the github repository of the project, the structure of the maven project is like this : 
-
-![](/assets/action05.png)
+on the github repository of the project, the structure of the maven project is like this :
 
 
 
