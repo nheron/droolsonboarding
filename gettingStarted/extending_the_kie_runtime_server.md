@@ -8,8 +8,6 @@ From within the  kie-wb, it is possible to create a container in the kie-server 
 
 Here we have an example when two kie-servers are connected
 
-
-
 ![](/action01.png)
 
 We first have to create a container for the swimming pool project we created in the tutorial.
@@ -28,21 +26,11 @@ On the first kie-server
 
 ## Testing the container
 
- 
+In the example we are using, we build a plugin for the kie-server. 
 
+The source code is [here](https://github.com/chtiJBUG/drools-onboarding/tree/master/drools-framework-kie-server-parent). There are two maven project, one for our kie-server that is a maven assembly project using the defautl kie-server from the community project and the second one is our own service.
 
-
-
-
-
-
-
-
-
-
-
-
-
+We then built a service for the swimming pool that will use our drools service. The source code is [here](https://github.com/chtiJBUG/drools-onboarding/tree/master/drools-framework-examples/swimming-pool-kie-server).
 
 
 
