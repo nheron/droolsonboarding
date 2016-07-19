@@ -32,5 +32,17 @@ The source code is [here](https://github.com/chtiJBUG/drools-onboarding/tree/mas
 
 We then built a service for the swimming pool that will use our drools service. The source code is [here](https://github.com/chtiJBUG/drools-onboarding/tree/master/drools-framework-examples/swimming-pool-kie-server).
 
+### Creating a drools plugin for the kie-server
+
+
+
+
+
+### Creating a service that uses our plugin
+
+
+
+
+
 
 
