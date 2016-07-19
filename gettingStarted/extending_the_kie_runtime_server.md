@@ -36,15 +36,13 @@ We then built a service for the swimming pool that will use our drools service. 
 
 To create a kie-server plugin, you need to implement an interface kieServerExtentsion and to create a fiile called org.kie.server.services.api.KieServerExtension in the META-INF\/services directory and in this file you should put the complete class name of you implementation.
 
-
-
 Here is the file META-INF\/services\/org.kie.server.services.api.KieServerExtension
 
 ```
 org.chtijbug.kieserver.services.drools.DroolsFrameworkKieServerExtension
 ```
 
-And the class looks like this : 
+And the class looks like this :
 
 
 
@@ -59,6 +57,4 @@ ezezez
 ezez
 
 ezez
-
-
 
