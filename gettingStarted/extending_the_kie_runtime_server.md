@@ -32,7 +32,7 @@ The source code is [here](https://github.com/chtiJBUG/drools-onboarding/tree/mas
 
 We then built a service for the swimming pool that will use our drools service. The source code is [here](https://github.com/chtiJBUG/drools-onboarding/tree/master/drools-framework-examples/swimming-pool-kie-server).
 
-### Creating a drools plugin for the kie-server
+### Creating a drools extension for the kie-server
 
 To create a kie-server plugin, you need to implement an interface kieServerExtentsion and to create a fiile called org.kie.server.services.api.KieServerExtension in the META-INF\/services directory and in this file you should put the complete class name of you implementation.
 
@@ -215,10 +215,6 @@ Note the method  getAppComponents. We give back the ruleExectutionService that w
 
 This instance we shall obtain in our service that we want to build to use our server extension.
 
-
-
-
-
 To build a new service in kie-server that will use a plugin we have to implement an interface
 
 ```
@@ -256,5 +252,5 @@ public class LoyaltyKieServerApplicationComponentsService implements KieServerAp
 }
 ```
 
-We send back our component 
+We send back our component
 
