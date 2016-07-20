@@ -22,6 +22,8 @@ On the first kie-server
 
 ser![](/action05.png)On the second kie-server
 
+
+
 ![](/action06.png)
 
 ## Testing the container
@@ -42,11 +44,25 @@ Here is the file META-INF\/services\/org.kie.server.services.api.KieServerExtens
 org.chtijbug.kieserver.services.drools.DroolsFrameworkKieServerExtension
 ```
 
-And the class looks like this :
+And the class you have to write must implemetns the following interface :
 
 
 
-
+```
+public interface KieServerExtension {
+    boolean isActive();
+    void init(KieServerImpl kieServer, KieServerRegistry registry);
+    void destroy(KieServerImpl kieServer, KieServerRegistry registry);
+    void createContainer(String id, KieContainerInstance kieContainerInstance, Map<String, Object> parameters);
+    void disposeContainer(String id, KieContainerInstance kieContainerInstance, Map<String, Object> parameters);
+    List<Object> getAppComponents(SupportedTransports type);
+    <T> T getAppComponents(Class<T> serviceType);
+    String getImplementedCapability();
+    List<Object> getServices();
+    String getExtensionName();
+    Integer getStartOrder();
+}
+```
 
 
 
