@@ -62,6 +62,10 @@ public interface KieServerExtension {
 
 This methods will be called by the kie-server.
 
+Here is our implementation. In the init method we shall instantiate our service.
+
+In the createContainer method we add all the classes that we find in the container. Notice that we give our extension a name that we shall use later "DroolsFramework".
+
 ```
 public class DroolsFrameworkKieServerExtension implements KieServerExtension {
     public static final String EXTENSION_NAME = "DroolsFramework";
