@@ -204,8 +204,6 @@ public class DroolsFrameworkKieServerExtension implements KieServerExtension {
 
 Note the method  getAppComponents. We give back the ruleExectutionService that we instanciated in the init method of type DroolsFrameworkRulesExecutionService.
 
- 
-
 ```
 @Overridepublic <T> T getAppComponents(Class<T> serviceType) {
     if (serviceType.isAssignableFrom(rulesExecutionService.getClass())) {
@@ -254,5 +252,11 @@ public class LoyaltyKieServerApplicationComponentsService implements KieServerAp
 }
 ```
 
-We send back our component
+We send back our component SwimmingPoolResource and give it the execution service.
+
+
+
+
+
+
 
