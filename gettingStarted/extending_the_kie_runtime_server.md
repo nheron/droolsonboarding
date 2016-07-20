@@ -64,7 +64,48 @@ This methods will be called by the kie-server.
 
 ### Creating a service that uses our plugin
 
-ezezez
+To build a new service in kie-server that will use a plugin we have to implement an interface
+
+```
+public interface KieServerApplicationComponentsService {
+    Collection<Object> getAppComponents( String extension, SupportedTransports type, Object... services );
+}
+```
+
+Our implementation looks like this : 
+
+```
+public class LoyaltyKieServerApplicationComponentsService implements KieServerApplicationComponentsService {
+    private static final String OWNER_EXTENSION = "DroolsFramework";
+    public Collection<Object> getAppComponents(String extension, SupportedTransports type, Object... services) {
+        // skip calls from other than owning extension
+        if (!OWNER_EXTENSION.equals(extension)) {
+            return Collections.emptyList();
+        }
+        DroolsFrameworkRulesExecutionService rulesExecutionService = null;
+        KieServerRegistry context = null;
+        for (Object object : services) {
+            if (DroolsFrameworkRulesExecutionService.class.isAssignableFrom(object.getClass())) {
+                DroolsFrameworkRulesExecutionService droolsFrameworkRulesExecutionService = (DroolsFrameworkRulesExecutionService) object; 
+               context = droolsFrameworkRulesExecutionService.getContext();
+                rulesExecutionService = droolsFrameworkRulesExecutionService;
+                continue;
+            }
+        }
+        List<Object> components = new ArrayList<Object>(1);
+        if (SupportedTransports.REST.equals(type)) {
+            components.add(new swimmingpoolResource(rulesExecutionService, context));
+        }
+        return components;
+    }
+}
+```
+
+
+
+
+
+
 
 ezez
 
