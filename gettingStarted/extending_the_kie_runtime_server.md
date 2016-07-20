@@ -22,8 +22,6 @@ On the first kie-server
 
 ser![](/action05.png)On the second kie-server
 
-
-
 ![](/action06.png)
 
 ## Testing the container
@@ -46,8 +44,6 @@ org.chtijbug.kieserver.services.drools.DroolsFrameworkKieServerExtension
 
 And the class you have to write must implemetns the following interface :
 
-
-
 ```
 public interface KieServerExtension {
     boolean isActive();
@@ -64,7 +60,7 @@ public interface KieServerExtension {
 }
 ```
 
-
+This methods will be called by the kie-server.
 
 ### Creating a service that uses our plugin
 
