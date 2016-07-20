@@ -202,7 +202,22 @@ public class DroolsFrameworkKieServerExtension implements KieServerExtension {
 }
 ```
 
-### Creating a service that uses our plugin
+Note the method  getAppComponents. We give back the ruleExectutionService that we instanciated in the init method of type 
+
+```
+@Overridepublic <T> T getAppComponents(Class<T> serviceType) {
+    if (serviceType.isAssignableFrom(rulesExecutionService.getClass())) {
+        return (T) rulesExecutionService;
+    }
+    return null;
+}
+```
+
+This instance we shall obtain in our service that we want to build to use our server extension.
+
+
+
+
 
 To build a new service in kie-server that will use a plugin we have to implement an interface
 
@@ -241,7 +256,5 @@ public class LoyaltyKieServerApplicationComponentsService implements KieServerAp
 }
 ```
 
-ezez
-
-ezez
+We send back our component 
 
