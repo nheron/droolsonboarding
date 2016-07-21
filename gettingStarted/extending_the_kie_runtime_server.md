@@ -32,11 +32,18 @@ The source code is [here](https://github.com/chtiJBUG/drools-onboarding/tree/mas
 
 We then built a service for the swimming pool that will use our drools service. The source code is [here](https://github.com/chtiJBUG/drools-onboarding/tree/master/drools-framework-examples/swimming-pool-kie-server).
 
-### Architecture Overview of our extension and the service that uses it
+### Architecture of our extension and the service that uses it
+
+Here is a global overview on how to build a complete set of new features : 
+
+* A new instance of kieServerExtension
+
+* A new instance of KieServerApplicationComponentsService 
+
+
+
 
 ![](/assets/RuntImeKieServerExtension.jpg)
-
-
 
 ### Creating a drools extension for the kie-server
 
