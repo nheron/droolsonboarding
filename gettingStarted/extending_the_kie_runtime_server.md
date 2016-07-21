@@ -34,13 +34,9 @@ We then built a service for the swimming pool that will use our drools service. 
 
 ### Architecture Overview of our extension and the service that uses it
 
-
-
 ![](/assets/RuntImeKieServerExtension.jpg)
 
 ### Creating a drools extension for the kie-server
-
-
 
 To create a kie-server plugin, you need to implement an interface kieServerExtentsion and to create a fiile called org.kie.server.services.api.KieServerExtension in the META-INF\/services directory and in this file you should put the complete class name of you implementation.
 
@@ -266,12 +262,42 @@ We send back our component SwimmingPoolResource and give it the execution servic
 
 ```
 @Path("server/containers/instances/swimmingpool/")
-public class swimmingpoolResource {    private static final Logger logger = LoggerFactory.getLogger(swimmingpoolResource.class);    private KieCommands commandsFactory = KieServices.Factory.get().getCommands();    private DroolsFrameworkRulesExecutionService rulesExecutionService;    private KieServerRegistry registry;    private RuleBasePackage ruleBasePackage = null;    public swimmingpoolResource() {    }    public swimmingpoolResource(DroolsFrameworkRulesExecutionService rulesExecutionService, KieServerRegistry registry) {        this.rulesExecutionService = rulesExecutionService;        this.registry = registry;    }    @POST    @Path("/run/{id}")    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})    public Quote runSession(@PathParam("id") String id,                            Quote quoteRequest) {        try {            KieContainerInstance kci = registry.getContainer(id);            ChtijbugObjectRequest chtijbugObjectRequest = new ChtijbugObjectRequest();            chtijbugObjectRequest.setObjectRequest(quoteRequest);            ChtijbugObjectRequest chtijbutObjectResponse = (ChtijbugObjectRequest) rulesExecutionService.FireAllRulesAndStartProcess(kci, chtijbugObjectRequest, "swimmingpool.P000");            ObjectMapper mapper = new ObjectMapper();            String jsonInString = mapper.writeValueAsString(chtijbutObjectResponse.getSessionLogging());            Quote response = (Quote) chtijbutObjectResponse.getObjectRequest();            response.setSessionLogging(jsonInString);            logger.debug("Returning OK response with content '{}'", quoteRequest);            return response;        } catch (Exception e) {            // in case marshalling failed return the FireAllRulesAndStartProcess container response to keep backward compatibility            String response = "Execution failed with error : " + e.getMessage();            logger.debug("Returning Failure response with content '{}'", response);            return quoteRequest;        }    }}
+public class swimmingpoolResource {
+    private static final Logger logger = LoggerFactory.getLogger(swimmingpoolResource.class);
+    private KieCommands commandsFactory = KieServices.Factory.get().getCommands();
+    private DroolsFrameworkRulesExecutionService rulesExecutionService;
+    private KieServerRegistry registry;
+    private RuleBasePackage ruleBasePackage = null;
+    public swimmingpoolResource() {
+    }
+    public swimmingpoolResource(DroolsFrameworkRulesExecutionService rulesExecutionService, KieServerRegistry registry) {
+        this.rulesExecutionService = rulesExecutionService;
+        this.registry = registry;
+    }
+    @POST
+    @Path("/run/{id}")
+    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public Quote runSession(@PathParam("id") String id,
+                            Quote quoteRequest) {
+        try {
+            KieContainerInstance kci = registry.getContainer(id);
+            ChtijbugObjectRequest chtijbugObjectRequest = new ChtijbugObjectRequest();
+            chtijbugObjectRequest.setObjectRequest(quoteRequest);
+            ChtijbugObjectRequest chtijbutObjectResponse = (ChtijbugObjectRequest) rulesExecutionService.FireAllRulesAndStartProcess(kci, chtijbugObjectRequest, "swimmingpool.P000");
+            ObjectMapper mapper = new ObjectMapper();
+            String jsonInString = mapper.writeValueAsString(chtijbutObjectResponse.getSessionLogging());
+            Quote response = (Quote) chtijbutObjectResponse.getObjectRequest();
+            response.setSessionLogging(jsonInString);
+            logger.debug("Returning OK response with content '{}'", quoteRequest); 
+           return response;
+        } catch (Exception e) {
+            // in case marshalling failed return the FireAllRulesAndStartProcess container response to keep backward compatibility
+            String response = "Execution failed with error : " + e.getMessage();
+            logger.debug("Returning Failure response with content '{}'", response);
+            return quoteRequest;
+        }
+    }
+}
 ```
-
-
-
-
-
-
 
