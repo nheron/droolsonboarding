@@ -28,6 +28,7 @@
     * [Implementing the final step](gettingStarted/implementing_the_subscription_step.md)
     * [Conclusion](gettingStarted/how_to_install_the_server.md)
 * [BRMS Runtime tutorial](gettingStarted/brmsruntime.md)
+    * [Install needed tools to run the workbench](gettingStarted/install-needed-tools-to-run-the-workbench.md)
 * [JBPM tutorial](gettingStarted/jbpm.md)
 * [Examples](examples/examples.md)
     * [Swimming pool example](examples/swimmingpool/swimmingpool.md)
