@@ -37,7 +37,7 @@ The new architecture looks like the previous one :
 
 Out of the box, the new drools tooling in version 6.4 offers us an authoring tool with a runtime ready to work\/deploy a drools set of rules in a maven package.
 
-Which is even better is that as well the authoring tool \(kie-wb\) or the execution server \(kie-server\) can be extended.
+Which is even better is that as well the authoring tool \(kie-wb\) or the execution server \(kie-server\) can be extended. You can see that at the end of the book.
 
-In this tutorial we are going to present an example of each case.
+For now on, we shall use the standard tooling and interface available out of the box.
 
