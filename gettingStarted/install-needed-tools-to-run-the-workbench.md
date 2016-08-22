@@ -11,5 +11,7 @@ This technology allows us to use pre-build images that run on all supported plat
 
 This will avoid spolling your operating system, we are going to use virtual machines on your host.
 
-For the windows owner the 
+For the windows\/MacOS machines, the toolbox is [here.](https://www.docker.com/products/docker-toolbox)
+
+
 
