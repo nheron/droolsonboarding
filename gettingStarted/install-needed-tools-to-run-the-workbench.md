@@ -1,4 +1,4 @@
-![](install/win-step01.png)To be able to run the workbench as well as the kie server nativelely on your machine, a lot has to be installed :
+To be able to run the workbench as well as the kie server nativelely on your machine, a lot has to be installed :
 
 * Java runtime
 * Bundle that installs all needed component
@@ -25,8 +25,6 @@ Click in the download page on the Docker ToolBox Setup. The security system will
 
 ![](/install/step-03.png)
 
-
-
 ![](/install/step-04.png)
 
 ![](/install/step-05.png)
@@ -37,7 +35,15 @@ Click in the download page on the Docker ToolBox Setup. The security system will
 
 ![](/install/step-08.png)
 
+Now double click on the "Docker quickstart terminal" and all should start : 
+
 ![](/install/step-09.png)
 
+
+
 ![](/install/step-10.png)
+
+Now we are ready to start the workbench.
+
+
 
