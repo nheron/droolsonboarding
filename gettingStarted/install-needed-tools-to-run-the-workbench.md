@@ -15,11 +15,29 @@ For the windows\/MacOS machines, the toolbox is [here.](https://www.docker.com/p
 
 ![](/assets/win-step01.png)
 
-We shall continue withe the windows installation. 
+We shall continue withe the windows installation.
 
 Click in the download page on the Docker ToolBox Setup. The security system will ask you if you allow this program to execute, answer yes.
 
-![](install/step-01.png)
+![](/install/step-01.png)
+
+![](/install/step-02.png)
+
+![](/install/step-03.png)
 
 
+
+![](/install/step-04.png)
+
+![](/install/step-05.png)
+
+![](/install/step-06.png)
+
+![](/install/step-07.png)
+
+![](/install/step-08.png)
+
+![](/install/step-09.png)
+
+![](/install/step-10.png)
 
