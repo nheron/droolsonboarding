@@ -1,4 +1,4 @@
-To be able to run the workbench as well as the kie server nativelely on your machine, a lot has to be installed :
+![](install/win-step01.png)To be able to run the workbench as well as the kie server nativelely on your machine, a lot has to be installed :
 
 * Java runtime
 * Bundle that installs all needed component
@@ -12,6 +12,14 @@ This technology allows us to use pre-build images that run on all supported plat
 This will avoid spolling your operating system, we are going to use virtual machines on your host.
 
 For the windows\/MacOS machines, the toolbox is [here.](https://www.docker.com/products/docker-toolbox)
+
+![](/assets/win-step01.png)
+
+We shall continue withe the windows installation. 
+
+Click in the download page on the Docker ToolBox Setup. The security system will ask you if you allow this program to execute, answer yes.
+
+![](install/step-01.png)
 
 
 
