@@ -24,9 +24,18 @@ If a red rule is fired, the calculation can stop. If a yellow rule is fired, the
 |  |  |
 
 base Price
-| Fiscal Power bigger than | Fiscal powwer less than | Base Price
-|  |
-| --- | --- |
+| Fiscal Power bigger than | Fiscal powwer less than | Base Price per year| Comment |
+|  | 0 | 300 | Electrical Car |
+|1 | 4 | 500 |  |
+|5 | 7 | 700 |   |
+|8 | 11 | 950 | |
+|12 | 17 | 1200 | |
+|18 |  | 1400 | |
+
+
+
+
+
 
 | OnlyDriverUnder18yearsold | If there is only one driver given and the age is under 16 years old. |
 
