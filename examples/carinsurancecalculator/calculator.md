@@ -34,6 +34,8 @@ Base Price
 | 12 | 17 | 1200 |  |
 | 18 |  | 1400 |  |
 
+Here are the available options.
+
 | Fiscal Power bigger than | Fiscal powwer less than | Base Price per year | Comment |
 
 | --- | --- | --- | --- |
