@@ -36,20 +36,13 @@ Base Price
 
 Here are the available options.
 
-| Fiscal Power bigger than | Fiscal powwer less than | Base Price per year | Comment |
-
+| Fiscal Power bigger than | Fiscal powwer less than | Option price per year | Comment |
 | --- | --- | --- | --- |
-
 | | 0 | 300 | Electrical Car |
-
 | 1 | 4 | 500 | |
-
 | 5 | 7 | 700 | |
-
 | 8 | 11 | 950 | |
-
 | 12 | 17 | 1200 | |
-
 | 18 | | 1400 | |
 
 
