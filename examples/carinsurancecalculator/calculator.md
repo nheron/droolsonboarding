@@ -47,7 +47,7 @@ Here is the price to add (to be applied per declared driver)
 | 30 | | 5 | 5 | +10% |
 All other cases +25% per driver
 
-If more than 4 drivers, starting from fourth no more addon. The 3 drivers to take are the most expansive.
+If more than 4 drivers are declared in the request, starting from the fourth driver and over are free. The 3 drivers to take are the most expansive.
 
 
 
