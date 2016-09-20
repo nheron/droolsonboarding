@@ -36,7 +36,6 @@ Base Price
 
 
 
-| OnlyDriverUnder18yearsold | If there is only one driver given and the age is under 16 years old. |
 
 
 
