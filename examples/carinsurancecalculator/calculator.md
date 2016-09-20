@@ -45,6 +45,8 @@ Here is the price to add
 | 18 | 30 | 2| 4| +12%  |
 | 30 |  | 0| 0| +0% |
 | 30 | | 5 | 5 | +10% |
+All other cases +50%
+
 
 
 
