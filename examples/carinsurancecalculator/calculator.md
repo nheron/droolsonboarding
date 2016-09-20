@@ -25,6 +25,7 @@ If a red rule is fired, the calculation can stop. If a yellow rule is fired, the
 
 base Price
 | Fiscal Power bigger than | Fiscal powwer less than | Base Price per year| Comment |
+| --- | --- | --- | --- |
 |  | 0 | 300 | Electrical Car |
 |1 | 4 | 500 |  |
 |5 | 7 | 700 |   |
