@@ -38,7 +38,7 @@ Here are the available options.
 
 | Fiscal Power bigger than | Fiscal powwer less than | Option price per year | Comment |
 | --- | --- | --- | --- |
-| | 0 | 300 | Electrical Car |
+| | 0 | 300 |  |
 | 1 | 4 | 500 | |
 | 5 | 7 | 700 | |
 | 8 | 11 | 950 | |
