@@ -34,7 +34,9 @@ Base Price
 | 12 | 17 | 1200 |  |
 | 18 |  | 1400 |  |
 
-Here is the price to add (to be applied per declared driver)
+
+
+Here are the prices to add (to be applied per declared driver and per base+option)
 
 
 | Age bigger than | Age smaller than | Maximum number accident last 2 years  | number accident last 5 years less than | % to add to base price |
