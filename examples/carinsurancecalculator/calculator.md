@@ -38,15 +38,22 @@ Here are the available options.
 
 | Fiscal Power bigger than | Fiscal powwer less than | Option price per year | Comment |
 | --- | --- | --- | --- |
-| | 0 | 300 |  |
-| 1 | 4 | 500 | |
-| 5 | 7 | 700 | |
-| 8 | 11 | 950 | |
-| 12 | 17 | 1200 | |
-| 18 | | 1400 | |
+| 1 | 4 | 600 | Full Risk |
+| 5 | 7 | 800 | Full Risk |
+| 8 | 11 | 1200 | Full Risk |
+| 12 | 17 |2000 | Full Risk |
+| 1 | 4 | 400 |  Stolen Damage |
+| 5 | 7 | 300 | Stolen Damage |
+| 8 | 11 | 600 | Stolen Damage |
+| 12 | 17 | 1000 | Stolen Damage |
+| 1 | 4 | 200 | Car Glass Damage |
+| 5 | 7 | 300 | Car Glass Damage |
+| 8 | 11 | 400 | Car Glass Damage|
+| 12 | 17 | 500 | Car Glass Damage |
 
 
-Here are the prices to add (to be applied per declared driver and per base+option)
+
+Here are the prices to add (to be applied per declared driver and per base+option). 
 
 
 | Age bigger than | Age smaller than | Maximum number accident last 2 years  | number accident last 5 years less than | % to add to base price |
