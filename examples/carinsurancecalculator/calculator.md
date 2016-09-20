@@ -34,6 +34,21 @@ Base Price
 | 12 | 17 | 1200 |  |
 | 18 |  | 1400 |  |
 
+| Fiscal Power bigger than | Fiscal powwer less than | Base Price per year | Comment |
+
+| --- | --- | --- | --- |
+
+| | 0 | 300 | Electrical Car |
+
+| 1 | 4 | 500 | |
+
+| 5 | 7 | 700 | |
+
+| 8 | 11 | 950 | |
+
+| 12 | 17 | 1200 | |
+
+| 18 | | 1400 | |
 
 
 Here are the prices to add (to be applied per declared driver and per base+option)
