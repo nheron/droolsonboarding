@@ -13,17 +13,12 @@ In Input, the calculator should receive a quote requet, containing the car , the
 
 If a red rule is fired, the calculation can stop. If a yellow rule is fired, the calculation can continu.
 
-
-
 | Red Rule name | Description |
 | --- | --- |
 | OnlyDriverUnder18yearsold | If there is only one driver given and the age is under 16 years old. |
 
-
-
 | Yellow Rule Name | Description |
 | --- | --- |
-| OneDriverBetween16And18YearsOld | If one driver is between 16 and 18 years and no other driver is  over 25 years old and has no accident in the last 2 years and maximum 2 accident ont he last 5 years |
-
-
+| OneDriverBetween16And18YearsOld | If one driver is between 16 and 18 years and no other driver is  over 25 years old and has no accident in the last 2 years and maximum 2 accidents in the last 5 years |
+|  |  |
 
