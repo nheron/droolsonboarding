@@ -34,7 +34,7 @@ Base Price
 | 12 | 17 | 1200 |  |
 | 18 |  | 1400 |  |
 
-Here is the price to add
+Here is the price to add (to be applied per declared driver)
 
 
 | Age bigger than | Age smaller than | Maximum number accident last 2 years  | number accident last 5 years less than | % to add to base price |
@@ -46,6 +46,10 @@ Here is the price to add
 | 30 |  | 0| 0| +0% |
 | 30 | | 5 | 5 | +10% |
 All other cases +25% per driver
+
+If more than 4 drivers, starting from fourth no more addon. The 3 drivers to take are the most expansive.
+
+
 
 
 
