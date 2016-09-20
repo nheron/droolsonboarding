@@ -21,9 +21,9 @@ If a red rule is fired, the calculation can stop. If a yellow rule is fired, the
 | Yellow Rule Name | Description |
 | --- | --- |
 | OneDriverBetween16And18YearsOld | If one driver is between 16 and 18 years and no other driver is  over 25 years old and has no accident in the last 2 years and maximum 2 accidents in the last 5 years |
-|  |  |
+|  |    |
 
-base Price
+Base Price
 | Fiscal Power bigger than | Fiscal powwer less than | Base Price per year| Comment |
 | --- | --- | --- | --- |
 |  | 0 | 300 | Electrical Car |
