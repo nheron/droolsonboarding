@@ -3,6 +3,7 @@
 This project is used by the jbpm tutorial.
 
 The purpose is to implement a calculator that shall give a a list of prices to insure a car for a given car and a list of drivers.
+The car data contains when it was first registered, the fiscal power, the brand name and the model name
 
 In Input, the calculator should receive a quote requet, containing the car , the list of drivers. The calculator should send back the same request object with added objects :
 
@@ -21,4 +22,25 @@ If a red rule is fired, the calculation can stop. If a yellow rule is fired, the
 | --- | --- |
 | OneDriverBetween16And18YearsOld | If one driver is between 16 and 18 years and no other driver is  over 25 years old and has no accident in the last 2 years and maximum 2 accidents in the last 5 years |
 |  |  |
+
+base Price
+| Fiscal Power bigger than | Fiscal powwer less than | Base Price
+|  |
+| --- | --- |
+
+| OnlyDriverUnder18yearsold | If there is only one driver given and the age is under 16 years old. |
+
+
+
+Here is the price to add
+| Age bigger than | Age smaller than | Maximum number accident last 2 years  | number accident last 5 years less than | % to add to base price |  
+|   16  | 18  |  | | +25% |
+| 18 | 30 | 0| 0| +5% |
+| 18 | 30 | 0| 2 | +10% |
+| 18 | 30 | 2| 4| +12%  |
+
+
+
+
+
 
