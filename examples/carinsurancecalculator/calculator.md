@@ -39,13 +39,13 @@ Here is the price to add
 
 | Age bigger than | Age smaller than | Maximum number accident last 2 years  | number accident last 5 years less than | % to add to base price |
 | --- | --- | --- | --- | --- |
-|   16  | 18  |  | | +25% |
+|   16  | 18  |  | | +20% |
 | 18 | 30 | 0| 0| +5% |
 | 18 | 30 | 0| 2 | +10% |
 | 18 | 30 | 2| 4| +12%  |
 | 30 |  | 0| 0| +0% |
 | 30 | | 5 | 5 | +10% |
-All other cases +50%
+All other cases +25% per driver
 
 
 
