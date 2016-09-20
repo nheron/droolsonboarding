@@ -36,9 +36,9 @@ Base Price
 
 Here is the price to add
 
-|  |  |
-| --- | --- |
-|  |  |
+|  |  | |
+| --- | --- | --- |
+|  |  | |
 
 
 
