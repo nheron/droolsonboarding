@@ -21,7 +21,7 @@ If a red rule is fired, the calculation can stop. If a yellow rule is fired, the
 | Yellow Rule Name | Description |
 | --- | --- |
 | OneDriverBetween16And18YearsOld | If one driver is between 16 and 18 years and no other driver is  over 25 years old and has no accident in the last 2 years and maximum 2 accidents in the last 5 years |
-|  |  |
+| OneDriverTooOld | If one driver is over 75 years old |
 
 Base Price
 
@@ -50,6 +50,7 @@ All other cases +25% per driver
 If more than 4 drivers are declared in the request, starting from the fourth driver and over are free. The 3 drivers to take are the most expansive.
 
 
+At the end, there can be only one yellow rule that can be fired.
 
 
 
