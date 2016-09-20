@@ -36,14 +36,12 @@ Base Price
 
 
 
-
-
-
 | OnlyDriverUnder18yearsold | If there is only one driver given and the age is under 16 years old. |
 
 
 
 Here is the price to add
+
 | Age bigger than | Age smaller than | Maximum number accident last 2 years  | number accident last 5 years less than | % to add to base price |  
 |   16  | 18  |  | | +25% |
 | 18 | 30 | 0| 0| +5% |
