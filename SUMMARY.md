@@ -35,6 +35,7 @@
     * [Loyalty Example](examples/loyalty/loyalty.md)
     * [Transport Cost Example](examples/transportCost/transportcost.md)
     * [Car Insurance Calculator Example](examples/carinsurancecalculator/calculator.md)
+        * [Requirements](examples/carinsurancecalculator/requirements.md)
     * [Commercial income calculator example](examples/commercialincomecalculator/calculator.md)
     * [Insurance Contract subscription](examples/newinsurancesubscription/subscription.md)
 * [Extending the workbench](gettingStarted/extending_the_workbench.md)
