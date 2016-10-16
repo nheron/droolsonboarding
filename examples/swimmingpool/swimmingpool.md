@@ -1,1 +1,0 @@
-# Swimming Pool Example
