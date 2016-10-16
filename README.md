@@ -10,6 +10,6 @@ The book is also on github here https://github.com/nheron/droolsonboarding
 
 ## How to run the tutorial and examples 
 
-* the source code for the tutorials and examples can be found on [bitbucket](https://bitbucket.org/nheron/droolscourse)
+* the source code for the tutorials and examples can be found on [github]()
 * there is a virtual box appliance available with all included that you can find here \(TODO\) 
 
