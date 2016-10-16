@@ -150,13 +150,6 @@ TODO
 
 
 
-### Plugin Architecture to build patterns
-
-
-### Execution server : kie server and Plugin architecture
-
-
-
 
 
 
