@@ -4,7 +4,6 @@
 * [Technical Materials](technical_materials.md)
 * [Overview](overview/overview.md)
 * [Drools tutorial](gettingStarted/drools.md)
-    * [Drools architecture](gettingStarted/drools_concept.md)
     * [Installing Drools Tooling](gettingStarted/installing_drools_tooling.md)
     * [Data Model used in the tutorial](gettingStarted/data_model_used_in_the_tutorial.md)
     * [Lesson 1 : Core concepts](gettingStarted/first_rule_language_element.md)
