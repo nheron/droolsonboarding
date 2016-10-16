@@ -2,11 +2,13 @@
 
 You can find here all the materials that goes with this book.
 The book is also on github here https://github.com/nheron/droolsonboarding
+[Here is the content of the book](SUMMARY.md)
 
 ## How to edit the docs
 
 * go to [Drools Onboarding book](https://www.gitbook.com/book/nheron/droolsonboarding/details)
 * There you can clone and edit the document
+* You can do it from github also
 
 ## How to run the tutorial and examples 
 
