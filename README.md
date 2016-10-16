@@ -1,7 +1,7 @@
 # drools On Boarding
 
 You can find here all the materials that goes with this book.
-The book is also on github here https://github.com/nheron/droolsonboarding
+The book is also on github [here] (https://github.com/nheron/droolsonboarding).
 
 Here is the [content](SUMMARY.md) of the book
 
