@@ -87,7 +87,7 @@ To do, we first create a package called util and in there create a class that we
 
 
 ![](drools/dataModel_fig20.png)
-The create a new class called KnowledgeSessionHelper
+Then create a new class called KnowledgeSessionHelper
 
 ![](drools/dataModel_fig21.png)
 
