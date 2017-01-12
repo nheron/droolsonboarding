@@ -38,7 +38,7 @@ And the trip is a follows :
 | 2 | Rotterdam | Tournai | 300 | Train |
 | 3 | Tournai | Lille | 20 | Truck |
 
-there are 3 types of costs :
+There are 3 types of costs :
 
 * transport costs per Pallet
 
