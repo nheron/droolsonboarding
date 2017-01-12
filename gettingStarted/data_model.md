@@ -32,7 +32,7 @@ As said in the introduction on BRMS, all dependency are shown.
 
 
 > Note that in the 6.4.0 version there is a bug. If the workbench is restarted or you quit the editor and re-open it, the list is then empty when you log again. But it is only a display problem as in the repository the dependency is kept.
-> the JIRA is [here](https://issues.jboss.org/browse/GUVNOR-2508).
+> the JIRA is [here](https://issues.jboss.org/browse/GUVNOR-2508). It is corrected in version 6.5.0.
 
 Now we have to say which java entity/classes we want to use in our rules. This is then done as follows.
 ![](BRMS/Step2-DataModel/action07.png)
@@ -47,7 +47,7 @@ Then the list looks like this.
 
 ## Where dependencies and package white list are stored
 As said before, in case of a restart of the workbench application, the dependency list is empty.
-In this case, to see the dependency, you set the project explorer mode to repository view as shown below/
+In this case, to see the dependency, you set the project explorer mode to repository view as shown below
 
 ![](BRMS/Step2-DataModel/action10.png)
 You can now see how the repository is stored with all files.
