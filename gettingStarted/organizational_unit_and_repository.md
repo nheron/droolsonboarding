@@ -1,7 +1,7 @@
 # Organizational Unit And repository
 
 Before starting any example, we shall create the necessary wrapping.
-On the main screen, click the "Administration" link or the menu Authoring/Adminstration.
+On the main screen, click the "Administration" link or the menu Authoring/Administration.
 
 
 ![](BRMS/Step1-CreateOrganisationAndRepository/Action01.png)
