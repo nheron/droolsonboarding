@@ -476,7 +476,7 @@ You may need to add constructors in the CashFlow and AccountingPeriod classes :
     }
 ```
 
-Here is our test case.
+Here is our test case : 
 ```
 	@Test
 	public void testCollecting() throws Exception {
