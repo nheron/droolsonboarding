@@ -22,13 +22,13 @@ All products start from the same city and go to the same city in an order. A tri
 
 Here is the list of products in our test order.
 
-| Product | Transport type | Number | Height | Weight | depth | weight |
+| Product | Transport type | Number | Height | Weight | Depth | Weight |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| drill | pallet | 1000 | 20cm | 40cm | 30cm | 2 kg |
-| screwdriver | pallet | 30000 | 3cm | 2cm | 20cm | 0,2 kg |
+| Drill | pallet | 1000 | 20cm | 40cm | 30cm | 2 kg |
+| Screwdriver | pallet | 30000 | 3cm | 2cm | 20cm | 0,2 kg |
 | Sand | bulk |  |  |  |  | 35 Tons |
 | Gravel | bulk |  |  |  |  | 14 Tons |
-| furniture | individual | 23 |  |  |  | 500 kg |
+| Furniture | individual | 23 |  |  |  | 500 kg |
 
 And the trip is a follows :
 
