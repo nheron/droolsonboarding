@@ -417,7 +417,7 @@ The rule is fired twice as in the service there are two customers with the same 
 
 
 
-the purpose is to collect a set of fact and constraint if the constraints are true.
+The purpose is to collect a set of fact and constraint if the constraints are true.
 Let us see the following example int the rule "More then 2 CashFlow Line". in this rule, we want to collect all CashFlow that are in the correct time period and the good account number.
 The "from collect" syntax returns an arrayList. It is possible to add a condition as in the first rule where we add a constraint that we expect at least 2 items. In the second rule, we do not add this constraint.
 
