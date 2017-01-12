@@ -63,8 +63,8 @@ There are 3 types of costs :
 | :--- | :--- |
 | Shangai | 20€\/hour and a person can handle 13 pallets\/hour |
 | Rotterdam | 45€\/hour and a person can handle 60 pallets\/hour |
-| Tournai | 67€\/hour and can handle 40 pallets\/hour |
-| Lille | 79€\/hour and can handle 30 pallets\/hour |
+| Tournai | 67€\/hour and a person can handle 40 pallets\/hour |
+| Lille | 79€\/hour and a person can handle 30 pallets\/hour |
 
 The handling should not take more than 12 hours.
 
