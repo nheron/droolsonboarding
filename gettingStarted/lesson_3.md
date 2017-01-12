@@ -371,6 +371,11 @@ public class CustomerService {
 then we shall create the rule that uses the from 
 
 ```
+// add  import for the service
+import droolscours.service.CustomerService;
+// add the global
+global CustomerService serviceCustomer;
+
 rule "FromCondition"
 	when
 		$c : Customer()
