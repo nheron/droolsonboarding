@@ -118,7 +118,7 @@ As seen in the previous part, the drools community redesigned completely the BRM
 
 ### Rule design pattern : decision tables,decision tree, guided rules
 
-In previous tutirial, we have learned how to write rules using the Drools Rule Language (DRL)
+In previous tutorial, we have learned how to write rules using the Drools Rule Language (DRL)
 
 ![](drools/lesson1_fig31.png)
 
