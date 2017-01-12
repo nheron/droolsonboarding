@@ -65,7 +65,7 @@ rule "Account group2"
 end
 
 ```
-do not forget to add a new entry in the kmodule.xml
+Do not forget to add a new entry in the kmodule.xml
 
 ```
      <kbase name="rules4" packages="lesson4">
@@ -213,7 +213,7 @@ We can go further
 ## starting a ruleflow from a rule
 
 
-Let us the following rule :
+Let us write the following rule :
 ![](drools/lesson4_fig10.png)
 
 And here is the following test case : 
