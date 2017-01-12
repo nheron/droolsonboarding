@@ -66,7 +66,7 @@ There are 3 types of costs :
 | Tournai | 67€\/hour and a person can handle 40 pallets\/hour |
 | Lille | 79€\/hour and a person can handle 30 pallets\/hour |
 
-The handling should not take more than 12 hours.
+The handling should not take more than 12 hours per city.
 
 The source code and the solution can be found [here](https://github.com/nheron/droolscourse/tree/master/cost-calculation).
 
