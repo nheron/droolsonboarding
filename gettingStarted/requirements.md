@@ -44,7 +44,7 @@ There are 3 types of costs :
 
 | Transport | Cost |
 | :--- | :--- |
-| boat | 0,2€\/km |
+| Boat | 0,2€\/km |
 | Train | 0,5€\/km |
 | Truck | 1€\/km |
 
