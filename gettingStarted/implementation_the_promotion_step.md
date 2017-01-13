@@ -36,7 +36,7 @@ Click on the "From Collect" link and then  chose the person fact type
 
 ![](BRMS/Step3-5-Implementation/action07.png)
 
-Then click on the "All Person with" link an dselect the age attribute and add the following constraint.
+Then click on the "All Person with" link and select the age attribute and add the following constraint.
 
 ![](BRMS/Step3-5-Implementation/action08.png)
 
