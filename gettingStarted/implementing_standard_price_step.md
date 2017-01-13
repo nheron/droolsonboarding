@@ -13,7 +13,7 @@ We give him a name :
 
 ![](BRMS/Step3-4-implementation/action02.png)
 
-AS we are going to add constraint on the person age
+And we are going to add constraint on the person age we have to add the person class type to the Data Objects list.
 
 ![](BRMS/Step3-4-implementation/action03.png)
 

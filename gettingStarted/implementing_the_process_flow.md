@@ -29,7 +29,7 @@ Click on the wrench and select "Business Rule Task"
 ![](BRMS/Step3-1-Implementation/action04.png)
 
 
-Clock on the "<<" on the right part and the properties will appear. Enter the Name and Ruleflow group name as follows : 
+Click on the "<<" on the right part and the properties will appear. Enter the Name and Ruleflow group name as follows : 
 
 ![](BRMS/Step3-1-Implementation/action05.png)
 

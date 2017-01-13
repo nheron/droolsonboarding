@@ -2,7 +2,7 @@
 
 ## Creating the rule
 
-Creating a new Guided Rule that you call YougestUnder3yearsOldFree
+Create a new Guided Rule that you call YougestUnder3yearsOldFree
 
 then Add a new Constraint
 
