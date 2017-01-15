@@ -40,7 +40,7 @@ Then click on the "All Person with" link and select the age attribute and add th
 
 ![](BRMS/Step3-5-Implementation/action08.png)
 
-Then Add a new constraint of type Accumulatte
+Then Add a new constraint of type Accumulate
 
 ![](BRMS/Step3-5-Implementation/action09.png)
 
