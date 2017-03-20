@@ -2,13 +2,13 @@
 We are first going to write java code that we are going to use through all the drooks tutorial.
 Here is the model we are going to use (taken from presentation done during conferences by Drools members)
 We are in a bank that handles accounts (2) and on each account there can be movements (2). The purpose is to calculate the account balance between an accounting period (3) of all accounts given the movements it has.
-We will run all examples in junit Tests.
+We will run all examples in unit tests.
 This data model is the same as you can find in the reference model in the drools documentation.
 ![](drools/dataModel_fig1.jpeg)
 ## Implement the pojo model
 
-We have to create an AccountProject of type drools as previously describes.
-Then we shall create a java package that we can name droolscours package in src/main/java (to respect maven definition) by doing on src/main/java right click and new Package, gibe him a name and push the finish button.
+We have to create an AccountProject of type drools as previously described.
+Then we shall create a java package that we can name droolscours package in src/main/java (to respect maven definition) by doing on src/main/java right click and new Package, give it a name and push the finish button.
 
 
 ![](drools/dataModel_fig2.jpeg)
@@ -21,7 +21,7 @@ and we are going to create 3 java classes : Account, AccountingPeriod and CashFl
 
 ![](drools/dataModel_fig4.png)
 
-And the Account class, add two attributes accountno and balance.
+On the Account class, add two attributes accountno and balance.
 Right click source/generate getter/setter and the Account class will have getter/setter.
 
 ![](drools/dataModel_fig5.png)
