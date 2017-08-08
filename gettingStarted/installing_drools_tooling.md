@@ -14,7 +14,7 @@ Drools is working with either Oracle Java machine or OpenJDK. With the drools ve
 
 ## Install Eclipse IDE
 
-After installing java, we can install [eclise](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/mars2).
+After installing java, we can install [eclipse](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/mars2).
 
 ## Download drools tooling
 
