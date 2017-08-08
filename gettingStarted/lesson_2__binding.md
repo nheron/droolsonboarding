@@ -55,6 +55,9 @@ To be able to see what is happening in the rule engine, we shall add to the Know
             public void afterRuleFlowGroupDeactivated(RuleFlowGroupDeactivatedEvent event) {
             }
         });
+
+        return session;
+    }
 ```
 In the CashFlow class, we should add the following toString method
 ```
