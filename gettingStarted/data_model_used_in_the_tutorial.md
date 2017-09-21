@@ -1,7 +1,7 @@
 # Data Model used in the tutorial
 We are first going to write java code that we are going to use through all the drooks tutorial.
 Here is the model we are going to use (taken from presentation done during conferences by Drools members)
-We are in a bank that handles accounts (2) and on each account there can be movements (2). The purpose is to calculate the account balance between an accounting period (3) of all accounts given the movements it has.
+We are in a bank that handles accounts (2) and on each account there can be movements (1). The purpose is to calculate the account balance between an accounting period (3) of all accounts given the movements it has.
 We will run all examples in junit Tests.
 This data model is the same as you can find in the reference model in the drools documentation.
 ![](drools/dataModel_fig1.jpeg)
