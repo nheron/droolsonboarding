@@ -14,7 +14,7 @@ While building the examples, you will see more rules fired than the shown exampl
 
 ## Some more classes
 
-To be able to see some more advanced features, we are goig to add 2 new classes in src/main/java droolscours package.
+To be able to see some more advanced features, we are going to add 2 new classes in src/main/java droolscours package.
 
 ```
 package droolscours;
@@ -489,9 +489,9 @@ Here is our test case :
 ## Accumulating
 
 In the previous section, we collect data. There is an "from accumulate" that allows us to sum data in one command.  
-the "from collect" instruction takes 5 parameters :   
-1\) a fact constraint expression   
-2\) an init condition   
+the "from collect" instruction takes 5 parameters :  
+1\) a fact constraint expression  
+2\) an init condition  
 3\) the instruction when the rule applies to the fact constraint expression  
 4\) the reverse action when the fact constraint expression is not true anymore  
 5\) The result of the accumulate
