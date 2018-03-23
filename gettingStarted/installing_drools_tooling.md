@@ -3,7 +3,7 @@
 We propose a VirtualBox  Machine with all installed and configured.
 
 If you prefer, you can install all tools on your machine.  
-To be able to work with drools, we need :   
+To be able to work with drools, we need :  
 1\) Java Virtual machine version 8  
 2\) Eclipse IDE  
 3\) download drools runtime and tools
@@ -14,7 +14,7 @@ Drools is working with either Oracle Java machine or OpenJDK. With the drools ve
 
 ## Install Eclipse IDE
 
-After installing java, we can install [eclise](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/mars2).
+After installing java, we can install [eclipse](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/mars2).
 
 ## Download drools tooling
 
