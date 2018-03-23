@@ -1,8 +1,5 @@
 # Installing Drools Tooling
 
-We propose a VirtualBox  Machine with all installed and configured.
-
-If you prefer, you can install all tools on your machine.  
 To be able to work with drools, we need :  
 1\) Java Virtual machine version 8  
 2\) Eclipse IDE  
