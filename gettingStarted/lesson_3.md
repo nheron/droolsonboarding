@@ -528,7 +528,7 @@ Then the initial condition, we initialize a double value we call total. Then in 
 ```
     @Test
     public void testAccumulate() throws Exception {
-        sessionStatefull = KnowledgeSessionHelper.getStatefulKnowledgeSessionWithCallback(kieContainer, "ksession-lesson3");
+        sessionStatefull = KnowledgeSessionHelper.getStatefulKnowledgeSessionWithCallback(kieContainer, "lesson35-session");
         OutputDisplay display = new OutputDisplay();
         sessionStatefull.setGlobal("showResult", display);
         sessionStatefull.insert(new Account(1,0));
