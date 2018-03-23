@@ -1,18 +1,19 @@
 # Adding more constraints in facts
 
-We concentrate on how the rule engine works in the first lesson. In the second lesson, we introduced how to express constraint between facts.
-In this lesson, we will concentrate on all the drools language possibilities to write constraints on facts for more complex cases.
+We concentrate on how the rule engine works in the first lesson. In the second lesson, we introduced how to express constraint between facts.  
+In this lesson, we will concentrate on all the drools language possibilities to write constraints on facts for more complex cases.  
 The reader has to create a test classes called TestLesson3 like for lesson2, a new package lesson3 in the src/test/rules and add in the kmodule.xml a new session declaration
 
 ```
      <kbase name="rules3" packages="lesson3">
         <ksession name="ksession-lesson3"/>
     </kbase>
-
 ```
+
 While building the examples, you will see more rules fired than the shown examples. As drools is a declarative language, as soon as the constraint are satisfied, the rule can fire.
 
 ## Some more classes
+
 To be able to see some more advanced features, we are goig to add 2 new classes in src/main/java droolscours package.
 
 ```
@@ -99,12 +100,10 @@ public class PrivateAccount extends Account {
         return buff.toString();
     }
 }
-
 ```
 
-
-
 ## In Constraint
+
 This allows to validate an attribute is a list of values
 
 ```
@@ -118,11 +117,11 @@ global OutputDisplay showResult;
 
 rule "The cashFlow can be a  credit or a debit"
 
-	when
-		$cash :CashFlow(type in ( CashFlow.DEBIT,CashFlow.CREDIT) )
+    when
+        $cash :CashFlow(type in ( CashFlow.DEBIT,CashFlow.CREDIT) )
 
-	then
-		showResult.showText("The cashFlow is a credit or a debit");
+    then
+        showResult.showText("The cashFlow is a credit or a debit");
 end
 ```
 
@@ -139,10 +138,10 @@ end
         sessionStatefull.fireAllRules();
     }    }
 ```
-And the console should look as follows : 
+
+And the console should look as follows :
 
 ![](drools/lesson3_fig2.png)
-
 
 ## Nested Accessor
 
@@ -150,10 +149,10 @@ This allows to add a constraint to a attribute class without the need to add the
 
 ```
 rule "Accessor"
-	when
-		$cash :PrivateAccount( owner.name =="Héron" )
-	then
-		showResult.showText("Account is owned by Héron");
+    when
+        $cash :PrivateAccount( owner.name =="Héron" )
+    then
+        showResult.showText("Account is owned by Héron");
 end
 ```
 
@@ -173,26 +172,27 @@ end
         sessionStatefull.fireAllRules();
     }
 ```
+
 As seen here, we do not add the customer instance to the drools session.
 
-
-![](drools/lesson3_fig3.png)
+![](drools/lesson3_fig3.png)  
 The rule has been fired.
 
-
-
 ## And/or
+
 It is possible to do constraints on attribute like in java.
+
 ```
 rule "infixAnd"
-	when
-	  ( $c1 : Customer ( country=="GB") and  PrivateAccount(  owner==$c1))
-		    or
+    when
+      ( $c1 : Customer ( country=="GB") and  PrivateAccount(  owner==$c1))
+            or
        ( $c1 : Customer (country=="US") and PrivateAccount(  owner==$c1))
-	then
-		showResult.showText("Person lives in GB or US");
+    then
+        showResult.showText("Person lives in GB or US");
 end
 ```
+
 ```
    @Test
     public void testInOrFact() throws Exception {
@@ -210,8 +210,8 @@ end
         sessionStatefull.fireAllRules();
     }
 ```
-![](drools/lesson3_fig4.png)
 
+![](drools/lesson3_fig4.png)
 
 ## not
 
@@ -219,14 +219,12 @@ This allows to test if no fact of a type is in the session.
 
 ```
 rule "no customer"
-	when
-		not Customer(  )
-	then
-		showResult.showText("No customer");
+    when
+        not Customer(  )
+    then
+        showResult.showText("No customer");
 end
-
 ```
-
 
 ```
     @Test
@@ -241,17 +239,19 @@ end
 
 ![](drools/lesson3_fig5.png)
 
-
 ## exist
+
 On the contrary of previous syntax, this allows to test if there at least one fact type is in the session.
+
 ```
 rule "Exists"
-	when
-		exists Account(  )
-	then
-		showResult.showText("Account exists");
+    when
+        exists Account(  )
+    then
+        showResult.showText("Account exists");
 end
 ```
+
 ```
     @Test
     public void testExistsCondition() throws Exception {
@@ -269,79 +269,78 @@ end
 
 ![](drools/lesson3_fig6.png)
 
-
 ## ForAll
 
 We would like to verify that every cashflow instance is linked to an Account instance.
 
 ```
 rule "ForAll"
-	when
-		forall (   Account( $no : accountNo  )
-					CashFlow( accountNo  == $no)
-				   )
-	then
-		showResult.showText("All cashflows are related to an Account ");
+    when
+        forall (   Account( $no : accountNo  )
+                    CashFlow( accountNo  == $no)
+                   )
+    then
+        showResult.showText("All cashflows are related to an Account ");
 end
-
 ```
-In this rule, in the forall condition, we link the CashFLow instance to the Account instance.
+
+In this rule, in the forall condition, we link the CashFLow instance to the Account instance.  
 We are goint to do a test case where all objects are related
 
 ```
-	@Test
-	public void testForALl() throws Exception {
-		sessionStatefull = KnowledgeSessionHelper
-				.getStatefulKnowledgeSessionWithCallback(kieContainer, "ksession-lesson3");
-		OutputDisplay display = new OutputDisplay();
-		sessionStatefull.setGlobal("showResult", display);
-		Account a = new Account();
-		a.setAccountNo(1);
-		a.setBalance(0);
-		sessionStatefull.insert(a);
-		CashFlow cash1 = new CashFlow();
-		cash1.setAccountNo(1);
-	
-		
-		sessionStatefull.insert(cash1);
-		CashFlow cash2 = new CashFlow();
-		cash2.setAccountNo(1);
-		
-		sessionStatefull.insert(cash2);
-		Account a2 = new Account();
-		a2.setAccountNo(2);
-		a2.setBalance(0);
-		sessionStatefull.insert(a2);
-		CashFlow cash3 = new CashFlow();
-		cash3.setAccountNo(2);
-		sessionStatefull.insert(cash3);
-		sessionStatefull.fireAllRules();
-	}
+    @Test
+    public void testForALl() throws Exception {
+        sessionStatefull = KnowledgeSessionHelper
+                .getStatefulKnowledgeSessionWithCallback(kieContainer, "ksession-lesson3");
+        OutputDisplay display = new OutputDisplay();
+        sessionStatefull.setGlobal("showResult", display);
+        Account a = new Account();
+        a.setAccountNo(1);
+        a.setBalance(0);
+        sessionStatefull.insert(a);
+        CashFlow cash1 = new CashFlow();
+        cash1.setAccountNo(1);
 
 
+        sessionStatefull.insert(cash1);
+        CashFlow cash2 = new CashFlow();
+        cash2.setAccountNo(1);
+
+        sessionStatefull.insert(cash2);
+        Account a2 = new Account();
+        a2.setAccountNo(2);
+        a2.setBalance(0);
+        sessionStatefull.insert(a2);
+        CashFlow cash3 = new CashFlow();
+        cash3.setAccountNo(2);
+        sessionStatefull.insert(cash3);
+        sessionStatefull.fireAllRules();
+    }
 ```
+
 When running the test, you should see the following logging.
 
 ![](drools/lesson3_fig7.png)
 
-Just modify the test case by updating the test case : 
+Just modify the test case by updating the test case :
 
 ```
 sessionStatefull.insert(cash2);
-		Account a2 = new Account();
-		a2.setAccountNo(2);
-		a2.setBalance(0);
-		sessionStatefull.insert(a2);
-		CashFlow cash3 = new CashFlow();
-		cash3.setAccountNo(1);
-		sessionStatefull.insert(cash3);
-		sessionStatefull.fireAllRules();
+        Account a2 = new Account();
+        a2.setAccountNo(2);
+        a2.setBalance(0);
+        sessionStatefull.insert(a2);
+        CashFlow cash3 = new CashFlow();
+        cash3.setAccountNo(1);
+        sessionStatefull.insert(cash3);
+        sessionStatefull.fireAllRules();
 ```
+
 When you run the test case, the rule ForAll will not be fired.
 
-
 ## From
-It is sometimes needed to access data from outside the drools session.
+
+It is sometimes needed to access data from outside the drools session.  
 As it is not possible to insert all objects in the session, we can use the from instruction in the when part.
 
 First let us create a CustomerService class in package Droolscours.sercice
@@ -365,10 +364,9 @@ public class CustomerService {
     }
 
 }
-
 ```
 
-then we shall create the rule that uses the from 
+then we shall create the rule that uses the from
 
 ```
 // add  import for the service
@@ -377,97 +375,85 @@ import droolscours.service.CustomerService;
 global CustomerService serviceCustomer;
 
 rule "FromCondition"
-	when
-		$c : Customer()
-		$cc : Customer(name ==$c.name,surname==$c.surname,country !=$c.country) from serviceCustomer.getListCustomer();
-	then
-		showResult.showText("Found same customer in 2 countries");
+    when
+        $c : Customer()
+        $cc : Customer(name ==$c.name,surname==$c.surname,country !=$c.country) from serviceCustomer.getListCustomer();
+    then
+        showResult.showText("Found same customer in 2 countries");
 end
 ```
 
-
-
-and the following test case : 
+and the following test case :
 
 ```
-	@Test
-	public void testFromLHS() throws Exception {
-		sessionStatefull = KnowledgeSessionHelper.getStatefulKnowledgeSessionWithCallback(kieContainer,
-				"ksession-lesson3");
-		OutputDisplay display = new OutputDisplay();
-		sessionStatefull.setGlobal("showResult", display);
-		sessionStatefull.setGlobal("serviceCustomer", new CustomerService());
-		Customer c = new Customer("Héron", "Nicolas", "A");
-		sessionStatefull.insert(c);
-		sessionStatefull.fireAllRules();
-	}
-
+    @Test
+    public void testFromLHS() throws Exception {
+        sessionStatefull = KnowledgeSessionHelper.getStatefulKnowledgeSessionWithCallback(kieContainer,
+                "ksession-lesson3");
+        OutputDisplay display = new OutputDisplay();
+        sessionStatefull.setGlobal("showResult", display);
+        sessionStatefull.setGlobal("serviceCustomer", new CustomerService());
+        Customer c = new Customer("Héron", "Nicolas", "A");
+        sessionStatefull.insert(c);
+        sessionStatefull.fireAllRules();
+    }
 ```
 
 The rule is fired twice as in the service there are two customers with the same name and with a different country.
 
-
 ![](drools/lesson3_fig8.png)
 
+## Collecting
 
-
-
-
-## Collecting 
-
-
-
-The purpose is to collect a set of fact and constraint if the constraints are true.
-Let us see the following example int the rule "More then 2 CashFlow Line". in this rule, we want to collect all CashFlow that are in the correct time period and the good account number.
-The "from collect" syntax returns an arrayList. It is possible to add a condition as in the first rule where we add a constraint that we expect at least 2 items. In the second rule, we do not add this constraint.
+The purpose is to collect a set of fact and constraint if the constraints are true. Let us see the following example int the rule "More then 2 CashFlow Line". in this rule, we want to collect all CashFlow that are in the correct time period and the good account number. The "from collect" syntax returns an arrayList. It is possible to add a condition as in the first rule where we add a constraint that we expect at least 2 items. In the second rule, we do not add this constraint.
 
 ```
 rule "More then 2 CashFlow Line"
-	when
-		$c : Account( $acc : accountno )
-		$p : AccountingPeriod ($sDate : startDate ,$eDate : endDate )
-		$number : ArrayList(size >= 2 )
+    when
+        $c : Account( $acc : accountno )
+        $p : AccountingPeriod ($sDate : startDate ,$eDate : endDate )
+        $number : ArrayList(size >= 2 )
               from collect( CashFlow( mvtDate >= $sDate && mvtDate  <= $eDate,accountNo == $acc ) )
 
-	then
-		showResult.showText("Found more than 2 CashFlow Lines");
-		showResult.showText("<<<<<<<<<<");
-		for (Object ff : $number){
-		    showResult.showText(ff.toString());
-		}
-		showResult.showText(">>>>>>>>>>>>>>>>");
+    then
+        showResult.showText("Found more than 2 CashFlow Lines");
+        showResult.showText("<<<<<<<<<<");
+        for (Object ff : $number){
+            showResult.showText(ff.toString());
+        }
+        showResult.showText(">>>>>>>>>>>>>>>>");
 end
 
 rule "Numbers of  CashFlow Line"
-	when
-		$c : Account( $acc : accountno )
-		$p : AccountingPeriod ($sDate : startDate ,$eDate : endDate )
-		$number : ArrayList( )
+    when
+        $c : Account( $acc : accountno )
+        $p : AccountingPeriod ($sDate : startDate ,$eDate : endDate )
+        $number : ArrayList( )
               from collect( CashFlow( mvtDate >= $sDate && mvtDate  <= $eDate,accountNo == $acc ) )
 
-	then
-		showResult.showText("Found "+$number+" more than 2 CashFlow Lines");
+    then
+        showResult.showText("Found "+$number+" more than 2 CashFlow Lines");
 end
+```
+
+You may need to add constructors in the CashFlow and AccountingPeriod classes :
 
 ```
-You may need to add constructors in the CashFlow and AccountingPeriod classes : 
+    public AccountingPeriod() {
+    }
 
+    public AccountingPeriod(Date startDate, Date endDate) {
+        super();
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
 ```
-	public AccountingPeriod() {
-	}
 
-	public AccountingPeriod(Date startDate, Date endDate) {
-		super();
-		this.startDate = startDate;
-		this.endDate = endDate;
-	}
-
-```
 ```
     public CashFlow() {
-		super();
-	}
-	public CashFlow(Date mvtDate, double amount, int type, long accountNo) {
+        super();
+    }
+    public CashFlow(Date mvtDate, double amount, int type, long accountNo) {
         super();
         this.mvtDate = mvtDate;
         this.amount = amount;
@@ -476,49 +462,47 @@ You may need to add constructors in the CashFlow and AccountingPeriod classes :
     }
 ```
 
-Here is our test case : 
+Here is our test case :
+
 ```
-	@Test
-	public void testCollecting() throws Exception {
-		sessionStatefull = KnowledgeSessionHelper.getStatefulKnowledgeSessionWithCallback(kieContainer,
-				"lesson34-session");
-		OutputDisplay display = new OutputDisplay();
-		sessionStatefull.setGlobal("showResult", display);
-		Account a = new Account();
-		a.setAccountNo(1);
-		a.setBalance(0);
-		sessionStatefull.insert(a);
-		sessionStatefull.insert(new CashFlow(DateHelper.getDate("2010-01-15"), 1000, CashFlow.CREDIT, 1));
-		sessionStatefull.insert(new CashFlow(DateHelper.getDate("2010-02-15"), 500, CashFlow.DEBIT, 1));
-		sessionStatefull.insert(new CashFlow(DateHelper.getDate("2010-04-15"), 1000, CashFlow.CREDIT, 1));
-		sessionStatefull
-				.insert(new AccountingPeriod(DateHelper.getDate("2010-01-01"), DateHelper.getDate("2010-31-31")));
-		sessionStatefull.fireAllRules();
-	}
-
-
+    @Test
+    public void testCollecting() throws Exception {
+        sessionStatefull = KnowledgeSessionHelper.getStatefulKnowledgeSessionWithCallback(kieContainer,
+                "lesson34-session");
+        OutputDisplay display = new OutputDisplay();
+        sessionStatefull.setGlobal("showResult", display);
+        Account a = new Account();
+        a.setAccountNo(1);
+        a.setBalance(0);
+        sessionStatefull.insert(a);
+        sessionStatefull.insert(new CashFlow(DateHelper.getDate("2010-01-15"), 1000, CashFlow.CREDIT, 1));
+        sessionStatefull.insert(new CashFlow(DateHelper.getDate("2010-02-15"), 500, CashFlow.DEBIT, 1));
+        sessionStatefull.insert(new CashFlow(DateHelper.getDate("2010-04-15"), 1000, CashFlow.CREDIT, 1));
+        sessionStatefull
+                .insert(new AccountingPeriod(DateHelper.getDate("2010-01-01"), DateHelper.getDate("2010-31-31")));
+        sessionStatefull.fireAllRules();
+    }
 ```
 
 ![](drools/lesson3_fig9.png)
 
-
-
 ## Accumulating
-In the previous section, we collect data. There is an "from accumulate" that allows us to sum data in one command.
-the "from collect" instruction takes 5 parameters : 
-1) a fact constraint expression 
-2) an init condition 
-3) the instruction when the rule applies to the fact constraint expression
-4) the reverse action when the fact constraint expression is not true anymore
-5) The result of the accumulate
 
-Here is our example : 
+In the previous section, we collect data. There is an "from accumulate" that allows us to sum data in one command.  
+the "from collect" instruction takes 5 parameters :   
+1\) a fact constraint expression   
+2\) an init condition   
+3\) the instruction when the rule applies to the fact constraint expression  
+4\) the reverse action when the fact constraint expression is not true anymore  
+5\) The result of the accumulate
+
+Here is our example :
 
 ```
 rule "Credit and Debit Rule"
-	when
-		$c : Account( $acc : accountno )
-		$p : AccountingPeriod ($sDate : startDate ,$eDate : endDate )
+    when
+        $c : Account( $acc : accountno )
+        $p : AccountingPeriod ($sDate : startDate ,$eDate : endDate )
         $totalCredit : Number( doubleValue > 100 )
              from accumulate( CashFlow( type ==CashFlow.CREDIT,$value : amount, mvtDate >= $sDate && mvtDate  <= $eDate,accountNo == $acc ),
                               init( double total = 0; ),
@@ -532,14 +516,13 @@ rule "Credit and Debit Rule"
                               reverse( total -= $value; ),
                               result( total ) )
 
-	then
-		showResult.showText(" Found "+$totalCredit+" as a credit");
-		showResult.showText(" Found "+$totalDebit+" as a debit");
+    then
+        showResult.showText(" Found "+$totalCredit+" as a credit");
+        showResult.showText(" Found "+$totalDebit+" as a debit");
 end
-
 ```
 
-The constraint here is on a fact type CashFlow with the constraints that we already used before (good account number and the good date period and it should be a credit or a debit)
+The constraint here is on a fact type CashFlow with the constraints that we already used before \(good account number and the good date period and it should be a credit or a debit\)  
 Then the initial condition, we initialize a double value we call total. Then in the action/reverse, we add to the total the amount in the CashFlow that we get by using an attribute binding. In the result action we put the total we calculated.
 
 ```
@@ -564,10 +547,6 @@ Then the initial condition, we initialize a double value we call total. Then in 
 
 ## Summary
 
-This lesson was an introduction to the main drools language syntax that are needed for starting a drools project.
+This lesson was an introduction to the main drools language syntax that are needed for starting a drools project.  
 In the next lesson, we will start learning the ruleflow concept that we encourage to use in drools projects.
-
-
-
-
 
