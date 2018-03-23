@@ -285,7 +285,7 @@ end
 ```
 
 In this rule, in the forall condition, we link the CashFLow instance to the Account instance.  
-We are goint to do a test case where all objects are related
+We are going to do a test case where all objects are related
 
 ```
     @Test
