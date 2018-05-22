@@ -76,7 +76,7 @@ When running the junit test, the console should look like this :
 
 ## Using callback to log activity in drools runtime
 
-Up to known, we only defined one rule. It runs or not and if yes we added a method that shows us something to see if the rule was executed.  
+Up to now, we only defined one rule. It runs or not and if yes we added a method that shows us something to see if the rule was executed.  
 In bigger project, adding logging code to each rule is not a good practice and will complexify the writing of rules and furthermore we are pushing drools to be a business tool for business analyst and they have to write technical code.  
 Drools offers a pattern to implement that functionnality that is called session callbacks.
 
