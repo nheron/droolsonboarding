@@ -381,7 +381,7 @@ The rule above uses a binding variable. We create an attribute variable called $
 ![](drools/lesson2_fig8.png)
 
 ![](drools/lesson2_fig9.png)
-Now the rule "Credit Rule" is only fired once and the balance is corret.
+Now the rule "Credit Rule" is only fired once and the balance is correct.
 
 ## Calculating balance
 Now we know how to link facts and use attribute variable via binding attributes to use them as constraint, we shall modify the credit rule and create a debit rule : 
@@ -420,7 +420,7 @@ rule "Debit rule"
                   + " has now a balance of "+$acc.getBalance());
 end
 ```
-In the rule above, we add a constraint so that the mvtDate of the CashFlow is between the startDate and endDate of the AccountinPeriod.
+In the rule above, we add a constraint so that the mvtDate of the CashFlow is between the startDate and endDate of the AccountingPeriod.
 
 
 and the test case
