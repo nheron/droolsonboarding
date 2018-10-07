@@ -7,44 +7,46 @@ In the drools/jbpm technology, we are going to use a jbpm process by using rule 
 
 ## Configure project to become a jbpm project
 
-select the project, right click with the mouse configure/convert to jbpm project
+Select the project, right click with the mouse configure/convert to jbpm project
 
 ![](drools/lesson4_fig1.png)
 
 ## Create your first rule flow
 
-in the src/test/rules create a package lesson4. Right click and create new File and call it ruleflow1.bpmn2 and click the OK button. An error messages appear to say the file is empty but the plugin will create a start event.
+In the src/test/rules create a package lesson4. Right click and create new File and call it ruleflow1.bpmn2 and click the OK button. An error messages appear to say the file is empty but the plugin will create a start event.
 
 ![](drools/lesson4_fig3.png)
 
 
-put two Rule tasks and one End Event.
+Put two Rule tasks and one End Event.
 
 ![](drools/lesson4_fig4.png)
 
 
-Then select each of the Rule set and set the properties as follows : 
+Then select each of the Rule set and set the properties as follows: 
 
 
 
 ![](drools/lesson4_fig5.png)
 
-![](drools/lesson4_fig6.png)
-The workflow should look like that : 
+![](drools/lesson4_fig6.png)  
+
+The workflow should look like this:  
+
 ![](drools/lesson4_fig7.png)
 
-Select the workflow in the rear, and in the properties file, change as follows : 
+Select the workflow in the rear, and in the properties file, change as follows: 
 
 ![](drools/lesson4_fig8.png)
 
 Create a new rule file called demo-ruleflow1.drl
 
 ```
-package cours
+package lesson4
 
-import droolscours.Account;
-import droolscours.AccountingPeriod;
-import droolscours.CashFlow;
+import droolscourse.Account;
+import droolscourse.AccountingPeriod;
+import droolscourse.CashFlow;
 import util.OutputDisplay;
 
 global OutputDisplay showResult;
@@ -75,7 +77,7 @@ Do not forget to add a new entry in the kmodule.xml
 ```
 
 
-Look at the keyword "ruleflow-group". Here the first rule we give it the name "Group1" and the second "Group2". they have the same name as the Rule-flow items we defined in the process definition above. Therefor, the first rule can only be fired when the rule-flow group "Group1" is activated and the same for the second rule and rule-flow group "Group2".
+Look at the keyword "ruleflow-group". Here the first rule we give the name "Group1" and the second "Group2". They have the same name as the Rule-flow items we defined in the process definition above. Therefore, the first rule can only be fired when the rule-flow group "Group1" is activated and the same for the second rule and rule-flow group "Group2".
 Before running a test case, we will add a new callback to know the activities around the jbpm process.
 
 ```
@@ -151,11 +153,11 @@ Before running a test case, we will add a new callback to know the activities ar
  
 
 ```
-Note that we are only looking for Node of type Rule Step called RuleSetNodeInstance.
-And the test case looks like this : 
+Note that we are only looking for a Node of type Rule Step called RuleSetNodeInstance.
+And the test case looks like this: 
 
 ```
-package droolscours;
+package droolscourse;
 import util.OutputDisplay;
 import org.junit.After;
 import org.junit.Before;
@@ -200,17 +202,18 @@ Before calling the fireAllRules method, we call a startProcess method with the "
 
 
 
-And the console display should be like this : 
+And the console display should be like this: 
 
 ![](drools/lesson4_fig9.png)
-How a rule-group works ?
+
+### How a rule-group works ?
 
 A rule flow group works like a separate group of rules. Those who are setting the focus when the rule step is called with the same node id as the ruleflow-group.
 When no more rules can be fired, the process can continue to the next node.
 
-We can go further 
+We can go further. 
 
-## starting a ruleflow from a rule
+## Starting a ruleflow from a rule
 
 
 Let us write the following rule :
@@ -268,15 +271,15 @@ Here is for "to Node Calculate1". Do not forget to click the "Imports" button  t
 ![](drools/lesson4_fig16.png)
 
 
-here is the rule file : 
+Here is the rule file : 
 
 ```
-package cours
+package lesson4a
 
 //#list any import classes here.
-import droolscours.Account;
-import droolscours.AccountingPeriod;
-import droolscours.CashFlow;
+import droolscourse.Account;
+import droolscourse.AccountingPeriod;
+import droolscourse.CashFlow;
 import util.OutputDisplay;
 
 global OutputDisplay showResult;
@@ -326,9 +329,7 @@ and the test case
 
 ![](drools/lesson4_fig17.png)
 
-if you change the balance to 500, the console should be : 
+If you change the balance to 500, the console should be: 
 
 ![](drools/lesson4_fig18.png)
-It is more efficient to have two groups of rules like this instead adding for all rules of 'Group1' the constraint on balance > 1000 and balance <= 1000 for "Group2". Indeed, if the level 1000$ changes you have to modify all rules. And furthermore, if the end user gives your the rule : "first case is when balance is less than 1000$", then the good practice is to implement business rules as they are given. And implementing with a ruleflow will help end users to divide their way of expressing more complex rules. We will see int the exercise how it helps.
-
-
+It is more efficient to have two groups of rules like this instead adding for all rules of 'Group1' the constraint on balance > 1000 and balance <= 1000 for "Group2". Indeed, if the level $1000 changes you have to modify all rules. And furthermore, if the end user gives your the rule : "first case is when balance is less than $1000", then the best practice is to implement business rules as they are given. And implementing with a ruleflow will help end users to divide their way of expressing more complex rules. We will see in the exercise how it helps.
