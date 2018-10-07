@@ -19,7 +19,7 @@ To be able to use drools in eclipse, we need to download the [Drools and jbpm To
 
 You have to unzip the file. In the directory droolsjbpm-tools-distribution-6.5.0.Final/binaries/org.drools.updatesite/ is the update site from where you have to install new Software.
 
-## Create you first project
+## Create your first project
 
 Go to File/New/Other  
 ![](../overview/images/CreateProject_New.jpeg)  
