@@ -2,7 +2,7 @@
 
 We concentrate on how the rule engine works in the first lesson. In the second lesson, we introduced how to express constraint between facts.  
 In this lesson, we will concentrate on all the drools language possibilities to write constraints on facts for more complex cases.  
-The reader has to create a test classes called TestLesson3 like for lesson2, a new package lesson3 in the src/test/rules and add in the kmodule.xml a new session declaration
+The reader has to create a test class called TestLesson3 like for lesson2, a new package lesson3 in the src/test/rules and add in the kmodule.xml a new session declaration
 
 ```
      <kbase name="rules3" packages="lesson3">
@@ -14,10 +14,10 @@ While building the examples, you will see more rules fired than the shown exampl
 
 ## Some more classes
 
-To be able to see some more advanced features, we are going to add 2 new classes in src/main/java droolscours package.
+To be able to see some more advanced features, we are going to add 2 new classes in src/main/java droolscourse package.
 
 ```
-package droolscours;
+package droolscourse;
 
 public class Customer {
     private String name;
@@ -75,7 +75,7 @@ public class Customer {
 ```
 
 ```
-package droolscours;
+package droolscourse;
 
 public class PrivateAccount extends Account {
     private Customer owner;
@@ -107,13 +107,13 @@ public class PrivateAccount extends Account {
 This allows to validate an attribute is a list of values
 
 ```
-package cours
+package lesson3
 
 //#list any import classes here.
-import droolscours.CashFlow;
+import droolscourse.CashFlow;
 import util.OutputDisplay;
 //#declare any global variables here
-global OutputDisplay showResult;
+global OutputDisplay showResults;
 
 rule "The cashFlow can be a  credit or a debit"
 
@@ -136,7 +136,7 @@ end
         cashFlow.setType(CashFlow.CREDIT);
         sessionStatefull.insert(cashFlow);
         sessionStatefull.fireAllRules();
-    }    }
+    }
 ```
 
 And the console should look as follows :
@@ -145,7 +145,7 @@ And the console should look as follows :
 
 ## Nested Accessor
 
-This allows to add a constraint to a attribute class without the need to add the linked object to the session.
+This allows us to add a constraint to a attribute class without the need to add the linked object to the session.
 
 ```
 rule "Accessor"
@@ -180,7 +180,7 @@ The rule has been fired.
 
 ## And/or
 
-It is possible to do constraints on attribute like in java.
+It is possible to do constraints on attributes like in Java.
 
 ```
 rule "infixAnd"
@@ -241,7 +241,7 @@ end
 
 ## exist
 
-On the contrary of previous syntax, this allows to test if there at least one fact type is in the session.
+The inverse of the previous syntax, this allows to test if there is at least one fact type in the session.
 
 ```
 rule "Exists"
@@ -271,7 +271,7 @@ end
 
 ## ForAll
 
-We would like to verify that every cashflow instance is linked to an Account instance.
+We would like to verify that every CashFlow instance is linked to an Account instance.
 
 ```
 rule "ForAll"
@@ -284,8 +284,8 @@ rule "ForAll"
 end
 ```
 
-In this rule, in the forall condition, we link the CashFLow instance to the Account instance.  
-We are going to do a test case where all objects are related
+In this rule, in the forall condition, we link the CashFlow instance to the Account instance.  
+We are going to do a test case where all objects are related.
 
 ```
     @Test
@@ -325,7 +325,7 @@ When running the test, you should see the following logging.
 Just modify the test case by updating the test case :
 
 ```
-sessionStatefull.insert(cash2);
+        sessionStatefull.insert(cash2);
         Account a2 = new Account();
         a2.setAccountNo(2);
         a2.setBalance(0);
@@ -343,7 +343,7 @@ When you run the test case, the rule ForAll will not be fired.
 It is sometimes needed to access data from outside the drools session.  
 As it is not possible to insert all objects in the session, we can use the from instruction in the when part.
 
-First let us create a CustomerService class in package Droolscours.sercice
+First let us create a CustomerService class in package droolscourse.service
 
 ```
 package droolscours.service;
@@ -355,7 +355,7 @@ import java.util.List;
 
 public class CustomerService {
 
-    public List<Customer> getListCustomer() {
+    public List<Customer> getCustomerList() {
         List<Customer> result = new ArrayList<Customer>();
         result.add(new Customer("Héron", "Nicolas", "Fr"));
         result.add(new Customer("Héron", "James", "GB"));
@@ -377,7 +377,7 @@ global CustomerService serviceCustomer;
 rule "FromCondition"
     when
         $c : Customer()
-        $cc : Customer(name ==$c.name,surname==$c.surname,country !=$c.country) from serviceCustomer.getListCustomer();
+        $cc : Customer(name ==$c.name,surname==$c.surname,country !=$c.country) from serviceCustomer.getCustomerList();
     then
         showResult.showText("Found same customer in 2 countries");
 end
@@ -405,12 +405,12 @@ The rule is fired twice as in the service there are two customers with the same 
 
 ## Collecting
 
-The purpose is to collect a set of fact and constraint if the constraints are true. Let us see the following example int the rule "More then 2 CashFlow Line". in this rule, we want to collect all CashFlow that are in the correct time period and the good account number. The "from collect" syntax returns an arrayList. It is possible to add a condition as in the first rule where we add a constraint that we expect at least 2 items. In the second rule, we do not add this constraint.
+The purpose is to collect a set of facts and constraints if the constraints are true. Let us see the following example in the rule "More then 2 CashFlow Line". In this rule, we want to collect all CashFlow that are in the correct time period and with the correct account number. The "from collect" syntax returns an ArrayList. It is possible to add a condition as in the first rule where we add a constraint that we expect at least 2 items. In the second rule, we do not add this constraint.
 
 ```
 rule "More then 2 CashFlow Line"
     when
-        $c : Account( $acc : accountno )
+        $c : Account( $acc : accountNo )
         $p : AccountingPeriod ($sDate : startDate ,$eDate : endDate )
         $number : ArrayList(size >= 2 )
               from collect( CashFlow( mvtDate >= $sDate && mvtDate  <= $eDate,accountNo == $acc ) )
@@ -426,7 +426,7 @@ end
 
 rule "Numbers of  CashFlow Line"
     when
-        $c : Account( $acc : accountno )
+        $c : Account( $acc : accountNo )
         $p : AccountingPeriod ($sDate : startDate ,$eDate : endDate )
         $number : ArrayList( )
               from collect( CashFlow( mvtDate >= $sDate && mvtDate  <= $eDate,accountNo == $acc ) )
@@ -488,7 +488,7 @@ Here is our test case :
 
 ## Accumulating
 
-In the previous section, we collect data. There is an "from accumulate" that allows us to sum data in one command.  
+In the previous section, we collect data. There is a "from accumulate" that allows us to sum data in one command.  
 the "from collect" instruction takes 5 parameters :  
 1\) a fact constraint expression  
 2\) an init condition  
@@ -496,7 +496,7 @@ the "from collect" instruction takes 5 parameters :
 4\) the reverse action when the fact constraint expression is not true anymore  
 5\) The result of the accumulate
 
-Here is our example :
+Here is our example:
 
 ```
 rule "Credit and Debit Rule"
@@ -504,13 +504,13 @@ rule "Credit and Debit Rule"
         $c : Account( $acc : accountno )
         $p : AccountingPeriod ($sDate : startDate ,$eDate : endDate )
         $totalCredit : Number( doubleValue > 100 )
-             from accumulate( CashFlow( type ==CashFlow.CREDIT,$value : amount, mvtDate >= $sDate && mvtDate  <= $eDate,accountNo == $acc ),
+             from accumulate( CashFlow( type == CashFlow.CREDIT, $value : amount, mvtDate >= $sDate && mvtDate  <= $eDate, accountNo == $acc ),
                               init( double total = 0; ),
                               action( total += $value; ),
                               reverse( total -= $value; ),
                               result( total ) )
         $totalDebit : Number( doubleValue > 100 )
-             from accumulate( CashFlow( type ==CashFlow.DEBIT,$value : amount, mvtDate >= $sDate && mvtDate  <= $eDate,accountNo == $acc ),
+             from accumulate( CashFlow( type == CashFlow.DEBIT, $value : amount, mvtDate >= $sDate && mvtDate  <= $eDate, accountNo == $acc ),
                               init( double total = 0; ),
                               action( total += $value; ),
                               reverse( total -= $value; ),
