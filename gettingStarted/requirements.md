@@ -13,10 +13,10 @@ A product has
 * a height, 
 * a width, 
 * a depth, 
-* transport type : if the product can be put with other products in a pallet, individual\(alone\) or bulk  \(like sand for example\)
+* transport type : if the product can be put with other products in a pallet, individual \(alone\) or bulk \(like sand for example\)
 * a weight
 
-A product can be put on a pallet. A pallet is 120 cm width and and 80 cm depth. It can be a maximum of 2 meters in height and the weight should not exceed 1400 kg. We should use a simple algorithm to fill each pallet. It will not be optimized, but we should used that as a margin of the costs.  A product that is bigger than 60 cm in width or depth or higher than 1m should be put alone on a pallet.
+A product can be put on a pallet. A pallet is 120 cm width and and 80 cm depth. It can be a maximum of 2 meters in height and the weight should not exceed 1400 kg. We should use a simple algorithm to fill each pallet. It will not be optimized, but we should use that as an upper limit for the costs.  A product that is bigger than 60 cm in width or depth or higher than 1m should be put alone on a pallet.
 
 All products start from the same city and go to the same city in an order. A trip is composed of steps. Each step can be done by train, boat or truck.
 
