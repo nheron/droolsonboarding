@@ -22,7 +22,7 @@ All products start from the same city and go to the same city in an order. A tri
 
 Here is the list of products in our test order.
 
-| Product | Transport type | Number | Height | Weight | Depth | Weight |
+| Product | Transport type | Number | Height | Width | Depth | Weight |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Drill | pallet | 1000 | 20cm | 40cm | 30cm | 2 kg |
 | Screwdriver | pallet | 30000 | 3cm | 2cm | 20cm | 0,2 kg |
@@ -30,7 +30,7 @@ Here is the list of products in our test order.
 | Gravel | bulk |  |  |  |  | 14 Tons |
 | Furniture | individual | 23 |  |  |  | 500 kg |
 
-And the trip is a follows :
+And the trip is as follows:
 
 | \# | start city | arrival city | distance \(km\) | travel mode |
 | :--- | :--- | :--- | :--- | :--- |
@@ -38,7 +38,7 @@ And the trip is a follows :
 | 2 | Rotterdam | Tournai | 300 | Train |
 | 3 | Tournai | Lille | 20 | Truck |
 
-There are 3 types of costs :
+There are 3 types of costs:
 
 * Transport costs per Pallet
 
