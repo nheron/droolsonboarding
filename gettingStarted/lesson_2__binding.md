@@ -359,11 +359,11 @@ The rule was fired twice because there are 2 (CashFlow,Account) couples. The fir
 We shall modify the rule like this: 
 
 ```
-package droolscours
+package droolscourse
 //list any import classes here.
-import droolscours.AccountingPeriod;
-import droolscours.CashFlow;
-import droolscours.Account;
+import droolscourse.AccountingPeriod;
+import droolscourse.CashFlow;
+import droolscourse.Account;
 import util.OutputDisplay;
 
 global OutputDisplay showResults;
