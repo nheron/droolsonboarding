@@ -2,20 +2,20 @@
 
 ## What is a rule ?
 
-In the previously created project, we are going to add a new drl file \(drl = drools rule language\)  
-to do so, select src/test/rules and first create a package called lesson1 and the a rule file called "lesson1".  
+In the previously created project, we are going to add a new drl file \(drl = drools rule language\).  
+To do so, select src/test/rules and first create a package called lesson1 and then a rule file called "lesson1".  
 ![](drools/lesson1_fig0_0.png)
 
 ![](drools/lesson1_fig0_1.png)
 
-and the select rule Drools/Rule Resource
+And select Drools/Rule Resource.
 
 ![](drools/lesson1_fig0.png)
 
 Enter a rule name and package and press the Finish Button.  
 ![](drools/lesson1_fig2.jpeg)
 
-the following element is then displayed : lesson1.drl
+The following element is then displayed : lesson1.drl
 
 ![](drools/lesson1_fig3.jpeg)
 
@@ -32,11 +32,11 @@ Let's analyse the rule elements:
 As any plugin in eclipse, the drools plugin allows auto completion \(ctrl+space\)  
 ![](drools/lesson1_fig5.png)
 
-We create a rule the has a condition just a fact of type Account. If the rule is fired, then we shall show the message "The account exists" in the console. Notice that the then part is just pure java.
+We create a rule the has a condition just a fact of type Account. If the rule is fired, then we shall show the message "The account exists" in the console. Notice that the then part is just pure Java.
 
 ![](drools/lesson1_fig6.png)
 
-Create a junit test called "testLesson1"
+Create a JUnit test called "testLesson1".
 
 ![](drools/lesson1_fig7.png)
 
@@ -52,9 +52,9 @@ Here we defined a session called "ksession-rules" \(that we use in the test to i
 Now you can run the test in TestLesson1 and you should see this:
 
 ![](drools/lesson1_fig12.png)  
-It is the message that we have put in the rule "Your first rule"
+It is the message that we have put in the rule "Your first rule".
 
-Let us add some logging to facilate the output
+Let us add some logging to facilitate the output.
 
 ## Using a Global variable to log informations
 
@@ -70,41 +70,42 @@ To initialize the global variable, we shall use the method setGlobal on the sess
 
 ![](drools/lesson1_fig15.png)
 
-When running the junit test, the console should look like this :
+When running the JUnit test, the console should look like this:
 
 ![](drools/lesson1_fig16.png)
 
-## Using callback to log activity in drools runtime
+## Using callbacks to log activity in drools runtime
 
-Up to known, we only defined one rule. It runs or not and if yes we added a method that shows us something to see if the rule was executed.  
-In bigger project, adding logging code to each rule is not a good practice and will complexify the writing of rules and furthermore we are pushing drools to be a business tool for business analyst and they have to write technical code.  
-Drools offers a pattern to implement that functionnality that is called session callbacks.
+Up to now, we have only defined one rule. It runs or not and if yes we added a method that shows us something to see if the rule was executed.  
+In a bigger project, adding logging code to each rule is not a good practice and will complexify the writing of rules. 
+Furthermore we are pushing drools to be a business tool for business analysts and they have to write technical code.  
+Drools offers a pattern to implement that functionality that is called session callbacks.
 
-Drools can be viewed in a synthetic picture like this :  
+Drools can be viewed in a synthetic picture like this:  
 ![](drools/lesson1_fig17.png)
 
-The production memory contains all the rule definition \(in our case the drl for the moment\).  
-The working memory which created with the session and we can add facts to it with the method insert.  
+The production memory contains all the rule definitions \(in our case the drl for the moment\).  
+The working memory which we created with the session and we can add facts to it with the method insert.  
 The agenda which contains all the rules that can be fired.  
-The pattern Matcher which is the algorithm that is used to match the rules on the facts given. In drools latest version, there are many different algorithm that are used \(The main one is the rete algorithm\).
+The Pattern Matcher which is the algorithm that is used to match the rules on the facts given. In drools latest version, there are many different algorithm that are used \(The main one is the rete algorithm\).
 
 On each of those parts, it is possible to add a callback when we create a Session.
 
 ![](drools/lesson1_fig18.png)  
-Each time a fact is inserted,updated or retracted we shall log the event and show it on the console. Here we are using the toString method of the java instance given \(event.getObject\(\).toString\(\)\).
+Each time a fact is inserted, updated or retracted we shall log the event and show it on the console. Here we are using the toString method of the Java instance given \(event.getObject\(\).toString\(\)\).
 
-We shall add a toString method to all our pojo classes Account, AccountingPeriod and CashFlow. To do so we shall let eclipse generate it for us by right clicking in the source code
+We shall add a toString method to all our POJO classes Account, AccountingPeriod and CashFlow. To do so we shall let eclipse generate it for us by right clicking in the source code.
 
 ![](drools/lesson1_fig19.png)
 
 ![](drools/lesson1_fig20.png)
 
 ![](drools/lesson1_fig21.png)  
-Then you should add the following unit test to the TestLesson1 java class  
+Then you should add the following unit test to the TestLesson1 Java class.  
 ![](drools/lesson1_fig22.png)  
-And in the console you should see this :  
+And in the console you should see this:  
 ![](drools/lesson1_fig23.png)  
-The  first line is generated by the first test. To be able to see the difference when a new test is started, we can add the following code to our JUnit test case :
+The  first line is generated by the first test. To be able to see the difference when a new test is started, we can add the following code to our JUnit test case:
 
 ![](/assets/Testlesson1JunitAdd.png)
 
@@ -113,13 +114,13 @@ and now the console should look like this :![](/assets/TestLesson1AddJunitMethod
   
 The first test is passed and we see the output generated when the rule is fired.  
 The second test first inserts an objet, then updates it the retract it.  
-To update an object, you first have to memorize the fact handle :
+To update an object, you first have to memorize the fact handle:
 
 ```
 FactHandle handlea = sessionStatefull.insert(a);
 ```
 
-and then you have to use that facthandle to tell drools the object was updated :
+and then you have to use that facthandle to tell drools the object was updated:
 
 ```
    a.setBalance(12.0);
@@ -139,13 +140,13 @@ as we call fireAllRules\(\) after we retract the only fact that was in the worki
 Let us take an example :  
 ![](drools/lesson1_fig26.png)  
 We insert an Account, call FireAllRules and then call a second time fireAllRules on the same session.  
-What shall happen ? How many times the rule "Your First Rule revisited" shall be fired ?
+What shall happen? How many times the rule "Your First Rule revisited" shall be fired?
 
-Here is the result :
+Here is the result:
 
 ![](drools/lesson1_fig27.png)  
 The rule is fired only once.  
-May be it is because we did not modify the Account object ?  
+Maybe it is because we did not modify the Account object?  
 Let us do another example that modifies the account object we pass to the the session.
 
 ![](drools/lesson1_fig28_bis.png)  
@@ -155,7 +156,7 @@ Here is the result :
 
 The rule is still not fired a second time. Just modifying the object does not do the job.
 
-Let us modify the example like this by telling the rule engine we modified the fact :
+Let us modify the example like this by telling the rule engine we modified the fact:
 
 ![](drools/lesson1_fig28.png)  
 Before calling the second fireAllRules, we tell drools that the fact we inserted before was updated. In our case, we did not modify its data.  
@@ -166,19 +167,19 @@ The rule was executed a second time.
 Here is what is happening when the FireAllRules method is called on a statefull session :
 
 * drools will look at all rules that can apply and put it in its agenda.
-* drools will execute the rule that is on top of its agenda
-* Once fired, the rule will be deactivated
-* We have to tell drools of a state change in one of facts in the when part \(lhs\) to make him reconsidering the rule.
+* drools will execute the rule that is on top of its agenda.
+* Once fired, the rule will be deactivated.
+* We have to tell drools of a state change in one of the facts in the when part \(lhs\) to make it reconsider the rule.
 * A state change can be an insert, update or delete \(retract\).
 
-In the last example, we tell drools that a fact has been updated
+In the last example, we tell drools that a fact has been updated.
 
 ```
 sessionStatefull.update(handle, a);
 ```
 
 So therefore, considering the previously inserted fact has been updated, drools reconsiders the rule.  
-As in the rule "Your First Rule revisited" there are no condition on the attributes, the rule is then fired.
+As in the rule "Your First Rule revisited" there are no conditions on the attributes, the rule is then fired.
 
 But we can also do that in the then \(RHS\) part of a rule : insert, update, retract.
 
@@ -188,30 +189,30 @@ Here is the test case :
 Here are the concerned rules.  
 ![](drools/lesson1_fig31.png)  
 in the first rule, in the then part we create a new instance of time AccountingPeriod and we use the keyword insert to tell drools to create a new fact.  
-As a concequence, the second rule will be executed as the only condition is there is an AccountingPeriod in the working memory.
+As a consequence, the second rule will be executed as the only condition is there is an AccountingPeriod in the working memory.
 
 ![](drools/lesson1_fig32.png)  
 We see in the logs
 
-* two first line : an object of type CashFlow was inserted. We did that from the Junit test with the code  
+* The first two lines: an object of type CashFlow was inserted. We did that from the Junit test with the code  
   `FactHandle handlea = sessionStatefull.insert(a);`
 
-* the third line is generated in the then part of the rule "Your First Rule revisited AccountingPeriod".
+* The third line is generated in the then part of the rule "Your First Rule revisited AccountingPeriod".
 
-* The fourth and fifth line : an object of type AccountingPeriod was inserted. This was done in the then part of the rule "Your First Rule revisited AccountingPeriod"
+* The fourth and fifth lines: an object of type AccountingPeriod was inserted. This was done in the then part of the rule "Your First Rule revisited AccountingPeriod".
 
 ```
 AccountingPeriod newPeriod = new AccountingPeriod();
         insert (newPeriod);
 ```
 
-* the last line is coming from the then part of the rule "Rule on AccountingPeriod that are inserting". Meaning the insered object AccountingPeriod we inserted in the previous rule triggered the second rule.
+* The last line is coming from the then part of the rule "Rule on AccountingPeriod that are inserting". Meaning the AccountingPeriod object we inserted in the previous rule triggered the second rule.
 
 ## Summary
 
-This ends the first lesson where we learned the core concepts needed when working with drools :  
-1. What is a rule  
-2. A rule with a simple condition  
-3. How to log what is happening in the rule engine  
+This ends the first lesson, where we learned the core concepts needed when working with drools:  
+1. What is a rule?  
+2. A rule with a simple condition.  
+3. How to log what is happening in the rule engine.  
 4. What triggers a rule execution and how to interact with the rule engine for fact handling.
 
