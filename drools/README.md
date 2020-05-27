@@ -1,3 +1,5 @@
+# Drools tutorial
+
 When working with drools, there are things you have to define :
 
 1\) The data model on which the rules applies. As we are working in the java language, a data model is a set of java classes.

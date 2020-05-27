@@ -22,17 +22,17 @@ You have to unzip the file. In the directory droolsjbpm-tools-distribution-6.5.0
 ## Create you first project
 
 Go to File/New/Other  
-![](../overview/images/CreateProject_New.jpeg)  
+![](../.gitbook/assets/CreateProject_New.jpeg)  
 then push on next  
-![](drools/CreateProject_SelectContent.jpeg)  
+![](../.gitbook/assets/CreateProject_SelectContent.jpeg)  
 Select the middle button and push next  
-![](drools/CreateProject_enterName.jpeg)  
+![](../.gitbook/assets/CreateProject_enterName.jpeg)  
 Enter "FirstProject" as a project name and keep only the "Add a sample Helloworld rule file to this project". the generated project should look like that:
 
-![](drools/CreateNewProject_treeview.jpeg)
+![](../.gitbook/assets/CreateNewProject_treeview.jpeg)
 
 If you do with the right mouse on DroolsTest class and run as "java Program", the following should be displayed on the console view
 
-![](drools/CreateProject_ConsoleOutput.jpeg)  
+![](../.gitbook/assets/CreateProject_ConsoleOutput.jpeg)  
 All is well installed.
 

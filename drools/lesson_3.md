@@ -1,10 +1,10 @@
-# Adding more constraints in facts
+# lesson 3 : Some more drools languages
 
 We concentrate on how the rule engine works in the first lesson. In the second lesson, we introduced how to express constraint between facts.  
 In this lesson, we will concentrate on all the drools language possibilities to write constraints on facts for more complex cases.  
 The reader has to create a test classes called TestLesson3 like for lesson2, a new package lesson3 in the src/test/rules and add in the kmodule.xml a new session declaration
 
-```
+```text
      <kbase name="rules3" packages="lesson3">
         <ksession name="ksession-lesson3"/>
     </kbase>
@@ -16,7 +16,7 @@ While building the examples, you will see more rules fired than the shown exampl
 
 To be able to see some more advanced features, we are going to add 2 new classes in src/main/java droolscours package.
 
-```
+```text
 package droolscours;
 
 public class Customer {
@@ -74,7 +74,7 @@ public class Customer {
 }
 ```
 
-```
+```text
 package droolscours;
 
 public class PrivateAccount extends Account {
@@ -106,7 +106,7 @@ public class PrivateAccount extends Account {
 
 This allows to validate an attribute is a list of values
 
-```
+```text
 package cours
 
 //#list any import classes here.
@@ -125,7 +125,7 @@ rule "The cashFlow can be a  credit or a debit"
 end
 ```
 
-```
+```text
     @Test
     public void testInConstrait() throws Exception {
         sessionStatefull = KnowledgeSessionHelper
@@ -141,13 +141,13 @@ end
 
 And the console should look as follows :
 
-![](drools/lesson3_fig2.png)
+![](../.gitbook/assets/lesson3_fig2.png)
 
 ## Nested Accessor
 
 This allows to add a constraint to a attribute class without the need to add the linked object to the session.
 
-```
+```text
 rule "Accessor"
     when
         $cash :PrivateAccount( owner.name =="Héron" )
@@ -156,7 +156,7 @@ rule "Accessor"
 end
 ```
 
-```
+```text
     @Test
     public void testNestedAccessor() throws Exception {
         sessionStatefull = KnowledgeSessionHelper
@@ -175,14 +175,14 @@ end
 
 As seen here, we do not add the customer instance to the drools session.
 
-![](drools/lesson3_fig3.png)  
+![](../.gitbook/assets/lesson3_fig3.png)  
 The rule has been fired.
 
 ## And/or
 
 It is possible to do constraints on attribute like in java.
 
-```
+```text
 rule "infixAnd"
     when
       ( $c1 : Customer ( country=="GB") and  PrivateAccount(  owner==$c1))
@@ -193,7 +193,7 @@ rule "infixAnd"
 end
 ```
 
-```
+```text
    @Test
     public void testInOrFact() throws Exception {
         sessionStatefull = KnowledgeSessionHelper
@@ -211,13 +211,13 @@ end
     }
 ```
 
-![](drools/lesson3_fig4.png)
+![](../.gitbook/assets/lesson3_fig4.png)
 
 ## not
 
 This allows to test if no fact of a type is in the session.
 
-```
+```text
 rule "no customer"
     when
         not Customer(  )
@@ -226,7 +226,7 @@ rule "no customer"
 end
 ```
 
-```
+```text
     @Test
     public void testNotCondition() throws Exception {
         sessionStatefull = KnowledgeSessionHelper
@@ -237,13 +237,13 @@ end
     }
 ```
 
-![](drools/lesson3_fig5.png)
+![](../.gitbook/assets/lesson3_fig5.png)
 
 ## exist
 
 On the contrary of previous syntax, this allows to test if there at least one fact type is in the session.
 
-```
+```text
 rule "Exists"
     when
         exists Account(  )
@@ -252,7 +252,7 @@ rule "Exists"
 end
 ```
 
-```
+```text
     @Test
     public void testExistsCondition() throws Exception {
         sessionStatefull = KnowledgeSessionHelper
@@ -267,13 +267,13 @@ end
     }
 ```
 
-![](drools/lesson3_fig6.png)
+![](../.gitbook/assets/lesson3_fig6.png)
 
 ## ForAll
 
 We would like to verify that every cashflow instance is linked to an Account instance.
 
-```
+```text
 rule "ForAll"
     when
         forall (   Account( $no : accountNo  )
@@ -287,7 +287,7 @@ end
 In this rule, in the forall condition, we link the CashFLow instance to the Account instance.  
 We are going to do a test case where all objects are related
 
-```
+```text
     @Test
     public void testForALl() throws Exception {
         sessionStatefull = KnowledgeSessionHelper
@@ -320,11 +320,11 @@ We are going to do a test case where all objects are related
 
 When running the test, you should see the following logging.
 
-![](drools/lesson3_fig7.png)
+![](../.gitbook/assets/lesson3_fig7.png)
 
 Just modify the test case by updating the test case :
 
-```
+```text
 sessionStatefull.insert(cash2);
         Account a2 = new Account();
         a2.setAccountNo(2);
@@ -345,7 +345,7 @@ As it is not possible to insert all objects in the session, we can use the from 
 
 First let us create a CustomerService class in package Droolscours.sercice
 
-```
+```text
 package droolscours.service;
 
 import droolscours.Customer;
@@ -368,7 +368,7 @@ public class CustomerService {
 
 then we shall create the rule that uses the from
 
-```
+```text
 // add  import for the service
 import droolscours.service.CustomerService;
 // add the global
@@ -385,7 +385,7 @@ end
 
 and the following test case :
 
-```
+```text
     @Test
     public void testFromLHS() throws Exception {
         sessionStatefull = KnowledgeSessionHelper.getStatefulKnowledgeSessionWithCallback(kieContainer,
@@ -401,13 +401,13 @@ and the following test case :
 
 The rule is fired twice as in the service there are two customers with the same name and with a different country.
 
-![](drools/lesson3_fig8.png)
+![](../.gitbook/assets/lesson3_fig8.png)
 
 ## Collecting
 
 The purpose is to collect a set of fact and constraint if the constraints are true. Let us see the following example int the rule "More then 2 CashFlow Line". in this rule, we want to collect all CashFlow that are in the correct time period and the good account number. The "from collect" syntax returns an arrayList. It is possible to add a condition as in the first rule where we add a constraint that we expect at least 2 items. In the second rule, we do not add this constraint.
 
-```
+```text
 rule "More then 2 CashFlow Line"
     when
         $c : Account( $acc : accountno )
@@ -438,7 +438,7 @@ end
 
 You may need to add constructors in the CashFlow and AccountingPeriod classes :
 
-```
+```text
     public AccountingPeriod() {
     }
 
@@ -449,7 +449,7 @@ You may need to add constructors in the CashFlow and AccountingPeriod classes :
     }
 ```
 
-```
+```text
     public CashFlow() {
         super();
     }
@@ -464,7 +464,7 @@ You may need to add constructors in the CashFlow and AccountingPeriod classes :
 
 Here is our test case :
 
-```
+```text
     @Test
     public void testCollecting() throws Exception {
         sessionStatefull = KnowledgeSessionHelper.getStatefulKnowledgeSessionWithCallback(kieContainer,
@@ -484,7 +484,7 @@ Here is our test case :
     }
 ```
 
-![](drools/lesson3_fig9.png)
+![](../.gitbook/assets/lesson3_fig9.png)
 
 ## Accumulating
 
@@ -498,7 +498,7 @@ the "from collect" instruction takes 5 parameters :
 
 Here is our example :
 
-```
+```text
 rule "Credit and Debit Rule"
     when
         $c : Account( $acc : accountno )
@@ -525,7 +525,7 @@ end
 The constraint here is on a fact type CashFlow with the constraints that we already used before \(good account number and the good date period and it should be a credit or a debit\)  
 Then the initial condition, we initialize a double value we call total. Then in the action/reverse, we add to the total the amount in the CashFlow that we get by using an attribute binding. In the result action we put the total we calculated.
 
-```
+```text
     @Test
     public void testAccumulate() throws Exception {
         sessionStatefull = KnowledgeSessionHelper.getStatefulKnowledgeSessionWithCallback(kieContainer, "lesson35-session");
@@ -543,7 +543,7 @@ Then the initial condition, we initialize a double value we call total. Then in 
     }
 ```
 
-![](drools/lesson3_fig10.png)
+![](../.gitbook/assets/lesson3_fig10.png)
 
 ## Summary
 
