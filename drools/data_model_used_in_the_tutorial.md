@@ -12,7 +12,7 @@ This data model is the same as you can find in the reference model in the drools
 ### Implement the POJO model
 
 We have to create an AccountProject of type drools as previously describes.  
-Then we shall create a java package that we can name droolscours package in src/main/java \(to respect maven definition\) by doing on src/main/java right click and new Package, gibe him a name and push the finish button.
+Then we shall create a java package that we can name droolscours package in src/main/java \(to respect maven definition\) by doing on src/main/java right click and new Package, give it a name and push the finish button.
 
 ![](../.gitbook/assets/dataModel_fig2.jpeg)
 
