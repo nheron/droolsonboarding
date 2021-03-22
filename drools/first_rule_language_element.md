@@ -3,7 +3,7 @@
 ## What is a rule in drools?
 
 In the previously created project, we are going to add a new drl file \(drl = drools rule language\)  
-to do so, select src/test/rules and first create a package called lesson1 and the a rule file called "lesson1".  
+to do so, select src/test/rules and first create a package called lesson1 and a rule file called "lesson1".  
 ![](../.gitbook/assets/lesson1_fig0_0.png)
 
 ![](../.gitbook/assets/lesson1_fig0_1.png)
@@ -65,7 +65,7 @@ We first define a java class called OutputDisplay that we shall create in the ut
 ![](../.gitbook/assets/lesson1_fig13.png)  
 Now we shall update the lesson1.drl file  
 ![](../.gitbook/assets/lesson1_fig14.png)  
-The keyword global is used and then a normal java declaration. Here the global is of type OutputDisplay and the variable is called showResults. This variable can now be used in the "them" part of the rule as here.  
+The keyword global is used and then a normal java declaration. Here the global is of type OutputDisplay and the variable is called showResults. This variable can now be used in the "then" part of the rule as here.  
 To initialize the global variable, we shall use the method "setGlobal" on the session we create as shown here in our test :
 
 ![](../.gitbook/assets/lesson1_fig15.png)
