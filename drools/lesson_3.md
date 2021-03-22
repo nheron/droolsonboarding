@@ -432,7 +432,7 @@ rule "Numbers of  CashFlow Line"
               from collect( CashFlow( mvtDate >= $sDate && mvtDate  <= $eDate,accountNo == $acc ) )
 
     then
-        showResult.showText("Found "+$number+" more than 2 CashFlow Lines");
+        showResult.showText("Found "+$number+" CashFlow Lines");
 end
 ```
 
@@ -489,7 +489,7 @@ Here is our test case :
 ## Accumulating
 
 In the previous section, we collect data. There is an "from accumulate" that allows us to sum data in one command.  
-the "from collect" instruction takes 5 parameters :  
+The "from accumulate" instruction takes 5 parameters :  
 1\) a fact constraint expression  
 2\) an init condition  
 3\) the instruction when the rule applies to the fact constraint expression  
