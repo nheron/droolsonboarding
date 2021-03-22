@@ -12,7 +12,7 @@ select the project, right click with the mouse configure/convert to jbpm project
 
 ## Create your first rule flow
 
-in the src/test/rules create a package lesson4. Right click and create new File and call it ruleflow1.bpmn2 and click the OK button. An error messages appear to say the file is empty but the plugin will create a start event.
+in the src/test/rules create a package lesson4. Right click and create a new File and call it `ruleflow1.bpmn2` and click the OK button. An error message appears to say the file is empty but the plugin will create a start event.
 
 ![](../.gitbook/assets/lesson4_fig3.png)
 
@@ -300,5 +300,5 @@ and the test case
 
 if you change the balance to 500, the console should be :
 
-![](../.gitbook/assets/lesson4_fig18.png) It is more efficient to have two groups of rules like this instead adding for all rules of 'Group1' the constraint on balance &gt; 1000 and balance &lt;= 1000 for "Group2". Indeed, if the level 1000$ changes you have to modify all rules. And furthermore, if the end user gives your the rule : "first case is when balance is less than 1000$", then the good practice is to implement business rules as they are given. And implementing with a ruleflow will help end users to divide their way of expressing more complex rules. We will see int the exercise how it helps.
+![](../.gitbook/assets/lesson4_fig18.png) It is more efficient to have two groups of rules like this instead adding for all rules of 'Group1' the constraint on balance &gt; 1000 and balance &lt;= 1000 for "Group2". Indeed, if the level 1000$ changes you have to modify all rules. And furthermore, if the end user gives you the rule : "first case is when balance is less than 1000$", then the good practice is to implement business rules as they are given. And implementing with a ruleflow will help end users to divide their way of expressing more complex rules. We will see into the exercise how it helps.
 
