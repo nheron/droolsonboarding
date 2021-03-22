@@ -41,7 +41,7 @@ To be able to see what is happening in the rule engine, we shall add to the Know
             public void afterMatchFired(AfterMatchFiredEvent event) {
                 System.out.println("The rule "
                         + event.getMatch().getRule().getName()
-                        + " has be fired");
+                        + " has been fired");
             }
             public void agendaGroupPopped(AgendaGroupPoppedEvent event) {
             }
@@ -74,13 +74,13 @@ public class CashFlow {
         buff.append("-----CashFlow-----)\n");
         buff.append("Account no=" + this.accountNo + "\n");
         if (this.mvtDate != null) {
-            buff.append("Mouvement Date= "
+            buff.append("Movement Date= "
                     + DateFormat.getDateInstance().format(this.mvtDate)
                     + "\n");
         } else {
-            buff.append("No Mouvement date was set\n");
+            buff.append("No Movement date was set\n");
         }
-        buff.append("Mouvement Amount=" + this.amount + "\n");
+        buff.append("Movement Amount=" + this.amount + "\n");
         buff.append("-----CashFlow end--)");
         return buff.toString();
     }
@@ -294,7 +294,7 @@ public class TestLesson2 {
 }
 ```
 
-In the TestTwoFacts test we insert an object of type Account and CashFlow mouvement of type credit. At the end, the balance should be 1000$. the console should look like this when running the test :
+In the TestTwoFacts test we insert an object of type Account and CashFlow movement of type credit. At the end, the balance should be 1000$. the console should look like this when running the test :
 
 ![](../.gitbook/assets/lesson2_fig4.png)
 
@@ -334,7 +334,7 @@ Let us make now an example with a second CashFlow movement. Here is the test cas
 
 When we run the test case, the test fails : ![](../.gitbook/assets/lesson2_fig6.png) and in the console, we see that the rule "Credit rule" is running twice :
 
-![](../.gitbook/assets/lesson2_fig7.png) The rule was fired twice because there are 2 \(CashFlow,Account\) couples. The first CashFlow mouvement concerns account number 1 and the seconde account number 2. We need to find a way to link the two facts. We shall modify the rule like this :
+![](../.gitbook/assets/lesson2_fig7.png) The rule was fired twice because there are 2 \(CashFlow,Account\) couples. The first CashFlow movement concerns account number 1 and the seconde account number 2. We need to find a way to link the two facts. We shall modify the rule like this :
 
 ```text
 package droolscours
@@ -359,7 +359,7 @@ The rule above uses a binding variable. We create an attribute variable called $
 
 ![](../.gitbook/assets/lesson2_fig8.png)
 
-![](../.gitbook/assets/lesson2_fig9.png) Now the rule "Credit Rule" is only fired once and the balance is corret.
+![](../.gitbook/assets/lesson2_fig9.png) Now the rule "Credit Rule" is only fired once and the balance is correct.
 
 ## Calculating balance
 
@@ -399,7 +399,7 @@ rule "Debit rule"
 end
 ```
 
-In the rule above, we add a constraint so that the mvtDate of the CashFlow is between the startDate and endDate of the AccountinPeriod.
+In the rule above, we add a constraint so that the mvtDate of the CashFlow is between the startDate and endDate of the AccountingPeriod.
 
 and the test case
 
