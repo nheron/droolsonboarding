@@ -4,5 +4,4 @@ We are going to divide our rules in 5 steps and do a rule-flow which mean a proc
 
 The data model we are going to use is as follows :
 
-![](../.gitbook/assets/action09.png)
-
+![](<../.gitbook/assets/action09 (3).png>)

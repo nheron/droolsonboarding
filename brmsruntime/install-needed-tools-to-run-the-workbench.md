@@ -13,7 +13,7 @@ This technology allows us to use pre-build images that run on all supported plat
 
 This will avoid spolling your operating system, we are going to use virtual machines on your host.
 
-For the windows\/MacOS machines, the toolbox is [here.](https://www.docker.com/products/docker-toolbox)
+For the windows\\/MacOS machines, the toolbox is [here.](https://www.docker.com/products/docker-toolbox)
 
 ![](../.gitbook/assets/win-step01.png)
 
@@ -61,7 +61,7 @@ We shall first verify the drools workbench is running :
 
 ![](../.gitbook/assets/step-12.png)
 
-you can now access the workbench at the following address : http:\/\/192.168.99.100:8080\/drools-wb
+you can now access the workbench at the following address : http:\\/\\/192.168.99.100:8080\\/drools-wb
 
 ![](../.gitbook/assets/step-13.png)
 
@@ -75,9 +75,8 @@ enter the command :
 
 ![](../.gitbook/assets/step-14.png)
 
-Login in the workbench and go the deploy\/rule deployment and you should see this.
+Login in the workbench and go the deploy\\/rule deployment and you should see this.
 
 ![](../.gitbook/assets/step-15.png)
 
 You can now start the tutorial on the BRMS.
-

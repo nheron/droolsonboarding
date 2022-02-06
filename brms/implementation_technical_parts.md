@@ -4,11 +4,11 @@
 
 Before going further, if you have git installed on your machine, you can checkout the code by cloning the repository :
 
-```text
+```
 git clone git://machine_ip:9418/nautic
 ```
 
-![](../.gitbook/assets/action07%20%281%29.png)
+![](<../.gitbook/assets/action07 (3).png>)
 
 In my example, I use a docker container that is in a virtualBox Machine at ip 192.168.99.100 and at port 19418.
 
@@ -16,7 +16,7 @@ In my example, I use a docker container that is in a virtualBox Machine at ip 19
 
 We will need some java functions to help us writing rules Go to new Items/DRL FIle and create a rule called "function" and put in the rule content the following code :
 
-```text
+```
 import java.util.Calendar;
 import java.util.Date;
 
@@ -81,5 +81,4 @@ function double AgeCalculationMonth(Date d1,Date d2) {
 }
 ```
 
-![](../.gitbook/assets/action08%20%281%29.png)
-
+![](<../.gitbook/assets/action08 (3).png>)
